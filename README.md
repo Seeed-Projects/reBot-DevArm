@@ -177,9 +177,7 @@ This project is deeply inspired by the following excellent open source projects:
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Seeed-Projects/reBot-DevArm&type=timeline&legend=top-left)](https://www.star-history.com/#Seeed-Projects/reBot-DevArm&type=timeline&legend=top-left)
-
-
+[![Star History Chart](https://api.star-history.com/svg?repos=Seeed-Projects/reBot-DevArm&type=date&legend=top-left)](https://www.star-history.com/#Seeed-Projects/reBot-DevArm&type=date&legend=top-left)
 
 # reBot-DevArm Project License
 Copyright (c) [2025] [Seeed Studio AI Robotics Team]
