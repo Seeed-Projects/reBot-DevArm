@@ -175,6 +175,10 @@ This project is deeply inspired by the following excellent open source projects:
 
 *Coming soon... Welcome to submit PRs to become a contributor!*
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Seeed-Projects/reBot-DevArm&type=timeline&legend=top-left)](https://www.star-history.com/#Seeed-Projects/reBot-DevArm&type=timeline&legend=top-left)
+
 
 
 # reBot-DevArm Project License
@@ -199,4 +203,5 @@ To view a copy of this license, visit: http://creativecommons.org/licenses/by-nc
 3. Commercial Authorization:
    If you wish to use this project for commercial purposes, please contact the author to obtain commercial authorization.
    Contact: yaohui.zhu@seeed.cc
+
 
