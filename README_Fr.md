@@ -176,6 +176,9 @@ Ce projet est profondément inspiré par les excellents projets open source suiv
 
 *Bientôt disponible... Bienvenue pour soumettre des PR et devenir contributeur !*
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Seeed-Projects/reBot-DevArm&type=date&legend=top-left)](https://www.star-history.com/#Seeed-Projects/reBot-DevArm&type=date&legend=top-left)
 
 
 # Licence du Projet reBot-DevArm
