@@ -1,7 +1,7 @@
 # 🦾 reBot-DevArm: 为每个开发者开源的机械臂
 
 <p align="center">
-  <img src="./media/v1.5.jpg" alt="reBot-DevArm Banner">
+  <img src="./media/v2.0.png" alt="reBot-DevArm Banner">
 </p>
 
 <p align="center">
@@ -25,6 +25,7 @@
     <a href="./README.md">English</a> &nbsp;|&nbsp;
     <a href="./README_JP.md">日本語</a>&nbsp;|&nbsp;
     <a href="./README_Fr.md">français</a>
+    <a href="./README_es.md">Español</a>
   </strong>
 </p>
 
@@ -38,26 +39,35 @@
 ## 📖 项目简介 (Introduction)
 
 **reBot-DevArm (Total Open Source Arm)** 是一个致力于降低具身智能学习门槛的机械臂项目。我们主打 **"真·开源"** —— 不仅仅是代码，我们无保留地开源了所有的：
-
+- 🦾 **两个版本电机的开源机械臂**：我们会提供Robostride和Damiao两个版本的同样外观的机械臂所有开源文件。
 - 🛠️ **硬件图纸**：钣金件、3D打印件源文件。
 - 🔩 **BOM 清单**：详细到每一个螺丝的规格和购买链接。
 - 💻 **软件及算法**：Python SDK、ROS1/2、Isaac Sim、Lerobot等
 
 **⚠️ 注意：本项目旨在促进教育与个人学习。所有资源对个人开发者、学生和教育机构完全免费开放，但在未经授权的情况下，严禁用于任何商业用途（包括但不限于直接售卖套件、作为商业产品的一部分等）。**
 
+**等我们测试完所有硬件性能、精度以及安全性评估后，将会放宽免费商用的协议。**
+
+## ☎ 联系我们
+- **开源进度 & 技术支持**-耀晖: yaohui.zhu@seeed.cc
+- **未来合作 & 轻量化定制**-Elaine: elaine.wu@seeed.cc
+
 ## 🗺️ 开源路线图 (Roadmap & Status)
+
+> [!WARNING]
+>由于春节假期的原因，很多公司都放假了，影响了我们的样品测试进度，我们在做完所有性能和精度验证后才会开源，所以开源节奏会往后延迟1个月左右。
 
 我们承诺持续维护并适配主流的机器人开发生态。以下是我们目前的适配进度与计划发布时间：
 
 | 适配生态 | 状态 | 说明 / 预计发布时间 | 相关文档 |
 | :--- | :---: | :--- | :--- |
-| **电机基本使用** | ✅ 完成 | 基础运动控制与API封装 | [查看文档](https://wiki.seeedstudio.com/cn/damiao_series/) |
-| **新版本STEP 3D结构件及BOM开源** | 🚧 进行中 | 新版本所有零件的STEP格式、零部件BOM、及所有加工件参考价格 |  [预计 2026.02] |
-| **组装视频** | 🚧 进行中 | 超详细的组装步骤及视频 |  [预计 2026.02] |
-| **ROS2 (Humble)** |⏳ 计划中 | 核心驱动已完成，正在优化MoveIt2 |[预计 2026.03]|
-| **LeRobot 适配** | ⏳ 计划中 | 适配 Hugging Face LeRobot 训练框架 | [预计 2026.03]|
-| **Pinocchio 适配** | ⏳ 计划中 | 适配 Pinocchio框架、实现机械臂正逆运动学及动力学重力补偿功能 | [预计 2026.03]|
-| **Isaac Sim 仿真** | ⏳ 计划中 | 导入USD模型并实现仿真遥操作 | [预计 2026.03]|
+| **电机基本使用** | ✅ 完成 | 基础运动控制与API封装 | [灵足时代](https://wiki.seeedstudio.com/cn/robstride_control/)  [达妙科技](https://wiki.seeedstudio.com/cn/damiao_series/)|
+| **新版本STEP 3D结构件及BOM开源** | 🚧 进行中 | 新版本所有零件的STEP格式、零部件BOM、及所有加工件参考价格 |  [延期到 2026.03] |
+| **组装视频** | 🚧 进行中 | 超详细的组装步骤及视频 |  [延期到 2026.03] |
+| **ROS2 (Humble)** |⏳ 计划中 | 核心驱动已完成，正在优化MoveIt2 |[预计 2026.04]|
+| **LeRobot 适配** | ⏳ 计划中 | 适配 Hugging Face LeRobot 训练框架 | [预计 2026.04]|
+| **Pinocchio 适配** | ⏳ 计划中 | 适配 Pinocchio框架、实现机械臂正逆运动学及动力学重力补偿功能 | [预计 2026.04]|
+| **Isaac Sim 仿真** | ⏳ 计划中 | 导入USD模型并实现仿真遥操作 | [预计 2026.04]|
 | **逐步更新最新算法** | ⏳ 计划中 | 逐步更新主流算法 | 持续进行 |
 | **推出系列完全免费课程** | ⏳ 计划中 | 逐步更新主流算法 | 持续进行 |
 
@@ -118,11 +128,11 @@ reBot-DevArm 专为桌面级具身智能应用设计，兼顾了负载能力与�
 ### 🛠️ 阶段一：硬件搭建与基础
 | 步骤 | 说明 | 链接 |
 | :---: | :--- | :--- |
-| **01** | **电机基本使用** (Basic Learning of Motors) | [📄 点击查看](https://wiki.seeedstudio.com/cn/damiao_series/) |
-| **02** | **开箱检查** (Unboxing) | 即将推出 |
-| **03** | **组装指南** (Assemble) |即将推出 |
-| **04** | **零点校准** (Calibration) |  即将推出|
-| **05** | **运动学测试** (Kinematics) | 即将推出|
+| **01** | **电机基本使用**  |  [灵足时代](https://wiki.seeedstudio.com/cn/robstride_control/)  [达妙科技](https://wiki.seeedstudio.com/cn/damiao_series/) |
+| **02** | **开箱检查**  | 即将推出 |
+| **03** | **组装指南**  |即将推出 |
+| **04** | **零点校准** |  即将推出|
+| **05** | **运动学**  | 即将推出|
 
 ### 💻 阶段二：算法与仿真进阶
 | 步骤 | 说明 | 链接 |

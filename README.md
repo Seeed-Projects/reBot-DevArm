@@ -2,7 +2,7 @@
 # 🦾 reBot-DevArm: Open Source Robotic Arm for All Developers
 
 <p align="center">
-  <img src="./media/v1.5.jpg" alt="reBot-DevArm Banner">
+  <img src="./media/v2.0.png" alt="reBot-DevArm Banner">
 </p>
 
 <p align="center">
@@ -26,6 +26,7 @@
     <a href="./README.md">English</a> &nbsp;|&nbsp;
     <a href="./README_JP.md">日本語</a>&nbsp;|&nbsp;
     <a href="./README_Fr.md">français</a>
+    <a href="./README_es.md">Español</a>
   </strong>
 </p>
 
@@ -39,26 +40,35 @@
 ## 📖 Introduction
 
 **reBot-DevArm** is a robotic arm project dedicated to lowering the barrier to learning Embodied AI. We focus on **"True Open Source"** — not just the code, we unreservedly open source everything:
-
+- 🦾 **Two versions of the robotic arm**：We will provide all open-source files for two versions of the robotic arm with the same appearance: **Robostride** and **Damiao**.
 - 🛠️ **Hardware Blueprints**: Source files for sheet metal parts and 3D printed parts.
 - 🔩 **BOM List**: Detailed down to the specifications and purchase links for every single screw.
 - 💻 **Software & Algorithms**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
 
 **⚠️ Note: This project is intended to promote education and personal learning. All resources are completely free for individual developers, students, and educational institutions. However, any unauthorized commercial use (including but not limited to selling kits directly or using it as part of a commercial product) is strictly prohibited.**
 
+**We will relax the free commercial use license after we complete all hardware performance, precision, and safety evaluations.**
+
+## ☎ Contact Us
+- **Open‑Source Progress & Technical Support**-Yaohui: yaohui.zhu@seeed.cc
+- **Future Collaboration & Customization**-Elaine: elaine.wu@seeed.cc
+
 ## 🗺️ Roadmap & Status
+
+> [!WARNING]
+> Due to the Chinese New Year holiday, most suppliers and partner companies have suspended operations, which has impacted the progress of our robotic arm sample testing. We will only release the open-source files **after completing all performance and precision validations**, so the open-source timeline will be delayed by approximately one month.
 
 We are committed to continuously maintaining and adapting to mainstream robot development ecosystems. Below is our current adaptation progress and planned release schedule:
 
 | Ecosystem | Status | Description / ETA | Documentation |
 | :--- | :---: | :--- | :--- |
-| **Basic Motor Usage** | ✅ Done | Basic motion control and API encapsulation | [View Docs](https://wiki.seeedstudio.com/cn/damiao_series/) |
-| **New Version STEP 3D Structure & BOM** | 🚧 In Progress | STEP files for all new parts, component BOM, and reference prices for all machined parts | [ETA 2026.02] |
-| **Assembly Video** | 🚧 In Progress | Ultra-detailed assembly steps and video | [ETA 2026.02] |
-| **ROS2 (Humble)** |⏳ Planned | Core driver completed, optimizing MoveIt2 |[ETA 2026.03]|
-| **LeRobot Adaptation** | ⏳ Planned | Adapting to the Hugging Face LeRobot training framework | [ETA 2026.03]|
-| **Pinocchio Adaptation** | ⏳ Planned | Adapting to the Pinocchio framework, implementing forward/inverse kinematics and dynamic gravity compensation | [ETA 2026.03]|
-| **Isaac Sim Simulation** | ⏳ Planned | Importing USD models and implementing simulation teleoperation | [ETA 2026.03]|
+| **Basic Motor Usage** | ✅ Done | Basic motion control and API encapsulation | [Robostride](https://wiki.seeedstudio.com/robstride_control/)  [Damiao](https://wiki.seeedstudio.com/damiao_series/)|
+| **New Version STEP 3D Structure & BOM** | 🚧 In Progress | STEP files for all new parts, component BOM, and reference prices for all machined parts | [Delay 2026.03] |
+| **Assembly Video** | 🚧 In Progress | Ultra-detailed assembly steps and video | [Delay 2026.03] |
+| **ROS2 (Humble)** |⏳ Planned | Core driver completed, optimizing MoveIt2 |[ETA 2026.04]|
+| **LeRobot Adaptation** | ⏳ Planned | Adapting to the Hugging Face LeRobot training framework | [ETA 2026.04]|
+| **Pinocchio Adaptation** | ⏳ Planned | Adapting to the Pinocchio framework, implementing forward/inverse kinematics and dynamic gravity compensation | [ETA 2026.04]|
+| **Isaac Sim Simulation** | ⏳ Planned | Importing USD models and implementing simulation teleoperation | [ETA 2026.04]|
 | **Gradual Algorithm Updates** | ⏳ Planned | Gradually updating mainstream algorithms | Continuous |
 | **Launch of Fully Free Courses** | ⏳ Planned | Step-by-step tutorials | Continuous |
 
@@ -119,7 +129,7 @@ We have planned a complete learning path for you, from unboxing to AI simulation
 ### 🛠️ Phase 1: Hardware Build & Basics
 | Step | Description | Link |
 | :---: | :--- | :--- |
-| **01** | **Basic Learning of Motors** | [📄 Click to View](https://wiki.seeedstudio.com/cn/damiao_series/) |
+| **01** | **Basic Learning of Motors** | [Robostride](https://wiki.seeedstudio.com/robstride_control/)  [Damiao](https://wiki.seeedstudio.com/damiao_series/)|
 | **02** | **Unboxing** | Coming Soon |
 | **03** | **Assembly Guide** | Coming Soon |
 | **04** | **Zero Calibration** | Coming Soon |
