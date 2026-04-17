@@ -73,7 +73,7 @@ We are committed to continuously maintaining and adapting to mainstream robot de
 | **Assembly Video** | 🚧 In Progress | Ultra-detailed assembly steps and video | [Expected: 2026.04.20] |
 | **ROS2 (Humble)** | 🚧 In Progress  | Core drivers have been completed, and MoveIt2 is currently being optimized | [Expected: 2026.04.20] |
 | **Python SDK** | ✅Continuously optimized, PRs welcome | Universal motor library supporting multiple brands of joint motors | [Motorbridge](https://github.com/tianrking/MotorBridge) |
-| **Pinocchio Integration** |  ✅ Completed  | Adaptation to the Pinocchio framework, enabling forward/inverse kinematics and gravity compensation for the robotic arm | [Wiki](https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/) ||
+| **Pinocchio Integration** |  ✅ Completed  | Adaptation to the Pinocchio framework, enabling forward/inverse kinematics and gravity compensation for the robotic arm | [Wiki](https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/) [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)|
 | **Isaac Sim Simulation** | 🚧 In Progress  | Import USD models and enable simulated teleoperation | [Expected: 2026.04.20] |
 | **LeRobot Integration** | 🚧 In Progress  | Adaptation to the Hugging Face LeRobot training framework | [Expected: 2026.04.30] |
 | **Gradual Updates of the Latest Algorithms** | ⏳ Planned | Mainstream algorithms will be updated progressively | Ongoing |
