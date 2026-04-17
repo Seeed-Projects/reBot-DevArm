@@ -70,7 +70,7 @@
 | **組み立て動画** | 🚧 進行中 | 超詳細な組み立て手順と動画 | [予定：2026.04.20] |
 | **ROS2 (Humble)** | 🚧 進行中  | コアドライバはすでに完成しており、現在 MoveIt2 を最適化中です | [予定：2026.04.20] |
 | **Python SDK** | ✅継続的な最適化、PR歓迎 | 複数ブランドの関節モーターに対応する汎用モーターライブラリ | [motorbridge](https://github.com/tianrking/MotorBridge) |
-| **Pinocchio 対応** | ✅ 完了   | Pinocchio フレームワークへの対応を行い、ロボットアームの順運動学/逆運動学および重力補償機能を実現 |[Wiki](https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/)  |
+| **Pinocchio 対応** | ✅ 完了   | Pinocchio フレームワークへの対応を行い、ロボットアームの順運動学/逆運動学および重力補償機能を実現 |[Wiki](https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_pinocchio_meshcat/) [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py) |
 | **Isaac Sim シミュレーション** | 🚧 進行中  | USD モデルをインポートし、シミュレーションによる遠隔操作を実現 | [予定：2026.04.20] |
 | **LeRobot 対応** | 🚧 進行中  | Hugging Face LeRobot 学習フレームワークへの対応 | [予定：2026.04.30] |
 | **最新アルゴリズムの段階的更新** | ⏳ 計画中 | 主流アルゴリズムを段階的に更新予定 | 継続中 |

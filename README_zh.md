@@ -72,7 +72,7 @@
 | **组装视频** | 🚧 进行中 | 超详细的组装步骤及视频 |  [预计 2026.04.20] |
 | **Python SDK** | ✅ 完成  |支持多个品牌的关节电机的通用电机库 | [motorbridge](https://github.com/tianrking/MotorBridge) |
 | **ROS2 (Humble)** |🚧 进行中 | 核心驱动已完成，正在优化MoveIt2 |[预计 2026.04.20]|
-| **Pinocchio 适配** | ✅ 完成 | 适配 Pinocchio框架、实现机械臂正逆运动学及动力学重力补偿功能 |[Wiki](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/)|
+| **Pinocchio 适配** | ✅ 完成 | 适配 Pinocchio框架、实现机械臂正逆运动学及动力学重力补偿功能 |[Wiki](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/) [reBotArm_control_py](https://github.com/vectorBH6/reBotArm_control_py)|
 | **Isaac Sim 仿真** | 🚧 进行中 | 导入USD模型并实现仿真遥操作 | [预计 2026.04.20]|
 | **LeRobot 适配** | 🚧 进行中 | 适配 Hugging Face LeRobot 训练框架 | [预计 2026.04.30]|
 | **逐步更新最新算法** | ⏳ 计划中 | 逐步更新主流算法 | 持续进行 |
