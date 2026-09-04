@@ -39,14 +39,26 @@ jobs:
       # 403 and 429 are accepted because several stores answer datacentre IPs
       # that way; a delisted product still answers 404, which is what this job
       # is looking for. Hosts that block CI outright live in .lycheeignore.
+      #
+      # --accept-timeouts keeps a slow host from failing the build: a host that
+      # does not answer within the timeout tells us nothing about whether the
+      # link is dead, while a delisted product still answers 404 and still
+      # fails. Without it the job goes red for reasons unrelated to the pull
+      # request under review, and a check that cries wolf gets merged past --
+      # which is what happened to the false red on #71.
+      #
+      # --retry-wait-time spaces the three retries out; back-to-back retries all
+      # land inside the same bad moment and buy nothing.
       - name: Check links in Markdown files
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
           args: >-
             --no-progress
             --max-retries 3
+            --retry-wait-time 2
             --timeout 30
             --accept 200,206,403,429
+            --accept-timeouts
             --root-dir "$(pwd)"
             './**/*.md'
           fail: true
