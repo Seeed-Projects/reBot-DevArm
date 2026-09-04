@@ -8,6 +8,19 @@ on:
       - "tools/tests/**"
       - ".github/workflows/readme-sync.yml"
 
+  # See the note in link-check.yml: without this, a translation that drifts in a
+  # direct push to main is never checked at all.
+  push:
+    branches: [main]
+    paths:
+      - "README*.md"
+      - "tools/check_readme_sync.py"
+      - "tools/tests/**"
+      - ".github/workflows/readme-sync.yml"
+
+  schedule:
+    - cron: "0 6 * * 1"
+
   workflow_dispatch:
 
 
