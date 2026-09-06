@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/badge/Commercial-Contact%20Us-red.svg" alt="yaohui.zhu@seeed.cc">
     <img src="https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg" alt="ROS Support">
     <img src="https://img.shields.io/badge/Framework-LeRobot-yellow.svg" alt="LeRobot">
-    <img src="https://img.shields.io/badge/Framework-Isaac Sim-yellow.svg" alt="LeRobot">
+    <img src="https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg" alt="LeRobot">
 </p>
 
 <p align="center">
@@ -61,7 +61,7 @@
 <a href="https://discord.gg/AbGuqJhDpQ">
     <img src="https://img.shields.io/discord/1409155673572249672?color=7289DA&label=Discord&logo=discord&logoColor=white"></a>
 <a href="https://wiki.seeedstudio.com/robotics_page/">  
-    <img src="https://img.shields.io/badge/Documentation-📕-blue" alt="robotics wiki"></a>
+    <img src="https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue" alt="robotics wiki"></a>
 </p>
 
 <p align="center">
@@ -79,7 +79,7 @@
         <big><b>&#x1F6D2; Amazon</b></big>
       </a>
       </a>
-        <a href="https://security.feishu.cn/link/safety?target=https%3A%2F%2Fde.aliexpress.com%2Fitem%2F1005012108314029.html%3FgatewayAdapt%3Dglo2deu&scene=ccm&logParams=%7B%22location%22%3A%22ccm_sheet%22%7D&lang=zh-CN&from=from_parent_docs"location"%3A"ccm_sheet"%7D&lang=zh-CN&from=from_parent_docs" target="_blank">
+        <a href="https://de.aliexpress.com/item/1005012108314029.html" target="_blank">
         <big><b>&#x1F6D2; Aliexpress</b></big>
       </a>
     </td>
@@ -113,7 +113,7 @@
   - **Full Kit**: Includes the complete set of the robotic arm body and gripper.
   - **Pre‑assembled Robotic Arm**: Fully assembled finished robotic arm.
 
-- The Seeedstudio kit does not include a power adapter and C-clamps as standard accessories. This arrangement takes into account that users may power the unit via batteries or mount it with a custom DIY base. You may purchase a [power supply separately](https://www.seeedstudio.com/AC-DC-Power-Adapter-IEC-60320-C14-XT30-Female-24V-4-5A-1200mm-L190-W92-5-H36mm-p-6764.html) and [Power Cord](https://www.seeedstudio.com/reServer-AC-US-p-5052.html), or refer to the Mean Well power solution shown at the bottom of our [BOM](./hardware/reBot_B601_DM/readme.md/#about-power-supply).
+- The Seeedstudio kit does not include a power adapter and C-clamps as standard accessories. This arrangement takes into account that users may power the unit via batteries or mount it with a custom DIY base. You may purchase a [power supply separately](https://www.seeedstudio.com/AC-DC-Power-Adapter-IEC-60320-C14-XT30-Female-24V-4-5A-1200mm-L190-W92-5-H36mm-p-6764.html) and [Power Cord](https://www.seeedstudio.com/reServer-AC-US-p-5052.html), or refer to the Mean Well power solution shown at the bottom of our [BOM](./hardware/reBot_B601_DM/readme.md#about-power-supply).
 
 - You can also purchase the [Leader Arm](https://www.seeedstudio.com/Star-Arm-102-p-6765.html?qid=P2U7IG_yskyak5m_1776415593315) and [12V 10A Power Supply](https://www.seeedstudio.com/FY1209900-12V-10A-Power-Adapter-12V-10A-p-6496.html) You may also use the 12VDC power adapter of SO-ARM101 to supply power to the Leader.
 
@@ -195,6 +195,10 @@ reBot-DevArm is designed for desktop Embodied AI applications, balancing payload
 | <img src="/community/hei-robot-lift-play.gif" height="100"> | <img src="/community/VR_with_reBot.png" height="100">   |<img src="/community/reBot_grasp_fruit.png" height="100">  |<img src="/community/Daniel_Dorado.jpg" height="100">  | <img src="/community/Groot_N1.7.png" height="100"> |
 | --- | --- | --- | --- |  --- | 
 | [From hei-rebot-lift](https://github.com/lipengdong/hei-rebot-lift) | [From Martin Kemka](https://www.linkedin.com/posts/activity-7484390995862781952-TX4m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)| [From Kamil Buczyński](https://www.linkedin.com/posts/kamil-buczy%C5%84ski-102843301_seeedstudio-rebotarm-seeedprojectofthemonth-ugcPost-7485297094715461633-RV_6/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)  | [From Daniel Dorado](https://www.linkedin.com/posts/doradodaniel_computervision-spatialai-sim2real-share-7474727487374184448-NhwX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)  |  [From Asier](https://www.linkedin.com/posts/asierarranz_nvidia-physicalai-isaaclab-ugcPost-7480271721942417408-YNwu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)  | 
+
+| <img src="/community/sim-to-real-vla.gif" height="100"> |
+| --- |
+| [Seeed reBot Arm and NVIDIA Isaac Sim-to-Real VLA Course](https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac) |
 
 ## 🧹Optional Hardware
 ###  Wirst Camera Mount
@@ -311,7 +315,7 @@ reBot-DevArm is not just a robotic arm, but a robotics learning community. We sh
 *   **🚗 Motors & Servos**: [Damiao / Gogo / Robstride / Mita / Feite / Fashion Star](https://wiki.seeedstudio.com/robotics_page/)
 *   **👁️ Visual Perception**: [Depth Cameras / LiDAR / Vision Algorithms](https://wiki.seeedstudio.com/robotics_page/)
 *   **👂 Voice Interaction**: [reSpeaker Mic Arrays/Voice Control/Spatial Awareness(DoA)](https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_flex/)
-*   **🧭 Motion & Attitude**: [IMU (6-axis/9-axis) / Gyroscopes / Magnetometers](https://wiki.seeedstudio.com/Sensor/IMU/)
+*   **🧭 Motion & Attitude**: [IMU (6-axis/9-axis) / Gyroscopes / Magnetometers](https://wiki.seeedstudio.com/Sensor_accelerometer/)
 *   **🤖 Comprehensive Kits**: [More Robotics Sensors & Driver Examples](https://wiki.seeedstudio.com/robotics_page/)
 
 

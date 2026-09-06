@@ -19,7 +19,7 @@
     <img src="https://img.shields.io/badge/Commercial-Contact%20Us-red.svg" alt="yaohui.zhu@seeed.cc">
     <img src="https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg" alt="ROS Support">
     <img src="https://img.shields.io/badge/Framework-LeRobot-yellow.svg" alt="LeRobot">
-    <img src="https://img.shields.io/badge/Framework-Isaac Sim-yellow.svg" alt="LeRobot">
+    <img src="https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg" alt="LeRobot">
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@
 <a href="https://discord.gg/AbGuqJhDpQ">
     <img src="https://img.shields.io/discord/1409155673572249672?color=7289DA&label=Discord&logo=discord&logoColor=white"></a>
 <a href="https://wiki.seeedstudio.com/robotics_page/">  
-    <img src="https://img.shields.io/badge/Documentation-📕-blue" alt="robotics wiki"></a>
+    <img src="https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue" alt="robotics wiki"></a>
 </p>
 
 <p align="center">
@@ -101,7 +101,7 @@
 
   中国：[淘宝矽递科技旗舰店](https://detail.tmall.com/item.htm?app=chrome&bxsign=scdlw5VjXYQhfgOyva6IEit8asOyaYSFE5I3VXYy3VPlmlREIPF350GWGqrQeFq6zMR0LYTFVDN1CYDrBsUaYz-4JxcTqiZF-HQ6NUldhIWqF4BZVDgneY0XNmbgokb1mXQ&cpp=1&id=1042412233386&price=8295&shareUniqueId=35714007536&share_crt_v=1&shareurl=true&short_name=h.iLxfDpYMNSysFIa&sourceType=item%2Citem&sp_tk=UGU1SzU2ZmJVdE8%3D&spm=a2159r.13376460.0.0&suid=f2c61ac8-e0ca-45d0-b100-75210b69b5b9&tbSocialPopKey=shareItem&tk=Pe5K56fbUtO&un=1a387738ed21d73a0f8768acc41474bb&un_site=0&ut_sk=1.aduVZSGbgvEDAPW0%2BMUyPBgR_21646297_1776313782940.Copy.1&wxsign=tbwGGBQEcYglkjQ8Bb9ce0nY3n0Lt2A0LqWv5fIH-2gpBWlQr1YAclOKyIimOONlUMdMNexbYhHL1BfCn7tnsbQlmgAwPGYNzFYFGNmitXbVMMtxoW1WB68Oux3DSBGem9OWTXZB4ARF_FuruhSrejI1g)
   
-Seeedstudio套件出货默认不带电源适配器和C型木工夹是考虑大家可能会用电池供电及DIY底座进行固定，当然你可以额外单独购买电源或者参考我们的[BOM最下面的明纬电源方案](./hardware/reBot_B601_DM/readme_zh.md/#关于电源)
+Seeedstudio套件出货默认不带电源适配器和C型木工夹是考虑大家可能会用电池供电及DIY底座进行固定，当然你可以额外单独购买电源或者参考我们的[BOM最下面的明纬电源方案](./hardware/reBot_B601_DM/readme_zh.md#关于电源)
 
 -----------------------------
 
@@ -131,6 +131,7 @@ reBot机械臂RS版本在[矽递科技电商平台](https://detail.tmall.com/ite
 | **Isaac Sim 仿真** | 🚧 进行中 | 导入USD模型并实现仿真遥操作 | [Wiki](https://wiki.seeedstudio.com/rebot_arm_b601_dm_isaacsim/)|
 | **LeRobot 适配** |  ✅ 完成  | 适配 Hugging Face LeRobot 训练框架 | [reBot Arm B601-DM Lerobot使用教程](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/)|
 | **深度相机集成** | ✅ 完成 | 基于 YOLO 与深度相机的视觉夹取演示 | [reBot Arm B601-DM 视觉夹取 Demo](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/) |
+| **reSpeaker 语音集成** | ✅ 完成 | 加入 reSpeaker Flex 4 麦克风阵列，构建具备空间感知能力的语音驱动智能机械臂控制系统 | [reBot Arm B601-DM 语音控制](https://wiki.seeedstudio.com/cn/control_rebot_arm_using_voice_with_respeaker_flex/) |
 | **逐步更新最新算法** | ⏳ 计划中 | 逐步更新主流算法 | 持续进行 |
 | **推出系列完全免费课程** | ⏳ 计划中 | 逐步更新主流算法 | 持续进行 |
 
@@ -147,7 +148,7 @@ reBot机械臂RS版本在[矽递科技电商平台](https://detail.tmall.com/ite
 | **LeRobot 适配** |  ✅ 完成 | 适配 Hugging Face LeRobot 训练框架 | [reBot Arm B601-RS入门Lerobot](https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_lerobot/)|
 | **Pinocchio 适配** | ✅ 完成 | 适配 Pinocchio框架、实现机械臂正逆运动学及动力学重力补偿功能 |[reBot Arm B601-DM 的 Pinocchio 与 MeshCat 入门指南](https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_pinocchio_meshcat/) 以及 [Github 控制代码](https://github.com/Seeed-Projects/reBotArm_control_py)|
 | **深度相机集成** | ✅ 完成 | 基于 YOLO 与深度相机的视觉夹取演示 | [reBot Arm B601-RS 视觉夹取 Demo](https://wiki.seeedstudio.com/cn/rebot_arm_b601_rs_grasping_demo/) |
-| **Isaac Sim 仿真** | ⏳ 计划中 | 导入USD模型并实现仿真遥操作 | [DLI Course](https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac) & [源代码](https://github.com/Seeed-Projects/reBot-Isaacsim)|
+| **Isaac Sim 仿真** | ✅ 完成 | 导入USD模型并实现仿真遥操作 | [DLI Course](https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac) & [源代码](https://github.com/Seeed-Projects/reBot-Isaacsim)|
 | **逐步更新最新算法** | ⏳ 计划中 | 逐步更新主流算法 | 持续进行 |
 | **推出系列完全免费课程** | ⏳ 计划中 | 逐步更新主流算法 | 持续进行 |
 
@@ -163,7 +164,7 @@ reBot-DevArm 专为桌面级具身智能应用设计，兼顾了负载能力与�
 | :--- | :--- | :--- |
 | **工作负载 (Payload)** | 1.5kg | **2.5kg** |
 | **推荐工作空间** | 70%臂展工作空间 | 70%臂展工作空间 |
-| **最大臂展 (Reach)** | 650 mm | **754 mm** |
+| **最大臂展 (Reach)** | 767 mm | **754 mm** |
 | **自重 (Weight)** | **约 4.5 kg** |约 6.7 kg |
 | **重复定位精度** | < 0.2 mm | < 0.2 mm |
 | **自由度 (DOF)** | 6 DOF + 1 夹爪|6 DOF + 1 夹爪|
@@ -180,6 +181,10 @@ reBot-DevArm 专为桌面级具身智能应用设计，兼顾了负载能力与�
 | <img src="/community/hei-robot-lift-play.gif" height="100"> | <img src="/community/VR_with_reBot.png" height="100">   |<img src="/community/reBot_grasp_fruit.png" height="100">  |<img src="/community/Daniel_Dorado.jpg" height="100">  | <img src="/community/Groot_N1.7.png" height="100"> |
 | --- | --- | --- | --- |  --- | 
 | [From hei-rebot-lift](https://github.com/lipengdong/hei-rebot-lift) | [From Martin Kemka](https://www.linkedin.com/posts/activity-7484390995862781952-TX4m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)| [From Kamil Buczyński](https://www.linkedin.com/posts/kamil-buczy%C5%84ski-102843301_seeedstudio-rebotarm-seeedprojectofthemonth-ugcPost-7485297094715461633-RV_6/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)  | [From Daniel Dorado](https://www.linkedin.com/posts/doradodaniel_computervision-spatialai-sim2real-share-7474727487374184448-NhwX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)  |  [From Asier](https://www.linkedin.com/posts/asierarranz_nvidia-physicalai-isaaclab-ugcPost-7480271721942417408-YNwu/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)  | 
+
+| <img src="/community/sim-to-real-vla.gif" height="100"> |
+| --- |
+| [Seeed reBot Arm 与 NVIDIA Isaac 的 Sim-to-Real VLA 课程](https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac) | 
 
 
 ## 🧹可选硬件
@@ -295,7 +300,7 @@ reBot-DevArm 不仅仅是一个机械臂，更是一个机器人学习社区。�
 *   **🚗 电机舵机**：[达妙 / 高擎 / 灵足 / 脉塔 / 飞特 / 华馨京](https://wiki.seeedstudio.com/robotics_page/)
 *   **👁️ 视觉感知**：[深度相机 / 激光雷达 / 视觉算法](https://wiki.seeedstudio.com/robotics_page/)
 *   **👂  听觉交互**：[ReSpeaker 麦克风阵列 / 语音识别](https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/)
-*   **🧭 运动姿态**：[IMU (6轴/9轴) / 陀螺仪 / 磁力计](https://wiki.seeedstudio.com/Sensor/IMU/)
+*   **🧭 运动姿态**：[IMU (6轴/9轴) / 陀螺仪 / 磁力计](https://wiki.seeedstudio.com/Sensor_accelerometer/)
 *   **🤖 综合套件**：[更多机器人传感器与驱动案例](https://wiki.seeedstudio.com/robotics_page/)
 
 
