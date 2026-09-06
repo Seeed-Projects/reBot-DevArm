@@ -124,6 +124,14 @@
 - Nous recommandons fortement d'utiliser l'alimentation [Meanwell 48V 12.5A](https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NzgzODk2NzUxNTQ0NzEyOjE3ODE2MTA2NTU6c3BfYXRmOjIwMDExNjA5NjQwMTc5ODo6MDo6&url=%2FLRS-350-48-Price-Switching-Supply-MeanWell%2Fdp%2FB0BP6S5DYR%2Fref%3Dsr_1_1_sspa%3Fcrid%3D27VPQOWNPN9UG%26dib%3DeyJ2IjoiMSJ9.qK84sGJa4-74kbCEX11MOFBju8sSQUdFsbHw6PNvmaEHnhzjX2T7dyhRNJY01mXxpWk8lccGOwnezxmqLKUjqglX_FI26mrxlvZf0KNiLdJ8QnhKsber4KDoyyLHNxWGV451uHCzZbCDXxM0iYXVnubuVourRaRURlyMorRavuLd2a32kABx-BKqyF5Dfr7dV453ecE6QULFqG-UVLBaBRijbxQGTJ2YiNyXAqn3bkM.Bt5mAPOJNAWGnXCC2mwvjdDdccZd1_0-WRXZpP4mR4M%26dib_tag%3Dse%26keywords%3DLRS-350-48%26qid%3D1781610655%26sprefix%3Dlrs-350-%252Caps%252C331%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1) pour le modèle RS. Si vous avez besoin de plus de puissance pour libérer toutes ses performances, vous pouvez opter pour un adaptateur d'alimentation 48V 25A.
 ------------------
 
+## 🚀 Essayer la simulation en ligne
+
+Découvrez le jumeau numérique MuJoCo du reBot Arm B601-RS directement dans votre navigateur, sans aucune installation. Basculez entre les configurations bras standard et AGV, contrôlez les articulations et le TCP, affichez les caméras globale et de poignet D405, puis lancez les démonstrations automatiques de rangement et d'empilage. Le premier chargement du modèle peut prendre quelques instants ; Chrome ou Edge est recommandé.
+
+<p align="center">
+  <a href="https://yang-ci.github.io/Rebot_Arm_AGV/"><strong>▶ Lancer la démo interactive reBot Arm</strong></a>
+</p>
+
 
 ## 🗺️ Feuille de route & état
 
