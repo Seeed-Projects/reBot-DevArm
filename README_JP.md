@@ -125,6 +125,14 @@
 - RSモデルには [Meanwell 48V 12.5A](https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NzgzODk2NzUxNTQ0NzEyOjE3ODE2MTA2NTU6c3BfYXRmOjIwMDExNjA5NjQwMTc5ODo6MDo6&url=%2FLRS-350-48-Price-Switching-Supply-MeanWell%2Fdp%2FB0BP6S5DYR%2Fref%3Dsr_1_1_sspa%3Fcrid%3D27VPQOWNPN9UG%26dib%3DeyJ2IjoiMSJ9.qK84sGJa4-74kbCEX11MOFBju8sSQUdFsbHw6PNvmaEHnhzjX2T7dyhRNJY01mXxpWk8lccGOwnezxmqLKUjqglX_FI26mrxlvZf0KNiLdJ8QnhKsber4KDoyyLHNxWGV451uHCzZbCDXxM0iYXVnubuVourRaRURlyMorRavuLd2a32kABx-BKqyF5Dfr7dV453ecE6QULFqG-UVLBaBRijbxQGTJ2YiNyXAqn3bkM.Bt5mAPOJNAWGnXCC2mwvjdDdccZd1_0-WRXZpP4mR4M%26dib_tag%3Dse%26keywords%3DLRS-350-48%26qid%3D1781610655%26sprefix%3Dlrs-350-%252Caps%252C331%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1) 電源の使用を強く推奨します。より強力な出力で性能を最大限に引き出したい場合は、48V 25A 電源アダプターを選択できます。
 ------------------
 
+## 🚀 オンラインシミュレーションを体験
+
+インストール不要で、reBot Arm B601-RS の MuJoCo デジタルツインをブラウザから直接体験できます。標準アームと AGV の構成切り替え、関節と TCP の操作、俯瞰カメラと D405 手首カメラの表示、自動収納・積み上げデモを利用できます。初回はモデルの読み込みに少し時間がかかる場合があります。Chrome または Edge を推奨します。
+
+<p align="center">
+  <a href="https://yang-ci.github.io/Rebot_Arm_AGV/"><strong>▶ reBot Arm インタラクティブデモを起動</strong></a>
+</p>
+
 
 ## 🗺️ ロードマップ & ステータス
 

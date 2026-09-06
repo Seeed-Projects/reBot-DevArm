@@ -113,6 +113,14 @@ reBot机械臂RS版本在[矽递科技电商平台](https://detail.tmall.com/ite
 
 --------------------------------
 
+## 🚀 在线体验
+
+无需安装，直接在浏览器中体验 reBot Arm B601-RS MuJoCo 数字孪生。你可以切换标准机械臂与 AGV 配置、控制关节和 TCP、查看全局相机与 D405 腕部相机，并运行自动归位抓取和叠叠乐演示。首次下载模型资源可能需要片刻，建议使用 Chrome 或 Edge。
+
+<p align="center">
+  <a href="https://yang-ci.github.io/Rebot_Arm_AGV/"><strong>▶ 立即启动 reBot Arm 在线交互演示</strong></a>
+</p>
+
 ## 🗺️ 开源路线图 (Roadmap & Status)
 
 我们承诺持续维护并适配主流的机器人开发生态。以下是我们目前的适配进度与计划发布时间：
