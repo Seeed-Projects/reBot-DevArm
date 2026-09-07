@@ -7,6 +7,17 @@ on:
       - ".lycheeignore"
       - ".github/workflows/link-check.yml"
 
+  # Also watch the branch itself. Commits reach main without a pull request --
+  # direct pushes, and merges resolved locally -- and those are exactly the
+  # changes no reviewer saw. A guard that only runs on pull requests cannot
+  # catch them.
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - ".lycheeignore"
+      - ".github/workflows/link-check.yml"
+
   # Purchase pages get relisted and wiki paths get reorganised without anything
   # in this repository changing, so the docs also need checking on a timer.
   schedule:
