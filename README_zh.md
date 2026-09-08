@@ -200,7 +200,7 @@ reBot-DevArm 专为桌面级具身智能应用设计，兼顾了负载能力与�
 | 32×32 UVC 相机 | Intel D435i | Intel D405 & Gemini 305 | Gemini 2 |
 | --- | --- | --- | --- |
 | 即将上线 | <img src="/hardware/reBot_B601_DM/3D_Printed_Parts/images/D435i.jpg" height="100"> |  <img src="/hardware/reBot_B601_DM/3D_Printed_Parts/images/D405.jpg" height="100"> | <img src="/hardware/reBot_B601_DM/3D_Printed_Parts/images/Gemini2.jpg" height="100"> |
-| 即将上线 | [STEP模型文件](/hardware/reBot_B601_DM/3D_Printed_Parts/D435_Gemini2_Mount.step) | [STEP模型文件](/hardware/reBot_B601_DM/3D_Printed_Parts/D405_305_Mount.step) |[STEP模型文件](/hardware/reBot_B601_DM/3D_Printed_Parts/D435_Gemini2_Mount.step) |
+| 即将上线 | [STEP模型文件](/hardware/reBot_B601_DM/3D_Printed_Parts/D435_Gemini2_Mount.step) | [STEP模型文件](/hardware/reBot_B601_DM/3D_Printed_Parts/D405_305_Mount.step) · [设计说明](https://github.com/bowenszhu/rebot-b601-rs-d405-wrist-mount/tree/v1.0.0) |[STEP模型文件](/hardware/reBot_B601_DM/3D_Printed_Parts/D435_Gemini2_Mount.step) |
 
 ### 兼容主臂（Leader Arm）
 | Star Arm 102-LD | 欢迎各类机械臂兼容接入 |
