@@ -172,6 +172,7 @@
 | **LeRobot 統合** | ✅ 完了 | Hugging Face LeRobot トレーニングフレームワークへの対応 | [Getting Started with LeRobot-based reBot Arm](https://wiki.seeedstudio.com/rebot_arm_b601_rs_lerobot/) |
 | **Pinocchio 統合** | ✅ 完了 | Pinocchio フレームワークへの対応により、ロボットアームの順運動学/逆運動学および重力補償を実現 | [Getting Started with Pinocchio for reBot Arm B601-RS](https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/) と [Github repo](https://github.com/vectorBH6/reBotArm_control_py) |
 | **深度カメラ統合** | ✅ 完了 | YOLO と深度カメラに基づくビジュアル把持デモ | [Getting Started with Visual Grasping Demo](https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/) |
+| **エンボディド・エージェント・アーキテクチャ**                                    |   ✅ 完成  | 自然言語コマンド（例：「pick up the red block」）を受信し、把持計画を自動生成して実行する                                                          | [reBot B601 RS ロボットアームのエンボディド・エージェント・アーキテクチャ設計](https://wiki.seeedstudio.com/ja/wrc_demo_tutorial/) & [ソースコード](https://github.com/TheMoonAstronaut/wrc.git)  |
 | **Isaac Sim シミュレーション** | ✅ 完了 | USD モデルをインポートし、シミュレーションによる遠隔操作を実現 | [Github Repo](https://github.com/Seeed-Projects/reBot-Isaacsim) |
 | **最新アルゴリズムの段階的更新** | ⏳ 計画中 | 主流アルゴリズムを段階的に更新予定 | Ongoing |
 | **完全無料コースシリーズの提供** | ⏳ 計画中 | 主流アルゴリズムを段階的に更新予定 | Ongoing |
