@@ -19,6 +19,8 @@
 Rebot_Arm_description/
 ├── README.md
 ├── README_zh.md
+├── tools/
+│   └── rviz_urdf_compat.py  # ROS 2 Jazzy RViz 多材质显示兼容处理
 ├── RS/
 │   ├── README.md
 │   ├── README_zh.md
@@ -106,6 +108,52 @@ package://<package_name>/description/meshes/...
 ```
 
 同时确认 `setup.py` 或 `CMakeLists.txt` 会安装所有 URDF 和 STL。RViz 只负责显示；MoveIt 是否使用碰撞网格取决于加载的 robot description。
+
+> [!IMPORTANT]
+> ROS 2 Jazzy 的 RViz 在显示“同一 link 包含多个不同材质的 visual”时，可能把该 link 的所有网格渲染成第一个材质的颜色。启动 RViz 或 MoveIt 前，请用 [`tools/rviz_urdf_compat.py`](tools/rviz_urdf_compat.py) 处理传给 `robot_description` 的 URDF。脚本只向标准输出写入转换结果，不会修改源 URDF。
+
+该脚本会将额外的 visual 移到零偏移的 fixed 子 link，保留网格位姿、材质和碰撞定义。它还会针对 RViz/Ogre 单独提亮 RS 的黑色材质，不会改动源 URDF 及 Web/MuJoCo 使用的颜色。DM 没有匹配这些 `rs_*` 材质名，因此只会应用多 visual 拆分。
+
+可先在命令行查看转换结果：
+
+```bash
+python3 tools/rviz_urdf_compat.py RS/urdf/ReBot_Arm_RS.urdf > /tmp/ReBot_Arm_RS_rviz.urdf
+python3 tools/rviz_urdf_compat.py DM/urdf/ReBot_Arm_DM.urdf > /tmp/ReBot_Arm_DM_rviz.urdf
+```
+
+在 Python ROS 2 launch 中，应将脚本的输出直接作为 `robot_description`：
+
+```python
+from launch.substitutions import Command, FindPackageShare, PathJoinSubstitution
+from launch_ros.parameter_descriptions import ParameterValue
+
+package_share = FindPackageShare("<package_name>")
+urdf_file = PathJoinSubstitution(
+    [package_share, "description", "urdf", "ReBot_Arm_RS.urdf"]
+)
+compat_script = PathJoinSubstitution(
+    [package_share, "tools", "rviz_urdf_compat.py"]
+)
+robot_description = ParameterValue(
+    Command(["python3 ", compat_script, " ", urdf_file]),
+    value_type=str,
+)
+```
+
+接入 MoveIt 时，在创建 `move_group` 和 RViz 节点之前处理 `MoveItConfigsBuilder` 生成的配置：
+
+```python
+from importlib.machinery import SourceFileLoader
+
+compat = SourceFileLoader("rviz_urdf_compat", compat_script_path).load_module()
+description_key = "robot_description"
+source_urdf = moveit_config.robot_description[description_key]
+moveit_config.robot_description[description_key] = (
+    compat.make_rviz_compatible(source_urdf)
+)
+```
+
+请把 `tools/rviz_urdf_compat.py` 随 ROS package 一起安装，并确保 `robot_state_publisher`、MoveIt `move_group` 和 RViz 收到同一份处理后的 `robot_description`。
 
 ### MuJoCo
 

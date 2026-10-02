@@ -19,6 +19,8 @@ This directory uses relative paths and includes the meshes required for model re
 Rebot_Arm_description/
 ├── README.md
 ├── README_zh.md
+├── tools/
+│   └── rviz_urdf_compat.py  # ROS 2 Jazzy RViz multi-material compatibility helper
 ├── RS/
 │   ├── README.md
 │   ├── README_zh.md
@@ -106,6 +108,52 @@ package://<package_name>/description/meshes/...
 ```
 
 Also make sure `setup.py` or `CMakeLists.txt` installs every URDF and STL file. RViz handles visualization only; whether MoveIt uses the collision meshes depends on the loaded robot description.
+
+> [!IMPORTANT]
+> ROS 2 Jazzy's RViz may render every mesh in a link with multiple differently colored visuals using only that link's first material. Before starting RViz or MoveIt, process the URDF passed to `robot_description` with [`tools/rviz_urdf_compat.py`](tools/rviz_urdf_compat.py). The script writes the converted result to stdout and never modifies the source URDF.
+
+The script moves extra visuals into zero-offset fixed child links, preserving the original mesh poses, materials, and collision definitions. It also lightens the RS black materials for RViz/Ogre display without changing the source URDF or the colors used by Web/MuJoCo. DM does not match those `rs_*` material names, so it only applies the multi-visual split.
+
+Preview the converted output from the command line:
+
+```bash
+python3 tools/rviz_urdf_compat.py RS/urdf/ReBot_Arm_RS.urdf > /tmp/ReBot_Arm_RS_rviz.urdf
+python3 tools/rviz_urdf_compat.py DM/urdf/ReBot_Arm_DM.urdf > /tmp/ReBot_Arm_DM_rviz.urdf
+```
+
+In a Python ROS 2 launch file, feed the script output directly as the `robot_description`:
+
+```python
+from launch.substitutions import Command, FindPackageShare, PathJoinSubstitution
+from launch_ros.parameter_descriptions import ParameterValue
+
+package_share = FindPackageShare("<package_name>")
+urdf_file = PathJoinSubstitution(
+    [package_share, "description", "urdf", "ReBot_Arm_RS.urdf"]
+)
+compat_script = PathJoinSubstitution(
+    [package_share, "tools", "rviz_urdf_compat.py"]
+)
+robot_description = ParameterValue(
+    Command(["python3 ", compat_script, " ", urdf_file]),
+    value_type=str,
+)
+```
+
+For MoveIt integration, process the `MoveItConfigsBuilder` output before creating the `move_group` and RViz nodes:
+
+```python
+from importlib.machinery import SourceFileLoader
+
+compat = SourceFileLoader("rviz_urdf_compat", compat_script_path).load_module()
+description_key = "robot_description"
+source_urdf = moveit_config.robot_description[description_key]
+moveit_config.robot_description[description_key] = (
+    compat.make_rviz_compatible(source_urdf)
+)
+```
+
+Install `tools/rviz_urdf_compat.py` together with the ROS package, and make sure `robot_state_publisher`, the MoveIt `move_group`, and RViz all receive the same processed `robot_description`.
 
 ### MuJoCo
 
