@@ -138,6 +138,12 @@ Nous maintenons et adaptons en continu les principaux écosystèmes de développ
 | Derniers algorithmes | ⏳ Prévu | Algorithmes grand public mis à jour progressivement | En cours |
 | Série de cours gratuits | ⏳ Prévu | Une série de cours entièrement gratuits | En cours |
 
+#### Contributions des développeurs
+
+| Écosystème | Auteur | Description | Dépôt |
+| :--- | :---: | :--- | :--- |
+| Téléopération par iPhone, HEBI Mobile I/O et Meta Quest | [@ammarjmahmood](https://github.com/ammarjmahmood) | Déplacez un téléphone ou une manette Quest et la pince suit, avec le mappage de pose relative de TidyBot++ (CoRL 2024) : application iPhone native SwiftUI et ARKit, HEBI Mobile I/O, WebXR en passthrough sur Quest, pilote MIT à 200 Hz avec compensation de gravité, cinématique inverse sur l'URDF RS officiel et verrouillages de sécurité. Testé sur un B601-RS avec un iPhone 16 Pro Max. | [rebot-phone-teleop](https://github.com/ammarjmahmood/rebot-phone-teleop) |
+
 ## ⚙️ Spécifications matérielles
 
 Conçu pour des applications d'IA incarnée sur bureau, en équilibrant charge utile et flexibilité.

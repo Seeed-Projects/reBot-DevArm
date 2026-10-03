@@ -138,6 +138,12 @@ We continuously maintain and adapt to mainstream robot development ecosystems. B
 | Latest Algorithms | ⏳ Planned | Mainstream algorithms updated progressively | Ongoing |
 | Free Course Series | ⏳ Planned | A series of completely free courses | Ongoing |
 
+#### Community Contributions
+
+| Ecosystem | Author | Description | Repository |
+| :--- | :---: | :--- | :--- |
+| iPhone, HEBI Mobile I/O and Meta Quest teleoperation | [@ammarjmahmood](https://github.com/ammarjmahmood) | Move a phone or a Quest controller and the gripper follows, using the relative pose mapping from TidyBot++ (CoRL 2024): native SwiftUI and ARKit iPhone app, HEBI Mobile I/O, WebXR passthrough on Quest, a 200 Hz MIT driver with gravity feedforward, IK on the official RS URDF and safety interlocks. Tested on a B601-RS with an iPhone 16 Pro Max. | [rebot-phone-teleop](https://github.com/ammarjmahmood/rebot-phone-teleop) |
+
 ## ⚙️ Hardware Specifications
 
 Designed for desktop Embodied AI applications, balancing payload and flexibility.

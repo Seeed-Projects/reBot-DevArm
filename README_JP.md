@@ -138,6 +138,12 @@
 | 最新アルゴリズムの段階的更新 | ⏳ 計画中 | 主流アルゴリズムを段階的に更新予定 | 継続中 |
 | 完全無料コースシリーズの提供 | ⏳ 計画中 | 完全無料のコースシリーズを順次提供予定 | 継続中 |
 
+#### 開発者からの貢献
+
+| 対応エコシステム | 作者 | 説明 | リポジトリ |
+| :--- | :---: | :--- | :--- |
+| iPhone、HEBI Mobile I/O、Meta Quest によるテレオペレーション | [@ammarjmahmood](https://github.com/ammarjmahmood) | スマートフォンや Quest コントローラーを動かすとグリッパーが追従します。TidyBot++（CoRL 2024）の相対姿勢マッピングを採用：ネイティブ SwiftUI と ARKit の iPhone アプリ、HEBI Mobile I/O、Quest の WebXR パススルー、200 Hz MIT ドライバー、重力フィードフォワード、公式 RS URDF による逆運動学と安全インターロック。B601-RS と iPhone 16 Pro Max で検証済み。 | [rebot-phone-teleop](https://github.com/ammarjmahmood/rebot-phone-teleop) |
+
 ## ⚙️ ハードウェア仕様
 
 デスクトップ向け Embodied AI アプリケーション向けに設計され、可搬重量と柔軟性のバランスを取っています。
