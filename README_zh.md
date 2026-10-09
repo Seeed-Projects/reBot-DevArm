@@ -109,6 +109,7 @@ RS 版本提供两种套件方案：
 | ROS2 集成 | ✅ 完成 | ROS2 机械臂控制器，支持运动学、轨迹规划与重力补偿 | [ROS2 教程](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/) |
 | Pinocchio 适配 | ✅ 完成 | 适配 Pinocchio，实现正逆运动学与重力补偿 | [Pinocchio 指南](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/) · [代码](https://github.com/Seeed-Projects/reBotArm_control_py) |
 | Isaac Sim 仿真 | ✅ 完成 | 导入 USD 模型并实现仿真遥操作 | [Wiki](https://wiki.seeedstudio.com/rebot_arm_b601_dm_isaacsim/) |
+| VR 遥操作 | ✅ 完成 | 基于 PICO 4 VR 的双边遥操作 | [代码](https://github.com/Eaglewzw/lerobot-teleoperator-rebot-vr) |
 | LeRobot 适配 | ✅ 完成 | 适配 Hugging Face LeRobot 训练框架 | [LeRobot 教程](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/) |
 | 深度相机集成 | ✅ 完成 | 基于 YOLO 与深度相机的视觉夹取演示 | [视觉夹取 Demo](https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/) |
 | reSpeaker 语音集成 | ✅ 完成 | 加入 reSpeaker Flex 4 麦克风阵列，构建具备空间感知的语音控制 | [语音控制](https://wiki.seeedstudio.com/cn/control_rebot_arm_using_voice_with_respeaker_flex/) |

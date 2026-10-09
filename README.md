@@ -109,6 +109,7 @@ We continuously maintain and adapt to mainstream robot development ecosystems. B
 | ROS2 Integration | ✅ Done | Kinematics, trajectory planning, gravity compensation | [ROS2 Guide](https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/) |
 | Pinocchio Integration | ✅ Done | Forward/inverse kinematics and gravity compensation | [Pinocchio Guide](https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/) · [Repo](https://github.com/Seeed-Projects/reBotArm_control_py) |
 | Isaac Sim Simulation | ✅ Done | USD models and simulated teleoperation | [Wiki](https://wiki.seeedstudio.com/rebot_arm_b601_dm_isaacsim/) |
+| VR Teleoperation | ✅ Done | PICO 4 VR-based bilateral teleoperation | [Repo](https://github.com/Eaglewzw/lerobot-teleoperator-rebot-vr) |
 | LeRobot Integration | ✅ Done | Hugging Face LeRobot training framework | [LeRobot Guide](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/) |
 | Depth Camera Integration | ✅ Done | YOLO + depth camera visual grasping demo | [Grasping Demo](https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/) |
 | reSpeaker Voice Integration | ✅ Done | reSpeaker Flex 4-mic array, voice-driven control with spatial awareness | [Voice Control](https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_flex/) |

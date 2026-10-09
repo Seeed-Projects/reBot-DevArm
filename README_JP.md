@@ -109,6 +109,7 @@
 | ROS2 統合 | ✅ 完了 | 運動学、軌道計画、重力補償に対応した ROS2 コントローラー | [ROS2 ガイド](https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/) |
 | Pinocchio 統合 | ✅ 完了 | 順運動学/逆運動学と重力補償を実現 | [Pinocchio ガイド](https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/) · [リポジトリ](https://github.com/Seeed-Projects/reBotArm_control_py) |
 | Isaac Sim シミュレーション | ✅ 完了 | USD モデルのインポートとシミュレーション遠隔操作 | [Wiki](https://wiki.seeedstudio.com/rebot_arm_b601_dm_isaacsim/) |
+| VR テレオペレーション | ✅ 完了 | PICO 4 VR ベースのバイラテラル遠隔操作 | [リポジトリ](https://github.com/Eaglewzw/lerobot-teleoperator-rebot-vr) |
 | LeRobot 統合 | ✅ 完了 | Hugging Face LeRobot トレーニングフレームワークに対応 | [LeRobot ガイド](https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/) |
 | 深度カメラ統合 | ✅ 完了 | YOLO と深度カメラによるビジュアル把持デモ | [把持デモ](https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/) |
 | reSpeaker 音声統合 | ✅ 完了 | reSpeaker Flex 4 マイクアレイによる空間認識対応の音声駆動制御 | [音声制御](https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_flex/) |
