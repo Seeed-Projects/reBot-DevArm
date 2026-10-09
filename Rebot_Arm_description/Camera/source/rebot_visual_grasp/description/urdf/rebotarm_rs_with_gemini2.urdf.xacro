@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rebotarm_rs_gemini2">
+  <xacro:arg name="with_camera" default="true"/>
+  <xacro:include filename="$(find rebotarm_bringup)/description/RS/urdf/ReBot_Arm_RS.urdf"/>
+  <xacro:if value="$(arg with_camera)">
+    <xacro:include filename="$(find orbbec_description)/urdf/gemini_2.urdf.xacro"/>
+  </xacro:if>
+
+  # Mount origin coincides with gripper_end / gripper_end.STL.
+# Runtime: bringup_with_camera.launch.py loads this xacro into robot_state_publisher
+# so RViz shows the camera; Orbbec driver still provides image topics + optical TF.
+# If you only use wrist_camera.launch.py (static TF), keep values in sync with
+# config/wrist_extrinsics.yaml.
+  <xacro:property name="mount_xyz" value="-0.1201 0.0003 0.0450"/>
+  <xacro:property name="mount_rpy" value="1.5827 0.0024 1.5515"/>
+  <xacro:property name="mount_mesh_scale" value="0.001 0.001 0.001"/>
+  <!-- Inverse of camera_botter_screw_joint: camera bottom screw at mount origin. -->
+  <xacro:property name="camera_xyz" value="0.0249 0.0487 0.0090"/>
+  <xacro:property name="camera_rpy" value="0.0042 -1.0502 -1.5718"/>
+
+  <link name="camera_mount_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rebot_visual_grasp/description/meshes/D435_Gemini2_Mount.stl"
+              scale="${mount_mesh_scale}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="gripper_to_mount" type="fixed">
+    <parent link="gripper_end"/>
+    <child link="camera_mount_link"/>
+    <origin xyz="${mount_xyz}" rpy="${mount_rpy}"/>
+  </joint>
+
+  <xacro:if value="$(arg with_camera)">
+    <joint name="mount_to_camera" type="fixed">
+      <parent link="camera_mount_link"/>
+      <child link="camera_link"/>
+      <origin xyz="${camera_xyz}" rpy="${camera_rpy}"/>
+    </joint>
+  </xacro:if>
+</robot>

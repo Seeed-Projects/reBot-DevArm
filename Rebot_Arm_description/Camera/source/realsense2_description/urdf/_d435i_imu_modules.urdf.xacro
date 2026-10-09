@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<!--
+# Copyright 2023 RealSense, Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+-->
+
+<!--
+This is the URDF model for the inertial modules of the
+RealSense 435i camera.
+-->
+<robot name="d435i_imu_modules" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="d435i_imu_modules" params="name use_nominal_extrinsics">
+    <xacro:property name="M_PI" value="${pi}" />
+
+    <xacro:if value="${use_nominal_extrinsics}">
+      <link name="${name}_accel_frame" />
+      <link name="${name}_accel_optical_frame" />
+      <link name="${name}_gyro_frame" />
+      <link name="${name}_gyro_optical_frame" />
+
+      <joint name="${name}_accel_joint" type="fixed">
+        <origin xyz = "-0.01174 -0.00552 0.0051" rpy = "0 0 0" />
+        <parent link="${name}_link" />
+        <child link="${name}_accel_frame" />
+      </joint>
+
+      <joint name="${name}_accel_optical_joint" type="fixed">
+        <origin xyz = "0 0 0" rpy = "${-M_PI/2} 0 ${-M_PI/2}" />
+        <parent link="${name}_accel_frame" />
+        <child link="${name}_accel_optical_frame" />
+      </joint>
+
+      <joint name="${name}_gyro_joint" type="fixed">
+        <origin xyz = "-0.01174 -0.00552 0.0051" rpy = "0 0 0" />
+        <parent link="${name}_link" />
+        <child link="${name}_gyro_frame" />
+      </joint>
+
+      <joint name="${name}_gyro_optical_joint" type="fixed">
+        <origin xyz = "0 0 0" rpy = "${-M_PI/2} 0 ${-M_PI/2}" />
+        <parent link="${name}_gyro_frame" />
+        <child link="${name}_gyro_optical_frame" />
+      </joint>
+    </xacro:if>
+  </xacro:macro>
+</robot>
+

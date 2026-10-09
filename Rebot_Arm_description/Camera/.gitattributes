@@ -1,0 +1,3 @@
+# Preserve vendored model bytes for the recorded SHA-256 hashes.
+meshes/** -text -diff
+source/** -text whitespace=-blank-at-eof,-space-before-tab,-trailing-space
