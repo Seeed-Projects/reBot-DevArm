@@ -9,11 +9,13 @@ import xml.etree.ElementTree as ET
 import xacro
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGES = ("rebot_visual_grasp", "realsense2_description", "orbbec_description")
+PACKAGES = ("rebot_visual_grasp", "realsense2_description", "orbbec_description", "uvc32_description")
 MESH_PATHS = {
     "rebot_visual_grasp/description/meshes/": "mounts/",
     "realsense2_description/meshes/": "realsense/",
     "orbbec_description/meshes/gemini2/": "gemini2/",
+    "uvc32_description/meshes/mounts/": "mounts/",
+    "uvc32_description/meshes/uvc32/": "uvc32/",
 }
 
 
@@ -32,8 +34,9 @@ def build():
                 text = text.replace(f"$(find {package})", str(staging / package))
             path.write_text(text)
 
-        for model in ("d405", "d435i", "gemini2"):
-            path = staging / "rebot_visual_grasp/description/urdf" / f"rebotarm_rs_with_{model}.urdf.xacro"
+        for model in ("d405", "d435i", "gemini2", "uvc32"):
+            package = "uvc32_description/urdf" if model == "uvc32" else "rebot_visual_grasp/description/urdf"
+            path = staging / package / f"rebotarm_rs_with_{model}.urdf.xacro"
             document = xacro.process_file(str(path))
             # Vendor macros provide the body, screw frame and optical frames;
             # assembly origins above are preserved verbatim from the source.

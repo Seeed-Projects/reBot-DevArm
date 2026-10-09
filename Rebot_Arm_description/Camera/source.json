@@ -12,6 +12,10 @@
     "orbbec_description": {
       "url": "https://github.com/orbbec/OrbbecSDK_ROS2",
       "commit": "c153462518ad674650bafa4464fda72c27ab797a"
+    },
+    "seeed_projects": {
+      "url": "https://github.com/Seeed-Projects/reBot-DevArm",
+      "commit": "875f274deda768fbcfffd67636dda0265ce399ed"
     }
   },
   "assets": [
@@ -175,11 +179,101 @@
       "upstream_path": "realsense2_description/meshes/d435.dae",
       "bytes": 15782439,
       "sha256": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78"
+    },
+    {
+      "file": "source/seeed_projects/hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step",
+      "package": "seeed_projects",
+      "upstream_path": "hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step",
+      "bytes": 321947,
+      "sha256": "d1df135e36b90db9bd0c0a724b80d72166e42bfc56e510939958d21b5d65b8bf"
+    },
+    {
+      "file": "source/seeed_projects/hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step",
+      "package": "seeed_projects",
+      "upstream_path": "hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step",
+      "bytes": 607280,
+      "sha256": "bf300894ec5678f647ac60cc5871c1126f692145e106bb4ca3c14920d6293b68"
+    }
+  ],
+  "uvc32": {
+    "body": "generic 32x32 mm schematic; not a vendor camera model",
+    "board_size_mm": [
+      32,
+      32,
+      1.6
+    ],
+    "board_hole_pitch_mm": [
+      28,
+      28
+    ],
+    "mount_xyz": [
+      -0.0940591902018456,
+      -0.00025356928883057825,
+      0.029971822207282752
+    ],
+    "mount_rpy": [
+      1.5827,
+      0.0024,
+      1.5515
+    ],
+    "camera_xyz": [
+      1.4555000000004981e-06,
+      0.07507025725000001,
+      -0.0274030491
+    ],
+    "camera_rpy": [
+      -0.6014558556803211,
+      0.0,
+      3.141592653589793
+    ],
+    "cad_clamp_center_mm": [
+      0.0,
+      7.1098943,
+      24.3103768
+    ],
+    "cad_board_contact_center_mm": [
+      0.001455500000000498,
+      82.18015155,
+      -3.0926722999999994
+    ],
+    "cad_plate_normal": [
+      0.0,
+      -0.5658434441295098,
+      0.8245127025920548
+    ],
+    "cadquery_version": "2.5.2",
+    "optical_frame": "nominal lens-front origin; simulation FOV is not calibrated"
+  },
+  "generated_assets": [
+    {
+      "file": "meshes/mounts/UVC32_mount.stl",
+      "bytes": 614784,
+      "sha256": "4e093b5d6694cf8e2105e58b2b6ea027516ee9b4f556ee49ca2a77eb32d28080"
+    },
+    {
+      "file": "meshes/uvc32/board.stl",
+      "bytes": 102284,
+      "sha256": "c1939b6787dc7ca0f65717363a73312d24831edb2c22fab652697a79d3d70da2"
+    },
+    {
+      "file": "meshes/uvc32/lens.stl",
+      "bytes": 25084,
+      "sha256": "5a9f3104a41163acabaf19a5e55eb4a15b9986e199dddbf6491c07712e23a76b"
+    },
+    {
+      "file": "meshes/uvc32/glass.stl",
+      "bytes": 25084,
+      "sha256": "4ace8e26956070a7300dc6c9f83416ce0f61bace4a686e9d86b4b1ba44d887b7"
+    },
+    {
+      "file": "source/uvc32_description/urdf/rebotarm_rs_with_uvc32.urdf.xacro",
+      "bytes": 2313,
+      "sha256": "eb58a339b376605aebfeb96856522fae5a062122cafbd693e8404abf3ff31f20"
     }
   ],
   "imported_from": {
     "repository": "https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS",
-    "commit": "8e153cb248e30ae2f82275f26ec3f94768852784",
+    "commit": "ed0d28b8d9bfe5c6cc1619810a13d0e5358b1c3e",
     "path": "reBotArm_simulator-RS/public/models/wrist-cameras",
     "date": "2026-10-09"
   }
