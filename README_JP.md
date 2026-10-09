@@ -263,7 +263,7 @@ reBot-DevArm は単なるロボットアームではなく、ロボティクス�
 
 **🎃 プロトタイプ貢献者**
 
-- SeeedStudio AI Robotics Team —— Yaohui Zhu（yaohui.zhu@seeed.cc）
+- SeeedStudio AI Robotics Team —— Yaohui Zhu（[yaohui.zhu@seeed.cc](mailto:yaohui.zhu@seeed.cc)）
 - SeeedStudio STU —— Wentao Dong
 - SeeedStudio STU —— Weiwei Xu
 - SeeedStudio Purchasing Department —— Fengqun Peng
@@ -316,5 +316,5 @@ reBot Arm ロボットアームプロジェクトは、常に「機敏性・開�
 
 ## ☎ お問い合わせ
 
-- **オープンソース進捗 & 技術サポート** —— Yaohui：yaohui.zhu@seeed.cc
-- **今後の協業 & カスタマイズ** —— Elaine：elaine.wu@seeed.cc
+- **オープンソース進捗 & 技術サポート** —— Yaohui：[yaohui.zhu@seeed.cc](mailto:yaohui.zhu@seeed.cc)
+- **今後の協業 & カスタマイズ** —— Elaine：[elaine.wu@seeed.cc](mailto:elaine.wu@seeed.cc)

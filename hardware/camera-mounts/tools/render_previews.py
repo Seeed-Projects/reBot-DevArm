@@ -1,4 +1,5 @@
 """Render source geometry. Requires cadquery, matplotlib, usd-core, numpy."""
+import argparse
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -35,15 +36,27 @@ def render(polys, target, title):
     fig.savefig(target, dpi=140, bbox_inches='tight')
     plt.close(fig)
 
-for folder in ['b601-camera-mounts', 'data-collection-camera-mounts']:
-    for source in sorted((ROOT/folder).iterdir()):
-        shape = cq.importers.importStep(str(source)).val()
-        vertices, triangles = shape.tessellate(.15, .15)
-        vertices = np.array([v.toTuple() for v in vertices])
-        polys = [vertices[list(t)] for t in triangles]
-        target = ROOT/'images'/f'{source.stem}.png'
-        render(polys, target, source.stem.replace('_',' ').replace('-',' '))
-        print(source.name, len(triangles), flush=True)
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('sources', nargs='*', type=Path,
+                    help='Render selected STEP/STP files; omit to render all assets.')
+args = parser.parse_args()
+sources = args.sources or [source for folder in ['b601-camera-mounts', 'data-collection-camera-mounts']
+                          for source in sorted((ROOT/folder).rglob('*'))
+                          if source.suffix.lower() in {'.step', '.stp'}]
+for source in sources:
+    shape = cq.importers.importStep(str(source)).val()
+    vertices, triangles = shape.tessellate(.15, .15)
+    vertices = np.array([v.toTuple() for v in vertices])
+    if source.stem == 'data-collection-camera-mount-v2':
+        # The supplied assembly is modeled along Y. Show it upright in the preview.
+        vertices = vertices[:, [0, 2, 1]] * np.array([1, -1, 1])
+    polys = [vertices[list(t)] for t in triangles]
+    target = ROOT/'images'/f'{source.stem}.png'
+    render(polys, target, source.stem.replace('_',' ').replace('-',' '))
+    print(source.name, len(triangles), flush=True)
+
+if args.sources:
+    raise SystemExit(0)
 
 stage = Usd.Stage.Open(str(ROOT/'data-collection-environment/box.usdz'))
 polys=[]
