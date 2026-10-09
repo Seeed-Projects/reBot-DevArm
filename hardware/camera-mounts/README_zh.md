@@ -9,10 +9,10 @@
 | 分类 | 内容 | 格式 |
 | --- | --- | --- |
 | [B601 摄像头支架](#b601-摄像头支架) | 4 款摄像头支架 | STEP（`.step`） |
-| [数据采集摄像头支架](#数据采集摄像头支架) | 4 款支架主体及 4 个适配件 | STEP（`.stp`） |
+| [数据采集摄像头支架](#数据采集摄像头支架) | V1：4 款支架主体及 4 个适配件；V2：1 个完整装配 | STEP（`.stp`） |
 | [数据采集环境](#数据采集环境) | 1 个箱体模型 | USDZ（`.usdz`） |
 
-以下介绍覆盖仓库内全部 13 个模型文件。摄像头及机械臂名称沿用上游文件中的命名；上游未提供完整尺寸说明、紧固件清单、打印参数或适配验证结果。制作前请打开 CAD 文件，结合实际设备检查安装尺寸和间隙。
+以下介绍覆盖仓库内全部 14 个模型文件。摄像头及机械臂名称沿用上游文件中的命名；上游未提供完整尺寸说明、紧固件清单、打印参数或适配验证结果。制作前请打开 CAD 文件，结合实际设备检查安装尺寸和间隙。
 
 ## B601 摄像头支架
 
@@ -66,7 +66,14 @@
 
 ## 数据采集摄像头支架
 
-上游 [Camera-Mount 仓库](https://github.com/xiehuangbao888/Camera-Mount) 提供 4 款编号支架和 4 个对应的适配件。以下配件对应关系根据原始文件名整理。上游没有提供装配说明或实物照片，完整装配效果及摄像头适配情况尚未验证。
+数据采集摄像头支架分为两个结构版本：
+
+| 版本 | 结构 | 文件 |
+| --- | --- | --- |
+| [V1](data-collection-camera-mounts/V1/) | 3D 打印支架主体及摄像头适配件 | 下方的 4 款编号支架和 4 个适配件 |
+| [V2](#v2铝型材摄像头支架) | 铝型材主体＋3D 打印摄像头支架 | 1 个完整 STEP 装配 |
+
+V1 来自上游 [Camera-Mount 仓库](https://github.com/xiehuangbao888/Camera-Mount)，提供 4 款编号支架和 4 个对应的适配件，配件对应关系按原始文件名保留。上游没有提供装配说明或实物照片，完整装配效果及摄像头适配情况尚未验证。V2 由 [Yang-Ci/Camera-Mounts](https://github.com/Yang-Ci/Camera-Mounts) 提供，主体改用铝型材。
 
 ### 支架 1
 
@@ -74,19 +81,19 @@
 
 *支架 1 主体。*
 
-[下载 mount-1.stp](data-collection-camera-mounts/mount-1.stp)
+[下载 mount-1.stp](data-collection-camera-mounts/V1/mount-1.stp)
 
 主体为较高的渐缩支撑结构，上端设有阶梯状连接接口。配套提供两个独立适配件，可根据实际机械臂选择，并在 CAD 软件中检查连接关系。
 
 ![支架 1 reBot 适配件模型预览](images/mount-1-rebot-adapter.png)
 
-[下载 reBot 适配件](data-collection-camera-mounts/mount-1-rebot-adapter.stp)
+[下载 reBot 适配件](data-collection-camera-mounts/V1/mount-1-rebot-adapter.stp)
 
 reBot 适配件为带开口和偏置连接部分的板状零件，对应上游的“支架1插件rebot”。
 
 ![支架 1 SO-ARM 适配件模型预览](images/mount-1-soarm-adapter.png)
 
-[下载 SO-ARM 适配件](data-collection-camera-mounts/mount-1-soarm-adapter.stp)
+[下载 SO-ARM 适配件](data-collection-camera-mounts/V1/mount-1-soarm-adapter.stp)
 
 SO-ARM 适配件为偏置板状零件，对应上游的“支架1插件soarm”。以上图片分别展示主体和配件，未进行装配验证。
 
@@ -94,13 +101,13 @@ SO-ARM 适配件为偏置板状零件，对应上游的“支架1插件soarm”�
 
 ![支架 2 模型预览](images/mount-2.png)
 
-[下载 mount-2.stp](data-collection-camera-mounts/mount-2.stp)
+[下载 mount-2.stp](data-collection-camera-mounts/V1/mount-2.stp)
 
 主体为渐缩支撑结构，上端连接接口与支架 1 不同。配套提供一个 SO-ARM 适配件。
 
 ![支架 2 SO-ARM 适配件模型预览](images/mount-2-soarm-adapter.png)
 
-[下载 SO-ARM 适配件](data-collection-camera-mounts/mount-2-soarm-adapter.stp)
+[下载 SO-ARM 适配件](data-collection-camera-mounts/V1/mount-2-soarm-adapter.stp)
 
 此配件对应上游的“支架2插件soarm”。请同时打开主体和适配件模型，检查连接方式及间隙。
 
@@ -108,13 +115,13 @@ SO-ARM 适配件为偏置板状零件，对应上游的“支架1插件soarm”�
 
 ![支架 3 模型预览](images/mount-3.png)
 
-[下载 mount-3.stp](data-collection-camera-mounts/mount-3.stp)
+[下载 mount-3.stp](data-collection-camera-mounts/V1/mount-3.stp)
 
 主体为渐缩支撑结构，顶部具有矩形凸起部分。根据上游文件名，支架 3 和支架 4 使用同一个适配件。
 
 ![支架 3 / 4 共用适配件模型预览](images/mount-3-4-adapter.png)
 
-[下载支架 3 / 4 共用适配件](data-collection-camera-mounts/mount-3-4-adapter.stp)
+[下载支架 3 / 4 共用适配件](data-collection-camera-mounts/V1/mount-3-4-adapter.stp)
 
 此配件对应上游的“支架3_4插件”。图片分别展示支架主体及共用配件。
 
@@ -122,24 +129,35 @@ SO-ARM 适配件为偏置板状零件，对应上游的“支架1插件soarm”�
 
 ![支架 4 模型预览](images/mount-4.png)
 
-[下载 mount-4.stp](data-collection-camera-mounts/mount-4.stp)
+[下载 mount-4.stp](data-collection-camera-mounts/V1/mount-4.stp)
 
-主体为渐缩支撑结构，顶部具有较宽的内凹接口。对应配件为上述[支架 3 / 4 共用适配件](data-collection-camera-mounts/mount-3-4-adapter.stp)。选择前可在 CAD 软件中比较支架 3 和支架 4 的接口几何。
+主体为渐缩支撑结构，顶部具有较宽的内凹接口。对应配件为上述[支架 3 / 4 共用适配件](data-collection-camera-mounts/V1/mount-3-4-adapter.stp)。选择前可在 CAD 软件中比较支架 3 和支架 4 的接口几何。
+
+### V2：铝型材摄像头支架
+
+![V2 数据采集摄像头支架装配预览](images/data-collection-camera-mount-v2.png)
+
+*根据提供的 STEP 几何生成的完整装配预览。*
+
+[下载 data-collection-camera-mount-v2.stp](data-collection-camera-mounts/data-collection-camera-mount-v2.stp)
+
+V2 为铝型材主体＋3D 打印摄像头支架的数据采集支架；V1 使用 3D 打印主体。新文件包含主体和摄像头安装部件的完整装配，是装配 CAD 文件，并非可直接打印的一组 STL。制作前请在 CAD 软件中识别需要打印的部件，并检查摄像头安装接口。
 
 ### 中英文文件名对照
 
-仅修改文件名，CAD 文件内容保持不变；支架编号和配件对应关系均保留。
+仅修改文件名，CAD 文件内容保持不变；V1 支架编号和配件对应关系均保留，V2 装配由维护者本地提供。
 
 | 原始文件名 | 英文文件名 |
 | --- | --- |
-| `数据采集摄像头支架_支架1.stp` | [`mount-1.stp`](data-collection-camera-mounts/mount-1.stp) |
-| `数据采集摄像头支架_支架1插件rebot.stp` | [`mount-1-rebot-adapter.stp`](data-collection-camera-mounts/mount-1-rebot-adapter.stp) |
-| `数据采集摄像头支架_支架1插件soarm.stp` | [`mount-1-soarm-adapter.stp`](data-collection-camera-mounts/mount-1-soarm-adapter.stp) |
-| `数据采集摄像头支架_支架2.stp` | [`mount-2.stp`](data-collection-camera-mounts/mount-2.stp) |
-| `数据采集摄像头支架_支架2插件soarm.stp` | [`mount-2-soarm-adapter.stp`](data-collection-camera-mounts/mount-2-soarm-adapter.stp) |
-| `数据采集摄像头支架_支架3.stp` | [`mount-3.stp`](data-collection-camera-mounts/mount-3.stp) |
-| `数据采集摄像头支架_支架3_4插件.stp` | [`mount-3-4-adapter.stp`](data-collection-camera-mounts/mount-3-4-adapter.stp) |
-| `数据采集摄像头支架_支架4.stp` | [`mount-4.stp`](data-collection-camera-mounts/mount-4.stp) |
+| `数据采集摄像头支架_支架1.stp` | [`mount-1.stp`](data-collection-camera-mounts/V1/mount-1.stp) |
+| `数据采集摄像头支架_支架1插件rebot.stp` | [`mount-1-rebot-adapter.stp`](data-collection-camera-mounts/V1/mount-1-rebot-adapter.stp) |
+| `数据采集摄像头支架_支架1插件soarm.stp` | [`mount-1-soarm-adapter.stp`](data-collection-camera-mounts/V1/mount-1-soarm-adapter.stp) |
+| `数据采集摄像头支架_支架2.stp` | [`mount-2.stp`](data-collection-camera-mounts/V1/mount-2.stp) |
+| `数据采集摄像头支架_支架2插件soarm.stp` | [`mount-2-soarm-adapter.stp`](data-collection-camera-mounts/V1/mount-2-soarm-adapter.stp) |
+| `数据采集摄像头支架_支架3.stp` | [`mount-3.stp`](data-collection-camera-mounts/V1/mount-3.stp) |
+| `数据采集摄像头支架_支架3_4插件.stp` | [`mount-3-4-adapter.stp`](data-collection-camera-mounts/V1/mount-3-4-adapter.stp) |
+| `数据采集摄像头支架_支架4.stp` | [`mount-4.stp`](data-collection-camera-mounts/V1/mount-4.stp) |
+| `数据采集摄像头支架.stp`（V2，维护者提供） | [`data-collection-camera-mount-v2.stp`](data-collection-camera-mounts/data-collection-camera-mount-v2.stp) |
 
 ## 数据采集环境
 
@@ -160,16 +178,17 @@ SO-ARM 适配件为偏置板状零件，对应上游的“支架1插件soarm”�
 
 ## 图片来源与模型预览
 
-全部 13 个模型文件均有直接根据原始 STEP 或 USDZ 几何生成的预览图。这些图片是模型预览，并非实物照片。适配件单独展示，图片不代表已完成装配或适配验证。
+全部 14 个模型文件均有直接根据原始 STEP 或 USDZ 几何生成的预览图。这些图片是模型预览，并非实物照片。V1 适配件单独展示，图片不代表已完成装配或适配验证。
 
 另外两张 B601 参考图来自上游：[D405.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D405.jpg) 和 [D435i.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D435i.jpg)，两者也均为 CAD 渲染图。
 
-如需重新生成预览图，在 Python 环境中安装 `cadquery`、`matplotlib`、`numpy` 和 `usd-core`，然后在仓库根目录执行 `cd hardware/camera-mounts && python tools/render_previews.py`。
+如需重新生成预览图，在 Python 环境中安装 `cadquery`、`matplotlib`、`numpy` 和 `usd-core`，然后在仓库根目录执行 `cd hardware/camera-mounts && python tools/render_previews.py`。仅生成 V2 预览可在 `hardware/camera-mounts/` 目录执行 `python tools/render_previews.py data-collection-camera-mounts/data-collection-camera-mount-v2.stp`。
 
 ## 资源来源与许可
 
 - B601 摄像头支架及参考渲染图：[Seeed-Projects/reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm)，许可为 CERN OHL-W-2.0。
-- 数据采集摄像头支架：[xiehuangbao888/Camera-Mount](https://github.com/xiehuangbao888/Camera-Mount)。复制这些资源时，上游仓库未声明许可证。
+- V2 数据采集摄像头支架：由 [Yang-Ci/Camera-Mounts](https://github.com/Yang-Ci/Camera-Mounts) 提供，详见 [NOTICE.md](NOTICE.md)。
+- V1 数据采集摄像头支架：[xiehuangbao888/Camera-Mount](https://github.com/xiehuangbao888/Camera-Mount)。复制这些资源时，上游仓库未声明许可证。
 - 数据采集环境：[yuyoujiang/rebot-arm-dli-isaacsim](https://github.com/yuyoujiang/rebot-arm-dli-isaacsim)，许可为 MIT。
 
 详情请查看 [NOTICE.md](NOTICE.md)、[LICENSE](LICENSE) 和 [licenses/](licenses/)。

@@ -257,7 +257,7 @@ reBot-DevArm 不仅是一个机械臂，更是一个机器人学习社区。我�
 
 **🎃 原型机贡献者**
 
-- SeeedStudio AI Robotics Team —— Yaohui Zhu（yaohui.zhu@seeed.cc）
+- SeeedStudio AI Robotics Team —— Yaohui Zhu（[yaohui.zhu@seeed.cc](mailto:yaohui.zhu@seeed.cc)）
 - SeeedStudio STU —— Wentao Dong
 - SeeedStudio STU —— Weiwei Xu
 - SeeedStudio Purchasing Department —— Fengqun Peng
@@ -310,5 +310,5 @@ reBot Arm 机械臂项目始终秉持「敏捷、开放、担当、共生」的�
 
 ## ☎ 联系我们
 
-- **开源进度 & 技术支持** —— 耀晖：yaohui.zhu@seeed.cc
-- **未来合作 & 轻量化定制** —— Elaine：elaine.wu@seeed.cc
+- **开源进度 & 技术支持** —— 耀晖：[yaohui.zhu@seeed.cc](mailto:yaohui.zhu@seeed.cc)
+- **未来合作 & 轻量化定制** —— Elaine：[elaine.wu@seeed.cc](mailto:elaine.wu@seeed.cc)
