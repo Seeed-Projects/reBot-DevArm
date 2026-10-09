@@ -183,8 +183,10 @@
 
 | 32×32 UVC カメラ | Intel D435i | Intel D405 & Gemini 305 | Gemini 2 |
 | :--- | :--- | :--- | :--- |
-| <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/UVC_camera_mount.png" height="100"> | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/D435i.jpg" height="100"> | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/D405.jpg" height="100"> | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Gemini2.jpg" height="100"> |
+| <img src="./Rebot_Arm_description/Camera/images/uvc32-mujoco.png" height="100" alt="32×32 UVC MuJoCo wrist camera assembly"> | <img src="./Rebot_Arm_description/Camera/images/d435i-mujoco.png" height="100" alt="RealSense D435i MuJoCo wrist camera assembly"> | <img src="./Rebot_Arm_description/Camera/images/d405-mujoco.png" height="100" alt="RealSense D405 MuJoCo wrist camera assembly"> | <img src="./Rebot_Arm_description/Camera/images/gemini2-mujoco.png" height="100" alt="Orbbec Gemini 2 MuJoCo wrist camera assembly"> |
 | [STEP](hardware/camera-mounts/b601-camera-mounts/UVC32_mount.step) | [STEP](hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step) | [STEP](hardware/camera-mounts/b601-camera-mounts/D405_305_Mount.step) · [設計説明](https://github.com/bowenszhu/rebot-b601-rs-d405-wrist-mount/tree/v1.0.0) | [STEP](hardware/camera-mounts/b601-camera-mounts/D435_Gemini2_Mount.step) |
+
+プレビューは B601-RS に取り付けた UVC32、D435i、D405、Gemini 2 を示します。マウントは B601-DM と共通です。[URDF と組み立て手順](Rebot_Arm_description/Camera/README.md)。UVC32 は公式のマウント CAD とカメラ基板の模式モデルを使用します。
 
 ### マスターアーム（Leader Arm）対応
 
