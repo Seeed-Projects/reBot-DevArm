@@ -1,14 +1,14 @@
-# B601-RS 腕部相机描述 / Wrist Camera Assemblies
+# B601-RS / B601-DM 通用腕部相机描述 / Shared Wrist Camera Assemblies
 
-本目录提供 RealSense D405、RealSense D435i 和 Orbbec Gemini 2 三套相机装配 URDF，包含相机本体、支架、安装位置、安装螺钉参考系及光学坐标系。资源与 `ReBot_Arm_DigitalTwin_RS` 中已验证的版本一致。
+本目录提供 B601-RS 与 B601-DM 通用的 RealSense D405、RealSense D435i 和 Orbbec Gemini 2 三套相机装配资源。两款机械臂共用相机本体、支架及网格，可复用同一套相机装配 URDF；接入各自机械臂时需对齐腕部安装参考系。资源包含安装位置、安装螺钉参考系及光学坐标系，与 `ReBot_Arm_DigitalTwin_RS` 中已验证的版本一致。
 
-This directory provides URDF assemblies for RealSense D405, RealSense D435i and Orbbec Gemini 2, including camera bodies, mounting brackets, mounting poses, screw reference frames and optical frames. The assets match the tested version in `ReBot_Arm_DigitalTwin_RS`.
+This directory provides RealSense D405, RealSense D435i and Orbbec Gemini 2 camera assemblies shared by B601-RS and B601-DM. Both arms share the camera bodies, brackets and meshes and can reuse the same camera assembly URDFs after aligning their wrist mounting reference frames. The assets include mounting poses, screw reference frames and optical frames and match the tested version in `ReBot_Arm_DigitalTwin_RS`.
 
 ## MuJoCo 装配预览 / MuJoCo Assembly Previews
 
-以下三张 MuJoCo 仿真截图展示各款相机及支架在 B601-RS 腕部的安装效果。
+以下三张 MuJoCo 仿真截图以 B601-RS 为展示平台，展示 RS、DM 共用的三款相机及支架装配。
 
-These three MuJoCo simulation screenshots show the cameras and their mounting brackets on the B601-RS wrist.
+These three MuJoCo simulation screenshots use B601-RS to illustrate the camera and bracket assemblies shared by RS and DM.
 
 ### RealSense D405
 
@@ -60,13 +60,13 @@ Camera/
 
 ## 使用方式 / Usage
 
-三个 URDF 都以空的 `gripper_end` link 为根，表示机械臂腕部的安装参考系。机械臂本体见 [`../RS/urdf/ReBot_Arm_RS.urdf`](../RS/urdf/ReBot_Arm_RS.urdf)。Web 加载器可以把相机根节点挂到机械臂现有的同名 link 下。
+三个 URDF 都以空的 `gripper_end` link 为根，保留相机装配的腕部安装参考系。机械臂本体分别见 [RS URDF](../RS/urdf/ReBot_Arm_RS.urdf) 和 [DM URDF](../DM/urdf/ReBot_Arm_DM.urdf)。RS 可挂到现有的 `gripper_end` link；本仓库 DM 描述的末端 link 名为 `end_link`，接入时需建立对应的固定安装变换，将相机根参考系对齐到实际安装位置。
 
-All three URDFs use an empty `gripper_end` link as the root and wrist mounting reference. The arm description is [`../RS/urdf/ReBot_Arm_RS.urdf`](../RS/urdf/ReBot_Arm_RS.urdf). A web loader can attach the camera root to the existing arm link of the same name.
+All three URDFs use an empty `gripper_end` link as the camera assembly root and wrist mounting reference. Arm descriptions are available in the [RS URDF](../RS/urdf/ReBot_Arm_RS.urdf) and [DM URDF](../DM/urdf/ReBot_Arm_DM.urdf). RS can attach the camera to its existing `gripper_end` link. The DM description in this repository uses `end_link`; integrate it with a fixed mounting transform that aligns the camera root reference frame with the physical mounting location.
 
-合并成完整机械臂 URDF 时，删除相机 URDF 中作为占位的空 `gripper_end` link，再合入其余 link、joint 和 material，避免重复定义。合并到其他目录时，需要同步调整网格路径。
+合并到 RS URDF 时，删除相机描述中作为占位的空 `gripper_end` link，再合入其余 link、joint 和 material，避免重复定义。合并到 DM URDF 时，可保留相机根参考 link，并用固定 joint 连接到 `end_link`，在该 joint 中设置安装参考系变换。合并到其他目录时，需要同步调整网格路径。
 
-To merge an assembly into a complete arm URDF, remove the empty placeholder `gripper_end` link from the camera description, then merge the remaining links, joints and materials without duplicate definitions. Update mesh paths if the merged file is stored in another directory.
+When merging into the RS URDF, remove the empty placeholder `gripper_end` link from the camera description, then merge the remaining links, joints and materials without duplicate definitions. For the DM URDF, retain the camera root reference link and connect it to `end_link` with a fixed joint specifying the mounting reference transform. Update mesh paths if the merged file is stored in another directory.
 
 网格路径相对于 `urdf/` 目录，复制时请保留整个 `Camera/` 目录。ROS / RViz 使用时，可将路径转换为所在 ROS package 的 `package://` URI，并安装所有资源。D435i 使用 D435 的 Collada（`.dae`）外壳，加载器需要支持该格式。
 
@@ -78,9 +78,9 @@ Loading the generated URDFs requires no vendor description packages, Xacro or ne
 
 ## 安装参数 / Mounting Parameters
 
-下表保留上游装配 Xacro 的值。XYZ 单位为米，RPY 单位为弧度。支架坐标相对于 `gripper_end`，相机坐标相对于支架 link；D405、D435i 的相机位置指底部安装螺钉参考系，Gemini 2 的相机位置指 `camera_link`。
+下表保留上游装配 Xacro 的值。XYZ 单位为米，RPY 单位为弧度。支架坐标相对于相机装配的 `gripper_end` 根参考系，相机坐标相对于支架 link；D405、D435i 的相机位置指底部安装螺钉参考系，Gemini 2 的相机位置指 `camera_link`。
 
-The values below are preserved from the upstream assembly Xacros. XYZ is in metres and RPY is in radians. Bracket poses are relative to `gripper_end`; camera poses are relative to the bracket link. D405 and D435i camera poses refer to their bottom mounting screw frames, while the Gemini 2 pose refers to `camera_link`.
+The values below are preserved from the upstream assembly Xacros. XYZ is in metres and RPY is in radians. Bracket poses are relative to the camera assembly’s `gripper_end` root reference frame; camera poses are relative to the bracket link. D405 and D435i camera poses refer to their bottom mounting screw frames, while the Gemini 2 pose refers to `camera_link`.
 
 | 型号 / Model | 支架 / Bracket XYZ | 支架 / Bracket RPY | 相机 / Camera XYZ | 相机 / Camera RPY |
 | --- | --- | --- | --- | --- |

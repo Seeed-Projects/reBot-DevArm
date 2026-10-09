@@ -51,7 +51,7 @@ Rebot_Arm_description/
         └── mujoco_collision/   # 6 个：仅用于 DM MuJoCo 夹指碰撞
 ```
 
-腕部相机资源、安装位置和 MuJoCo 装配截图见中英文说明 [`Camera/README.md`](Camera/README.md)。三套相机 URDF 以空的 `gripper_end` 为安装参考，可以挂到 RS 的同名 link。复用时请保留整个 `Camera/` 目录。
+腕部相机资源、安装位置和 MuJoCo 装配截图见中英文说明 [`Camera/README.md`](Camera/README.md)。D405、D435i、Gemini 2 的相机本体、支架、网格和装配 URDF 供 B601-RS 与 B601-DM 共用。相机装配以空的 `gripper_end` 为根参考系；RS 可挂到同名 link，DM 使用 `end_link`，需通过固定安装变换对齐参考系。复用时请保留整个 `Camera/` 目录。
 
 ## 分类含义
 

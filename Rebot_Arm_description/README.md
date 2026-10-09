@@ -51,7 +51,7 @@ Rebot_Arm_description/
         └── mujoco_collision/   # 6 meshes: DM MuJoCo finger collisions only
 ```
 
-Wrist camera resources, mounting poses and MuJoCo assembly screenshots are documented in the bilingual [`Camera/README.md`](Camera/README.md). Each camera URDF uses an empty `gripper_end` mounting reference that can attach to the RS arm link of the same name. Copy the complete `Camera/` directory when reusing an assembly.
+Wrist camera resources, mounting poses and MuJoCo assembly screenshots are documented in the bilingual [`Camera/README.md`](Camera/README.md). D405, D435i and Gemini 2 camera bodies, brackets, meshes and assembly URDFs are shared by B601-RS and B601-DM. Each assembly uses an empty `gripper_end` root reference frame; RS can attach it to the link of the same name, while DM uses `end_link` and requires a fixed mounting transform to align the reference frames. Copy the complete `Camera/` directory when reusing an assembly.
 
 ## Mesh categories
 
