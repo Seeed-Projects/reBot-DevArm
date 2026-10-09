@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+
+<!--
+# Copyright 2023 RealSense, Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+-->
+
+<!--
+This is the URDF model for the RealSense 430 camera, in its
+aluminum peripherial evaluation case.
+-->
+
+<robot name="sensor_d435" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Includes -->
+  <xacro:include filename="$(find realsense2_description)/urdf/_materials.urdf.xacro" />
+  <xacro:include filename="$(find realsense2_description)/urdf/_usb_plug.urdf.xacro" />
+
+  <xacro:macro name="sensor_d435" params="parent *origin name:=camera use_nominal_extrinsics:=false add_plug:=false use_mesh:=true">
+    <xacro:property name="M_PI" value="3.1415926535897931" />
+
+    <!-- The following values are approximate, and the camera node
+     publishing TF values with actual calibrated camera extrinsic values -->
+    <xacro:property name="d435_cam_depth_to_infra1_offset" value="0.0"/>
+    <xacro:property name="d435_cam_depth_to_infra2_offset" value="-0.050"/>
+    <xacro:property name="d435_cam_depth_to_color_offset" value="0.015"/>
+
+    <!-- The following values model the aluminum peripherial case for the
+  	D435 camera, with the camera joint represented by the actual
+  	peripherial camera tripod mount -->
+    <xacro:property name="d435_cam_width" value="0.090"/>
+    <xacro:property name="d435_cam_height" value="0.025"/>
+    <xacro:property name="d435_cam_depth" value="0.02505"/>
+    <xacro:property name="d435_cam_mount_from_center_offset" value="0.0149"/>
+    <!-- glass cover is 0.1 mm inwards from front aluminium plate -->
+    <xacro:property name="d435_glass_to_front" value="0.1e-3"/>
+    <!-- see datasheet Revision 007, Fig. 4-4 page 65 -->
+    <xacro:property name="d435_zero_depth_to_glass" value="4.2e-3"/>
+    <!-- convenience precomputation to avoid clutter-->
+    <xacro:property name="d435_mesh_x_offset" value="${d435_cam_mount_from_center_offset-d435_glass_to_front-d435_zero_depth_to_glass}"/>
+
+    <!-- The following offset is relative the the physical D435 camera peripherial
+  	camera tripod mount -->
+    <xacro:property name="d435_cam_depth_px" value="${d435_cam_mount_from_center_offset}"/>
+    <xacro:property name="d435_cam_depth_py" value="0.0175"/>
+    <xacro:property name="d435_cam_depth_pz" value="${d435_cam_height/2}"/>
+
+    <!-- camera body, with origin at bottom screw mount -->
+    <joint name="${name}_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent}"/>
+      <child link="${name}_bottom_screw_frame" />
+    </joint>
+    <link name="${name}_bottom_screw_frame"/>
+
+    <joint name="${name}_link_joint" type="fixed">
+      <origin xyz="${d435_mesh_x_offset} ${d435_cam_depth_py} ${d435_cam_depth_pz}" rpy="0 0 0"/>
+      <parent link="${name}_bottom_screw_frame"/>
+      <child link="${name}_link" />
+    </joint>
+
+    <link name="${name}_link">
+      <visual>
+        <xacro:if value="${use_mesh}">
+          <!-- the mesh origin is at front plate in between the two infrared camera axes -->
+          <origin xyz="${d435_zero_depth_to_glass + d435_glass_to_front} ${-d435_cam_depth_py} 0" rpy="${M_PI/2} 0 ${M_PI/2}"/>
+          <geometry>
+            <mesh filename="package://realsense2_description/meshes/d435.dae" />
+          </geometry>
+        </xacro:if>
+        <xacro:unless value="${use_mesh}">
+          <origin xyz="0 ${-d435_cam_depth_py} 0" rpy="0 0 0"/>
+          <geometry>
+            <box size="${d435_cam_depth} ${d435_cam_width} ${d435_cam_height}"/>
+          </geometry>
+          <material name="aluminum"/>
+        </xacro:unless>     
+      </visual>
+      <collision>
+        <origin xyz="0 ${-d435_cam_depth_py} 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${d435_cam_depth} ${d435_cam_width} ${d435_cam_height}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <!-- The following are not reliable values, and should not be used for modeling -->
+        <mass value="0.072" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257" />
+      </inertial>
+    </link>
+
+    <!-- Use the nominal extrinsics between camera frames if the calibrated extrinsics aren't being published. e.g. running the device in simulation  -->
+    <xacro:if value="${use_nominal_extrinsics}">
+      <!-- camera depth joints and links -->
+      <joint name="${name}_depth_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="${name}_link"/>
+        <child link="${name}_depth_frame" />
+      </joint>
+      <link name="${name}_depth_frame"/>
+
+      <joint name="${name}_depth_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+        <parent link="${name}_depth_frame" />
+        <child link="${name}_depth_optical_frame" />
+      </joint>
+      <link name="${name}_depth_optical_frame"/>
+
+      <!-- camera left IR joints and links -->
+      <joint name="${name}_infra1_joint" type="fixed">
+        <origin xyz="0 ${d435_cam_depth_to_infra1_offset} 0" rpy="0 0 0" />
+        <parent link="${name}_link" />
+        <child link="${name}_infra1_frame" />
+      </joint>
+      <link name="${name}_infra1_frame"/>
+
+      <joint name="${name}_infra1_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+        <parent link="${name}_infra1_frame" />
+        <child link="${name}_infra1_optical_frame" />
+      </joint>
+      <link name="${name}_infra1_optical_frame"/>
+
+      <!-- camera right IR joints and links -->
+      <joint name="${name}_infra2_joint" type="fixed">
+        <origin xyz="0 ${d435_cam_depth_to_infra2_offset} 0" rpy="0 0 0" />
+        <parent link="${name}_link" />
+        <child link="${name}_infra2_frame" />
+      </joint>
+      <link name="${name}_infra2_frame"/>
+
+      <joint name="${name}_infra2_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+        <parent link="${name}_infra2_frame" />
+        <child link="${name}_infra2_optical_frame" />
+      </joint>
+      <link name="${name}_infra2_optical_frame"/>
+
+      <!-- camera color joints and links -->
+      <joint name="${name}_color_joint" type="fixed">
+        <origin xyz="0 ${d435_cam_depth_to_color_offset} 0" rpy="0 0 0" />
+        <parent link="${name}_link" />
+        <child link="${name}_color_frame" />
+      </joint>
+      <link name="${name}_color_frame"/>
+
+      <joint name="${name}_color_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+        <parent link="${name}_color_frame" />
+        <child link="${name}_color_optical_frame" />
+      </joint>
+      <link name="${name}_color_optical_frame"/>
+    </xacro:if>
+
+    <xacro:if value="${add_plug}">
+      <xacro:usb_plug parent="${name}_link" name="${name}_usb_plug">
+        <origin xyz="${d435_cam_mount_from_center_offset - 0.02095} ${-d435_cam_depth_py - 0.0353} 0" rpy="0 0 0"/>
+      </xacro:usb_plug>
+    </xacro:if>
+  </xacro:macro>
+</robot>

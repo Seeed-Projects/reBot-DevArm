@@ -7,7 +7,7 @@
   </strong>
 </p>
 
-`Rebot_Arm_description/` collects the URDF and STL resources currently used by the B601-RS and B601-DM for reuse in Web applications, RViz, ROS 2, MuJoCo, and other robotics projects.
+`Rebot_Arm_description/` collects the URDF and STL resources currently used by the B601-RS and B601-DM, together with D405, D435i and Gemini 2 wrist camera assemblies, for reuse in Web applications, RViz, ROS 2, MuJoCo, and other robotics projects.
 
 This directory uses relative paths and includes the meshes required for model rendering, URDF collision geometry, and detailed MuJoCo gripper collisions. When copying it, keep each complete model directory intact instead of flattening all STL files into a single directory.
 
@@ -21,6 +21,15 @@ Rebot_Arm_description/
 ├── README_zh.md
 ├── tools/
 │   └── rviz_urdf_compat.py  # ROS 2 Jazzy RViz multi-material compatibility helper
+├── Camera/
+│   ├── README.md             # 简体中文 / English
+│   ├── images/               # MuJoCo screenshots
+│   ├── urdf/                 # D405 / D435i / Gemini 2 camera assembly URDFs
+│   ├── meshes/               # bracket and camera STL / Collada meshes
+│   ├── source/               # upstream assembly and vendor Xacros
+│   ├── source.json           # source revisions and file hashes
+│   ├── licenses/
+│   └── scripts/              # offline URDF regeneration
 ├── RS/
 │   ├── README.md
 │   ├── README_zh.md
@@ -41,6 +50,8 @@ Rebot_Arm_description/
         ├── shared/             # 4 meshes: shared by DM rendering and MuJoCo collision
         └── mujoco_collision/   # 6 meshes: DM MuJoCo finger collisions only
 ```
+
+Wrist camera resources, mounting poses and MuJoCo assembly screenshots are documented in the bilingual [`Camera/README.md`](Camera/README.md). D405, D435i and Gemini 2 camera bodies, brackets, meshes and assembly URDFs are shared by B601-RS and B601-DM. Each assembly uses an empty `gripper_end` root reference frame; RS can attach it to the link of the same name, while DM uses `end_link` and requires a fixed mounting transform to align the reference frames. Copy the complete `Camera/` directory when reusing an assembly.
 
 ## Mesh categories
 

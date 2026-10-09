@@ -1,0 +1,186 @@
+{
+  "retrieved": "2026-10-08",
+  "sources": {
+    "rebot_visual_grasp": {
+      "url": "https://github.com/xiehuangbao888/rebot_visual_grasp",
+      "commit": "dd28d65598deec767cf95fa45521d69b38155833"
+    },
+    "realsense2_description": {
+      "url": "https://github.com/realsenseai/realsense-ros",
+      "commit": "9215f26e8348ad5922a608b77882a9bfe05940f0"
+    },
+    "orbbec_description": {
+      "url": "https://github.com/orbbec/OrbbecSDK_ROS2",
+      "commit": "c153462518ad674650bafa4464fda72c27ab797a"
+    }
+  },
+  "assets": [
+    {
+      "file": "source/orbbec_description/urdf/gemini_2.urdf.xacro",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/urdf/gemini_2.urdf.xacro",
+      "bytes": 11860,
+      "sha256": "baad2ad5b0c8fa2aa6dc36cc251e87f75d61c6a4f2682a2e8392a16f8801c179"
+    },
+    {
+      "file": "source/realsense2_description/urdf/_d405.urdf.xacro",
+      "package": "realsense2_description",
+      "upstream_path": "realsense2_description/urdf/_d405.urdf.xacro",
+      "bytes": 7282,
+      "sha256": "81118e87388c06e4cf1b3dc8b114096de21c1b235bd283dafad84d2bd97aebb1"
+    },
+    {
+      "file": "source/realsense2_description/urdf/_d435.urdf.xacro",
+      "package": "realsense2_description",
+      "upstream_path": "realsense2_description/urdf/_d435.urdf.xacro",
+      "bytes": 7527,
+      "sha256": "ae3f57e8d38b3a6d5cc9de059e4afe545e4b895717d638b75d2ad0642cfb7f1b"
+    },
+    {
+      "file": "source/realsense2_description/urdf/_d435i.urdf.xacro",
+      "package": "realsense2_description",
+      "upstream_path": "realsense2_description/urdf/_d435i.urdf.xacro",
+      "bytes": 1472,
+      "sha256": "eda8f0dcf1ca6fb88179cfc8415942dc98b71de9ba50bbeb5cb60d9f09b86602"
+    },
+    {
+      "file": "source/realsense2_description/urdf/_d435i_imu_modules.urdf.xacro",
+      "package": "realsense2_description",
+      "upstream_path": "realsense2_description/urdf/_d435i_imu_modules.urdf.xacro",
+      "bytes": 2118,
+      "sha256": "adde35b74c532d160a9346be2802d832a3d54967a54f81d994a70be1a71a6bda"
+    },
+    {
+      "file": "source/realsense2_description/urdf/_materials.urdf.xacro",
+      "package": "realsense2_description",
+      "upstream_path": "realsense2_description/urdf/_materials.urdf.xacro",
+      "bytes": 1213,
+      "sha256": "cd8a4b4ab488b57855318e68226329a80310ee45e3aa489dd75222f2c607d005"
+    },
+    {
+      "file": "source/realsense2_description/urdf/_usb_plug.urdf.xacro",
+      "package": "realsense2_description",
+      "upstream_path": "realsense2_description/urdf/_usb_plug.urdf.xacro",
+      "bytes": 1798,
+      "sha256": "22531ecdc0b09aa3ab4408641432617b000618933e98dc2f488ac31b88c8ad79"
+    },
+    {
+      "file": "source/rebot_visual_grasp/description/urdf/rebotarm_rs_with_d405.urdf.xacro",
+      "package": "rebot_visual_grasp",
+      "upstream_path": "description/urdf/rebotarm_rs_with_d405.urdf.xacro",
+      "bytes": 1946,
+      "sha256": "1962e3330a77dfb09c2bd359c70c740b10652d6e7f1448e0b5e278de936278db"
+    },
+    {
+      "file": "source/rebot_visual_grasp/description/urdf/rebotarm_rs_with_d435i.urdf.xacro",
+      "package": "rebot_visual_grasp",
+      "upstream_path": "description/urdf/rebotarm_rs_with_d435i.urdf.xacro",
+      "bytes": 1983,
+      "sha256": "7a66b1bb053c8184991e2fd45d8b1885176bd34430d1b4453ce590736c7a5191"
+    },
+    {
+      "file": "source/rebot_visual_grasp/description/urdf/rebotarm_rs_with_gemini2.urdf.xacro",
+      "package": "rebot_visual_grasp",
+      "upstream_path": "description/urdf/rebotarm_rs_with_gemini2.urdf.xacro",
+      "bytes": 1875,
+      "sha256": "12f19eace2df050c1401f01d988038c27d47f039aeda86cf8410567963104529"
+    },
+    {
+      "file": "meshes/gemini2/base_link.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/base_link.STL",
+      "bytes": 2493384,
+      "sha256": "574379850b84e67e7e2b5def236e35270e4f5d3f1bcf029589969fd9ba468fdd"
+    },
+    {
+      "file": "meshes/gemini2/camera_botter_screw_frame.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/camera_botter_screw_frame.STL",
+      "bytes": 1126384,
+      "sha256": "6231bcb2df96553131a896d6f21fe4d1ba90e6df7e31ed2605cb70d5d0a76100"
+    },
+    {
+      "file": "meshes/gemini2/camera_color_frame.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/camera_color_frame.STL",
+      "bytes": 383784,
+      "sha256": "32b60b7c2c6c64e624f8510b0c48763ac858c6610211e66b53dd20d3a6ba6f83"
+    },
+    {
+      "file": "meshes/gemini2/camera_color_optical_frame.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/camera_color_optical_frame.STL",
+      "bytes": 383784,
+      "sha256": "32b60b7c2c6c64e624f8510b0c48763ac858c6610211e66b53dd20d3a6ba6f83"
+    },
+    {
+      "file": "meshes/gemini2/camera_depth_frame.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/camera_depth_frame.STL",
+      "bytes": 357884,
+      "sha256": "26319407e13d7ef04d26238dcb0f679c8c7b8507e5a11fdc20b25b31dc15e0df"
+    },
+    {
+      "file": "meshes/gemini2/camera_infra1_frame.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/camera_infra1_frame.STL",
+      "bytes": 357884,
+      "sha256": "750bcf7eaeb14ef43121c5c4fc87640daf5cb1150c81de2e052a5f9f4878f55e"
+    },
+    {
+      "file": "meshes/gemini2/camera_infra1_optical_frame.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/camera_infra1_optical_frame.STL",
+      "bytes": 357884,
+      "sha256": "342c0b4881c8b2886c37260ddb730f75c5259f311ef1fc60ec9b1728948ecd03"
+    },
+    {
+      "file": "meshes/gemini2/camera_infra2_frame.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/camera_infra2_frame.STL",
+      "bytes": 357884,
+      "sha256": "26319407e13d7ef04d26238dcb0f679c8c7b8507e5a11fdc20b25b31dc15e0df"
+    },
+    {
+      "file": "meshes/gemini2/camera_infra2_optical_frame.STL",
+      "package": "orbbec_description",
+      "upstream_path": "orbbec_description/meshes/gemini2/camera_infra2_optical_frame.STL",
+      "bytes": 357884,
+      "sha256": "342c0b4881c8b2886c37260ddb730f75c5259f311ef1fc60ec9b1728948ecd03"
+    },
+    {
+      "file": "meshes/mounts/D405_305_Mount.stl",
+      "package": "rebot_visual_grasp",
+      "upstream_path": "description/meshes/D405_305_Mount.stl",
+      "bytes": 219334,
+      "sha256": "8f3b8ebbb55b1376c4d3341562ffde0bfc3ccf9dabdce2e233d8b5bd999ee276"
+    },
+    {
+      "file": "meshes/mounts/D435_Gemini2_Mount.stl",
+      "package": "rebot_visual_grasp",
+      "upstream_path": "description/meshes/D435_Gemini2_Mount.stl",
+      "bytes": 265234,
+      "sha256": "ca73b5beb2879167285cda2284cb0e878737a69cde1298e54a5b6ee6c952b14e"
+    },
+    {
+      "file": "meshes/realsense/d405.stl",
+      "package": "realsense2_description",
+      "upstream_path": "realsense2_description/meshes/d405.stl",
+      "bytes": 194684,
+      "sha256": "a248f41149d12b28311829feecbe7a80cf1481fd05e0f5df2c4c7ecd556edd48"
+    },
+    {
+      "file": "meshes/realsense/d435.dae",
+      "package": "realsense2_description",
+      "upstream_path": "realsense2_description/meshes/d435.dae",
+      "bytes": 15782439,
+      "sha256": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78"
+    }
+  ],
+  "imported_from": {
+    "repository": "https://github.com/Yang-Ci/ReBot_Arm_DigitalTwin_RS",
+    "commit": "8e153cb248e30ae2f82275f26ec3f94768852784",
+    "path": "reBotArm_simulator-RS/public/models/wrist-cameras",
+    "date": "2026-10-09"
+  }
+}
