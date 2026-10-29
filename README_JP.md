@@ -64,22 +64,35 @@
 
 [Seeedstudio.com](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html) にて 5 種類のキットをご用意しています：
 
-- **アーム本体モーターキット** —— ロボットアーム用のモーターとワイヤーハーネスのみ
-- **アーム本体構造キット** —— 機械構造部品のみ
-- **グリッパー完全キット** —— グリッパー用のモーター、ワイヤーハーネス、構造部品
-- **フルキット** —— ロボットアーム本体とグリッパーの完全セット
-- **組立済みロボットアーム** —— 完全に組み立てられた完成品
+- **[アーム本体モーターキット](https://www.seeedstudio.com/reBot-Arm-B601-DM-Body-Motor-Kit-p-6752.html)** —— ロボットアーム用のモーターとワイヤーハーネスのみ
+- **[アーム本体構造キット](https://www.seeedstudio.com/reBot-Arm-B601-DM-Body-Structure-Kit-p-6753.html)** —— 機械構造部品のみ
+- **[グリッパー完全キット](https://www.seeedstudio.com/reBot-Arm-B601-DM-Gripper-Kit-p-6751.html)** —— グリッパー用のモーター、ワイヤーハーネス、構造部品
+- **[フルキット](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)** —— ロボットアーム本体とグリッパーの完全セット
+- **[組立済みロボットアーム](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)** —— 完全に組み立てられた完成品
 
-> 💡 SeeedStudio キットには標準付属品として電源アダプターと C 型クランプは含まれません（バッテリー給電や DIY ベースへの取り付けを考慮）。別途 [電源](https://www.seeedstudio.com/AC-DC-Power-Adapter-IEC-60320-C14-XT30-Female-24V-4-5A-1200mm-L190-W92-5-H36mm-p-6764.html) と [電源コード](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) を購入するか、[BOM](./hardware/reBot_B601_DM/readme.md#about-power-supply) 末尾の Mean Well 電源ソリューションをご参照ください。
+> 💡 SeeedStudio キットには標準付属品として電源アダプターと C 型クランプは含まれません（バッテリー給電や DIY ベースへの取り付けを考慮）。公式の [B601-DM 電源アダプターキット](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html) を購入するか、別途 [電源](https://www.seeedstudio.com/AC-DC-Power-Adapter-IEC-60320-C14-XT30-Female-24V-4-5A-1200mm-L190-W92-5-H36mm-p-6764.html) と [電源コード](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) を購入するか、[BOM](./hardware/reBot_B601_DM/readme.md#about-power-supply) 末尾の Mean Well 電源ソリューションをご参照ください。
 
 ### B601-RS キットオプション
 
-[Seeedstudio.com](https://www.seeedstudio.com/reBot-Arm-B601-RS-Assembled-Kit-with-Gripper-p-6865.html) にて 2 種類のキットをご用意しています：
+[Seeedstudio.com](https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html) にて 5 種類のキットをご用意しています：
 
-- **フルキット** —— ロボットアーム本体とグリッパーの未組立完全セット
-- **組立済みロボットアーム** —— 完全に組み立てられた完成品
+- **[アーム本体モーターキット](https://www.seeedstudio.com/reBot-Arm-B601-RS-Body-Motor-Kit-p-6867.html)** —— ロボットアーム用のモーターとワイヤーハーネスのみ
+- **[アーム本体構造キット](https://www.seeedstudio.com/reBot-Arm-B601-RS-Body-Structure-Kit-p-6866.html)** —— 機械構造部品のみ
+- **[グリッパー完全キット](https://www.seeedstudio.com/reBot-Arm-B601-RS-Gripper-Kit-p-6868.html)** —— グリッパー用のモーター、ワイヤーハーネス、構造部品
+- **[フルキット](https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html)** —— ロボットアーム本体とグリッパーの未組立完全セット
+- **[組立済みロボットアーム](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html)** —— 完全に組み立てられた完成品
 
-> 💡 RS モデルには [Mean Well 48V 12.5A](https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NzgzODk2NzUxNTQ0NzEyOjE3ODE2MTA2NTU6c3BfYXRmOjIwMDExNjA5NjQwMTc5ODo6MDo6&url=%2FLRS-350-48-Price-Switching-Supply-MeanWell%2Fdp%2FB0BP6S5DYR%2Fref%3Dsr_1_1_sspa%3Fcrid%3D27VPQOWNPN9UG%26dib%3DeyJ2IjoiMSJ9.qK84sGJa4-74kbCEX11MOFBju8sSQUdFsbHw6PNvmaEHnhzjX2T7dyhRNJY01mXxpWk8lccGOwnezxmqLKUjqglX_FI26mrxlvZf0KNiLdJ8QnhKsber4KDoyyLHNxWGV451uHCzZbCDXxM0iYXVnubuVourRaRURlyMorRavuLd2a32kABx-BKqyF5Dfr7dV453ecE6QULFqG-UVLBaBRijbxQGTJ2YiNyXAqn3bkM.Bt5mAPOJNAWGnXCC2mwvjdDdccZd1_0-WRXZpP4mR4M%26dib_tag%3Dse%26keywords%3DLRS-350-48%26qid%3D1781610655%26sprefix%3Dlrs-350-%252Caps%252C331%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1) 電源の使用を強く推奨します。より強い出力で性能を最大限に引き出す場合は、48V 25A 電源アダプターを選択できます。
+> 💡 RS モデルには [Mean Well 48V 12.5A](https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo0NzgzODk2NzUxNTQ0NzEyOjE3ODE2MTA2NTU6c3BfYXRmOjIwMDExNjA5NjQwMTc5ODo6MDo6&url=%2FLRS-350-48-Price-Switching-Supply-MeanWell%2Fdp%2FB0BP6S5DYR%2Fref%3Dsr_1_1_sspa%3Fcrid%3D27VPQOWNPN9UG%26dib%3DeyJ2IjoiMSJ9.qK84sGJa4-74kbCEX11MOFBju8sSQUdFsbHw6PNvmaEHnhzjX2T7dyhRNJY01mXxpWk8lccGOwnezxmqLKUjqglX_FI26mrxlvZf0KNiLdJ8QnhKsber4KDoyyLHNxWGV451uHCzZbCDXxM0iYXVnubuVourRaRURlyMorRavuLd2a32kABx-BKqyF5Dfr7dV453ecE6QULFqG-UVLBaBRijbxQGTJ2YiNyXAqn3bkM.Bt5mAPOJNAWGnXCC2mwvjdDdccZd1_0-WRXZpP4mR4M%26dib_tag%3Dse%26keywords%3DLRS-350-48%26qid%3D1781610655%26sprefix%3Dlrs-350-%252Caps%252C331%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1) 電源の使用を強く推奨します。より強い出力で性能を最大限に引き出す場合は、48V 25A 電源アダプターを選択できます。プラグアンドプレイで利用したい場合は、公式の [B601-RS 電源アダプターキット](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html) もご利用いただけます。
+
+### オプションアクセサリー
+
+以下のアクセサリーは [SeeedStudio.com](https://www.seeedstudio.com) で購入できます：
+
+- **[電源アダプターキット（B601-DM）](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html)** —— DM モデル用の公式電源アダプター
+- **[電源アダプターキット（B601-RS）](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html)** —— RS モデル用の公式電源アダプター
+- **[放電保護モジュール（B601-DM）](https://www.seeedstudio.com/Rebotic-Power-Discharge-Module-for-reBot-Arm-B601-DM-p-6988.html)** —— DM モデル用の回路保護・非常停止スイッチ
+- **[ブリーダーモジュール（B601-RS）](https://www.seeedstudio.com/Rebotic-Bleeder-Module-for-reBot-Arm-B601-RS-p-6987.html)** —— RS モデル用の回路保護・非常停止スイッチ
+- **[ソフトグリッパー](https://www.seeedstudio.com/reBot-Soft-Gripper-p-6989.html)** —— 両モデルに対応する柔軟グリッパー
 
 ### マスターアーム（Leader Arm、オプション）
 
@@ -171,7 +184,7 @@
 | <a href="https://x.com/raghav2956/status/2104659668375339475"><img src="/community/Raghav_Kumar.png" height="80" alt="Raghav Kumar"></a><br><sub>[Raghav Kumar より](https://x.com/raghav2956/status/2104659668375339475)</sub> | <a href="https://www.linkedin.com/posts/kamil-buczy%C5%84ski-102843301_seeedstudio-ai-agent-ugcPost-7510738285707776000-1SMQ/?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo"><img src="/community/Kamil_Buczynski.png" height="80" alt="Kamil Buczyński"></a><br><sub>[Kamil Buczyński より](https://www.linkedin.com/posts/kamil-buczy%C5%84ski-102843301_seeedstudio-ai-agent-ugcPost-7510738285707776000-1SMQ/?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)</sub> | <a href="https://www.linkedin.com/feed/update/urn:li:activity:7510701008885309440/"><img src="/community/Fictionlab.png" height="80" alt="Fictionlab"></a><br><sub>[Fictionlab より](https://www.linkedin.com/feed/update/urn:li:activity:7510701008885309440/)</sub> | <a href="https://x.com/seeedstudio/status/2101965998954107303"><img src="/community/box2bridge.png" height="80" alt="box2bridge"></a><br><sub>[box2bridge より](https://x.com/seeedstudio/status/2101965998954107303)</sub> | <a href="https://x.com/seeedstudio/status/2095469352976003482"><img src="/community/Fangtian.png" height="80" alt="FangTianChongHui"></a><br><sub>[FangTianChongHui より](https://x.com/seeedstudio/status/2095469352976003482)</sub> |
 | <a href="https://www.youtube.com/watch?v=hZRDGHnXDnk"><img src="/community/Kamil_Buczynski_2.png" height="80" alt="Kamil Buczynski"></a><br><sub>[Kamil Buczynski より](https://www.youtube.com/watch?v=hZRDGHnXDnk)</sub> | <a href="https://gxchris95.github.io/BetaGo/"><img src="/community/BetaGo.jpg" height="80" alt="BetaGo"></a><br><sub>[BetaGo より](https://gxchris95.github.io/BetaGo/)</sub> | <a href="https://x.com/dimentary/status/2104094838035820607"><img src="/community/Dmytro_Hrybov.png" height="80" alt="Dmytro Hrybov"></a><br><sub>[Dmytro Hrybov より](https://x.com/dimentary/status/2104094838035820607)</sub> | <a href="https://x.com/aamarsbarr/status/2106242900426449204"><img src="/community/Ammar.png" height="80" alt="Ammar"></a><br><sub>[Ammar より](https://x.com/aamarsbarr/status/2106242900426449204)</sub> | <a href="https://x.com/KlausPetersen_X/status/2110514809318023386"><img src="/community/Klaus_Petersen.png" height="80" alt="Klaus Petersen"></a><br><sub>[Klaus Petersen より](https://x.com/KlausPetersen_X/status/2110514809318023386)</sub> |
 | <a href="https://dreamlabs.ai/playground/#sim"><img src="/community/dreamlabs.png" height="80" alt="dreamlabs"></a><br><sub>[dreamlabs より](https://dreamlabs.ai/playground/#sim)</sub> | <a href="https://www.bilibili.com/video/BV1MNnw6gEEe/"><img src="/community/追风少年Patrick.png" height="80" alt="追风少年Patrick"></a><br><sub>[追风少年Patrick より](https://www.bilibili.com/video/BV1MNnw6gEEe/)</sub> | <a href="https://www.bilibili.com/video/BV1zPnq6oEhm/"><img src="/community/虾烤实验室.png" height="80" alt="虾烤实验室"></a><br><sub>[虾烤实验室 より](https://www.bilibili.com/video/BV1zPnq6oEhm/)</sub> | <a href="https://www.bilibili.com/video/BV1YRnH6qE8B/"><img src="/community/Goat_wzz.png" height="80" alt="Goat_wzz"></a><br><sub>[Goat_wzz より](https://www.bilibili.com/video/BV1YRnH6qE8B/)</sub> | <a href="https://www.bilibili.com/video/BV1Tipb6DEn5/"><img src="/community/W_Love_D.png" height="80" alt="W_Love_D"></a><br><sub>[W_Love_D より](https://www.bilibili.com/video/BV1Tipb6DEn5/)</sub> |
-| <a href="https://www.bilibili.com/video/BV1EvJR6iEuZ/"><img src="/community/W_Love_D_1.png" height="80" alt="W_Love_D"></a><br><sub>[W_Love_D より](https://www.bilibili.com/video/BV1EvJR6iEuZ/)</sub> | <a href="https://x.com/yoshikai_man/status/2112946345548111958"><img src="/community/Yoshikai.png" height="80" alt="yoshikai_man"></a><br><sub>[yoshikai_man より](https://x.com/yoshikai_man/status/2112946345548111958)</sub> | <a href="https://x.com/Mikeintech/status/2112604823170281688"><img src="/community/Mike_In_Tech.png" height="80" alt="Mike In Tech"></a><br><sub>[Mike In Tech より](https://x.com/Mikeintech/status/2112604823170281688)</sub> |
+| <a href="https://www.bilibili.com/video/BV1EvJR6iEuZ/"><img src="/community/W_Love_D_1.png" height="80" alt="W_Love_D"></a><br><sub>[W_Love_D より](https://www.bilibili.com/video/BV1EvJR6iEuZ/)</sub> | <a href="https://x.com/yoshikai_man/status/2112946345548111958"><img src="/community/Yoshikai.png" height="80" alt="yoshikai_man"></a><br><sub>[yoshikai_man より](https://x.com/yoshikai_man/status/2112946345548111958)</sub> | <a href="https://x.com/Mikeintech/status/2112604823170281688"><img src="/community/Mike_In_Tech.png" height="80" alt="Mike In Tech"></a><br><sub>[Mike In Tech より](https://x.com/Mikeintech/status/2112604823170281688)</sub> | <a href="https://x.com/stisov16/status/2114267861518868538"><img src="/community/Amogh_Shrivastava.png" height="80" alt="Amogh Shrivastava"></a><br><sub>[Amogh Shrivastava より](https://x.com/stisov16/status/2114267861518868538)</sub> | <a href="https://x.com/akanekikuchi4/status/2078486766944928011"><img src="/community/菊地あかね.jpg" height="80" alt="菊地あかね"></a><br><sub>[菊地あかね より](https://x.com/akanekikuchi4/status/2078486766944928011)</sub> |
 
 <p align="center">
   <a href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac"><img src="/community/sim-to-real-vla.gif" height="90" alt="Sim-to-Real VLA コース"></a><br>

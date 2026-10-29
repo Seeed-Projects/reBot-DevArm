@@ -64,22 +64,35 @@
 
 DM 版本提供五种套件方案：
 
-- **机械臂本体电机套件** —— 仅含机械臂所需的电机与线束
-- **机械臂本体结构件套件** —— 仅含机械结构零部件
-- **夹持器完整套件** —— 含夹持器的电机、线束及结构件
-- **整机完整套件** —— 含机械臂本体与夹持器全套组件
-- **成品组装机械臂** —— 已完成组装的成品机械臂
+- **[机械臂本体电机套件](https://www.seeedstudio.com/reBot-Arm-B601-DM-Body-Motor-Kit-p-6752.html)** —— 仅含机械臂所需的电机与线束
+- **[机械臂本体结构件套件](https://www.seeedstudio.com/reBot-Arm-B601-DM-Body-Structure-Kit-p-6753.html)** —— 仅含机械结构零部件
+- **[夹持器完整套件](https://www.seeedstudio.com/reBot-Arm-B601-DM-Gripper-Kit-p-6751.html)** —— 含夹持器的电机、线束及结构件
+- **[整机完整套件](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)** —— 含机械臂本体与夹持器全套组件
+- **[成品组装机械臂](https://www.seeedstudio.com/reBot-Arm-B601-DM-Assembled-Kit-with-Power-Supply-Bundle.html)** —— 已完成组装的成品机械臂
 
-> 💡 SeeedStudio 套件默认不含电源适配器与 C 型木工夹，这是考虑到大家可能会用电池供电或 DIY 底座固定。可单独购买电源，或参考 [BOM 底部的明纬电源方案](./hardware/reBot_B601_DM/readme_zh.md#关于电源)。
+> 💡 SeeedStudio 套件默认不含电源适配器与 C 型木工夹，这是考虑到大家可能会用电池供电或 DIY 底座固定。可选购[官方 B601-DM 电源适配器套件](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html)、单独购买电源，或参考 [BOM 底部的明纬电源方案](./hardware/reBot_B601_DM/readme_zh.md#关于电源)。
 
 ### B601-RS 套件方案
 
-RS 版本提供两种套件方案：
+RS 版本提供五种套件方案：
 
-- **完整套件** —— 含机械臂主体与夹爪全套散件
-- **预装版机械臂** —— 整机已组装完成
+- **[机械臂本体电机套件](https://www.seeedstudio.com/reBot-Arm-B601-RS-Body-Motor-Kit-p-6867.html)** —— 仅含机械臂所需的电机与线束
+- **[机械臂本体结构件套件](https://www.seeedstudio.com/reBot-Arm-B601-RS-Body-Structure-Kit-p-6866.html)** —— 仅含机械结构零部件
+- **[夹持器完整套件](https://www.seeedstudio.com/reBot-Arm-B601-RS-Gripper-Kit-p-6868.html)** —— 含夹持器的电机、线束及结构件
+- **[完整套件](https://www.seeedstudio.com/reBot-Arm-B601-RS-Disassembly-Kit-Version-with-Power-Supply-Bundle.html)** —— 含机械臂主体与夹爪全套散件
+- **[预装版机械臂](https://www.seeedstudio.com/reBot-Arm-B601-RS-Bundle-p-6898.html)** —— 整机已组装完成
 
-> 💡 强烈建议 RS 版本搭配 [明纬 48V 12.5A 电源](https://item.jd.com/10161209537223.html?pcdk=008mN9TrQ6PYFhXUTEM-B4KF5Q7Yc1ZcUlPyV2_Sl5Kf19Tr48gwCSd8OBwTR8sC.rQ4a.tlbT&spmTag=YTAyNDAuYjAwMjQ5My5jMDAwMDQwMjcuMSUyM3NrdV9jYXJkJTQwMTc4MTYxMTAyODQwNiUyMzE3NTAwNjczMzc4MzgxNzg2NTc2MTE1JTIzMjAzMTA0NjkzMw#switch-sku) 使用；若想输出更强动力、发挥全部性能，可选用 48V 25A 电源适配器。
+> 💡 强烈建议 RS 版本搭配 [明纬 48V 12.5A 电源](https://item.jd.com/10161209537223.html?pcdk=008mN9TrQ6PYFhXUTEM-B4KF5Q7Yc1ZcUlPyV2_Sl5Kf19Tr48gwCSd8OBwTR8sC.rQ4a.tlbT&spmTag=YTAyNDAuYjAwMjQ5My5jMDAwMDQwMjcuMSUyM3NrdV9jYXJkJTQwMTc4MTYxMTAyODQwNiUyMzE3NTAwNjczMzc4MzgxNzg2NTc2MTE1JTIzMjAzMTA0NjkzMw#switch-sku) 使用；若想输出更强动力、发挥全部性能，可选用 48V 25A 电源适配器，也可直接选购[官方 B601-RS 电源适配器套件](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html)。
+
+### 可选配件
+
+以下配件均可在 [SeeedStudio.com](https://www.seeedstudio.com) 购买：
+
+- **[电源适配器套件（B601-DM）](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-DM-p-6874.html)** —— DM 版官方电源适配器
+- **[电源适配器套件（B601-RS）](https://www.seeedstudio.com/Power-Adapter-Kit-for-reBot-Arm-B601-RS-p-6873.html)** —— RS 版官方电源适配器
+- **[放电保护模块（B601-DM）](https://www.seeedstudio.com/Rebotic-Power-Discharge-Module-for-reBot-Arm-B601-DM-p-6988.html)** —— DM 版电路保护与急停开关
+- **[泄放保护模块（B601-RS）](https://www.seeedstudio.com/Rebotic-Bleeder-Module-for-reBot-Arm-B601-RS-p-6987.html)** —— RS 版电路保护与急停开关
+- **[柔性夹爪](https://www.seeedstudio.com/reBot-Soft-Gripper-p-6989.html)** —— 两款机型通用的柔性夹爪
 
 ### 主臂（Leader Arm，可选）
 
@@ -166,7 +179,7 @@ reBot-DevArm 专为桌面级具身智能应用设计，兼顾负载能力与灵�
 | <a href="https://x.com/raghav2956/status/2104659668375339475"><img src="/community/Raghav_Kumar.png" height="80" alt="Raghav Kumar"></a><br><sub>[来自 Raghav Kumar](https://x.com/raghav2956/status/2104659668375339475)</sub> | <a href="https://www.linkedin.com/posts/kamil-buczy%C5%84ski-102843301_seeedstudio-ai-agent-ugcPost-7510738285707776000-1SMQ/?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo"><img src="/community/Kamil_Buczynski.png" height="80" alt="Kamil Buczyński"></a><br><sub>[来自 Kamil Buczyński](https://www.linkedin.com/posts/kamil-buczy%C5%84ski-102843301_seeedstudio-ai-agent-ugcPost-7510738285707776000-1SMQ/?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE6WUL4BWkFeyUj0TJ5JlGf6IG4iRHAicUo)</sub> | <a href="https://www.linkedin.com/feed/update/urn:li:activity:7510701008885309440/"><img src="/community/Fictionlab.png" height="80" alt="Fictionlab"></a><br><sub>[来自 Fictionlab](https://www.linkedin.com/feed/update/urn:li:activity:7510701008885309440/)</sub> | <a href="https://x.com/seeedstudio/status/2101965998954107303"><img src="/community/box2bridge.png" height="80" alt="box2bridge"></a><br><sub>[来自 box2bridge](https://x.com/seeedstudio/status/2101965998954107303)</sub> | <a href="https://x.com/seeedstudio/status/2095469352976003482"><img src="/community/Fangtian.png" height="80" alt="FangTianChongHui"></a><br><sub>[来自 FangTianChongHui](https://x.com/seeedstudio/status/2095469352976003482)</sub> |
 | <a href="https://www.youtube.com/watch?v=hZRDGHnXDnk"><img src="/community/Kamil_Buczynski_2.png" height="80" alt="Kamil Buczynski"></a><br><sub>[来自 Kamil Buczynski](https://www.youtube.com/watch?v=hZRDGHnXDnk)</sub> | <a href="https://gxchris95.github.io/BetaGo/"><img src="/community/BetaGo.jpg" height="80" alt="BetaGo"></a><br><sub>[来自 BetaGo](https://gxchris95.github.io/BetaGo/)</sub> | <a href="https://x.com/dimentary/status/2104094838035820607"><img src="/community/Dmytro_Hrybov.png" height="80" alt="Dmytro Hrybov"></a><br><sub>[来自 Dmytro Hrybov](https://x.com/dimentary/status/2104094838035820607)</sub> | <a href="https://x.com/aamarsbarr/status/2106242900426449204"><img src="/community/Ammar.png" height="80" alt="Ammar"></a><br><sub>[来自 Ammar](https://x.com/aamarsbarr/status/2106242900426449204)</sub> | <a href="https://x.com/KlausPetersen_X/status/2110514809318023386"><img src="/community/Klaus_Petersen.png" height="80" alt="Klaus Petersen"></a><br><sub>[来自 Klaus Petersen](https://x.com/KlausPetersen_X/status/2110514809318023386)</sub> |
 | <a href="https://dreamlabs.ai/playground/#sim"><img src="/community/dreamlabs.png" height="80" alt="dreamlabs"></a><br><sub>[来自 dreamlabs](https://dreamlabs.ai/playground/#sim)</sub> | <a href="https://www.bilibili.com/video/BV1MNnw6gEEe/"><img src="/community/追风少年Patrick.png" height="80" alt="追风少年Patrick"></a><br><sub>[来自 追风少年Patrick](https://www.bilibili.com/video/BV1MNnw6gEEe/)</sub> | <a href="https://www.bilibili.com/video/BV1zPnq6oEhm/"><img src="/community/虾烤实验室.png" height="80" alt="虾烤实验室"></a><br><sub>[来自 虾烤实验室](https://www.bilibili.com/video/BV1zPnq6oEhm/)</sub> | <a href="https://www.bilibili.com/video/BV1YRnH6qE8B/"><img src="/community/Goat_wzz.png" height="80" alt="Goat_wzz"></a><br><sub>[来自 Goat_wzz](https://www.bilibili.com/video/BV1YRnH6qE8B/)</sub> | <a href="https://www.bilibili.com/video/BV1Tipb6DEn5/"><img src="/community/W_Love_D.png" height="80" alt="W_Love_D"></a><br><sub>[来自 W_Love_D](https://www.bilibili.com/video/BV1Tipb6DEn5/)</sub> |
-| <a href="https://www.bilibili.com/video/BV1EvJR6iEuZ/"><img src="/community/W_Love_D_1.png" height="80" alt="W_Love_D"></a><br><sub>[来自 W_Love_D](https://www.bilibili.com/video/BV1EvJR6iEuZ/)</sub> | <a href="https://x.com/yoshikai_man/status/2112946345548111958"><img src="/community/Yoshikai.png" height="80" alt="yoshikai_man"></a><br><sub>[来自 yoshikai_man](https://x.com/yoshikai_man/status/2112946345548111958)</sub> | <a href="https://x.com/Mikeintech/status/2112604823170281688"><img src="/community/Mike_In_Tech.png" height="80" alt="Mike In Tech"></a><br><sub>[来自 Mike In Tech](https://x.com/Mikeintech/status/2112604823170281688)</sub> |
+| <a href="https://www.bilibili.com/video/BV1EvJR6iEuZ/"><img src="/community/W_Love_D_1.png" height="80" alt="W_Love_D"></a><br><sub>[来自 W_Love_D](https://www.bilibili.com/video/BV1EvJR6iEuZ/)</sub> | <a href="https://x.com/yoshikai_man/status/2112946345548111958"><img src="/community/Yoshikai.png" height="80" alt="yoshikai_man"></a><br><sub>[来自 yoshikai_man](https://x.com/yoshikai_man/status/2112946345548111958)</sub> | <a href="https://x.com/Mikeintech/status/2112604823170281688"><img src="/community/Mike_In_Tech.png" height="80" alt="Mike In Tech"></a><br><sub>[来自 Mike In Tech](https://x.com/Mikeintech/status/2112604823170281688)</sub> | <a href="https://x.com/stisov16/status/2114267861518868538"><img src="/community/Amogh_Shrivastava.png" height="80" alt="Amogh Shrivastava"></a><br><sub>[来自 Amogh Shrivastava](https://x.com/stisov16/status/2114267861518868538)</sub> | <a href="https://x.com/akanekikuchi4/status/2078486766944928011"><img src="/community/菊地あかね.jpg" height="80" alt="菊地あかね"></a><br><sub>[来自 菊地あかね](https://x.com/akanekikuchi4/status/2078486766944928011)</sub> |
 
 <p align="center">
   <a href="https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac"><img src="/community/sim-to-real-vla.gif" height="90" alt="Sim-to-Real VLA 课程"></a><br>
