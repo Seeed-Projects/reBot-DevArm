@@ -19,6 +19,7 @@
 |----------|------|----------|------|
 |  2026-03-31 | v1.0 |  reBot_B601_DM_v1.0_20260331.step  | Initial upload |
 |  2026-04-25 | v1.1 |  reBot_B601_DM_v1.1_20260425.step  | Added Cable Restraint for the 3 end joint motors to prevent loosening and disconnection. Fixed Joint 1 model from 4310 to 4340P. Added CNC part 02_Base_Reinforcement_Part.step at the bottom to enhance base rigidity. |
+|  2026-10-30 | v1.1 |  reBot_B601_DM_v1.1_20260625.step  | All wire harnesses upgraded to injection-molded (tooled) custom harnesses for better quality; the two 3D-printed brackets on the forearm and wrist have been fine-tuned internally so the cables can pass through the routing holes. |
 
 
 This BOM is for the reBot Arm B601 DM robotic arm, which uses Damiao 43 series motors. The other version, reBot Arm B601 RS, uses RobStride motors; [see the BOM here](../reBot_B601_RS/README.md).
@@ -27,7 +28,7 @@ This BOM is for the reBot Arm B601 DM robotic arm, which uses Damiao 43 series m
 *   3D_Printed_Parts/: Step files for all 3D printed parts.
 *   Metal_Parts/: Step files for all CNC machined metal parts.
 *   Purchased_Parts/: Step files for all purchased components.
-*   reBot_B601_DM_v1.1_20260415.step: Full robotic arm assembly file.
+*   reBot_B601_DM_v1.1_20260625.step: Full robotic arm assembly file (current); reBot_B601_DM_v1.1_20260425.step is kept as the previous revision.
 
 # 🛒[Gets All Parts](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
 - We offer five kit options:

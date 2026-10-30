@@ -17,6 +17,7 @@
 |----------|------|----------|------|
 | 2026-03-31 | v1.0 | reBot_B601_DM_v1.0_20260331.step | Mise en ligne initiale |
 | 2026-04-15 | v1.1 | reBot_B601_DM_v1.1_20260415.step | Ajout de colliers de câble pour les 3 moteurs d’articulation terminale afin d’éviter le desserrage et la déconnexion. Correction du modèle de l’articulation 1 de 4310 à 4340P. Ajout de la pièce usinée CNC 02_Base_Reinforcement_Part.step à la base pour renforcer la rigidité. |
+| 2026-10-30 | v1.1 | reBot_B601_DM_v1.1_20260625.step | Tous les faisceaux de câbles ont été remplacés par des faisceaux personnalisés moulés sur outillage de meilleure qualité ; les deux supports imprimés en 3D de l’avant-bras et du poignet ont été ajustés à l’intérieur afin que les câbles puissent passer par les orifices. |
 
 Cette nomenclature (BOM) concerne le bras robotique reBot Arm B601 DM, équipé de moteurs Damiao série 43.
 L’autre version, reBot Arm B601 RS, utilise des moteurs RobStride ; [voir la nomenclature ici](../reBot_B601_RS/README.md).
@@ -25,7 +26,7 @@ L’autre version, reBot Arm B601 RS, utilise des moteurs RobStride ; [voir la n
 *   3D_Printed_Parts/ : Fichiers Step de toutes les pièces imprimées en 3D.
 *   Metal_Parts/ : Fichiers Step de toutes les pièces métalliques usinées CNC.
 *   Purchased_Parts/ : Fichiers Step de tous les composants standard achetés.
-*   reBot_B601_DM_v1.1_20260415.step : Fichier d’assemblage complet du bras robotique.
+*   reBot_B601_DM_v1.1_20260625.step : Fichier d’assemblage complet du bras robotique (version actuelle).
 
 # 🛒 [Obtenir toutes les pièces](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
 - Nous proposons cinq options de kit :

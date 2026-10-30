@@ -19,6 +19,7 @@
 |----------|------|----------|------|
 |  2026-03-31 | v1.0 |  reBot_B601_DM_v1.0_20260331.step  | Subida inicial |
 |  2026-04-25 | v1.1 |  reBot_B601_DM_v1.1_20260425.step  | Se añaden sujeciones de cables para los 3 motores de las articulaciones del extremo, para evitar que se aflojen y se desconecten. Se corrige el modelo de la articulación 1 de 4310 a 4340P. Se añade la pieza CNC 02_Base_Reinforcement_Part.step en la parte inferior para reforzar la rigidez de la base. |
+|  2026-10-30 | v1.1 |  reBot_B601_DM_v1.1_20260625.step  | Todos los arneses de cables se han sustituido por arneses personalizados moldeados de mejor calidad; los dos soportes impresos en 3D del antebrazo y la muñeca se han ajustado internamente para que los cables puedan pasar por las posiciones de los orificios. |
 
 
 Esta BOM corresponde al brazo robótico reBot Arm B601 DM, que utiliza motores de la serie 43 de Damiao. La otra versión, el reBot Arm B601 RS, utiliza motores RobStride; [consulta su BOM aquí](../reBot_B601_RS/README.md).
@@ -27,7 +28,7 @@ Esta BOM corresponde al brazo robótico reBot Arm B601 DM, que utiliza motores d
 *   3D_Printed_Parts/: archivos STEP de todas las piezas impresas en 3D.
 *   Metal_Parts/: archivos STEP de todas las piezas metálicas mecanizadas por CNC.
 *   Purchased_Parts/: archivos STEP de todos los componentes comprados.
-*   reBot_B601_DM_v1.1_20260425.step: archivo del ensamblaje completo del brazo robótico.
+*   reBot_B601_DM_v1.1_20260625.step: archivo del ensamblaje completo del brazo robótico (versión actual).
 
 # 🛒[Consigue todas las piezas](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
 - Ofrecemos cinco opciones de kit:

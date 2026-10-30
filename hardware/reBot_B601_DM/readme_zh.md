@@ -19,6 +19,7 @@
 |----------|------|----------|------|
 |  3.31.2026 | v1.0 |  reBot_B601_DM_v1.0_20260331.step  | 第一次上传 |
 |  4.25.2026 | v1.1 |  reBot_B601_DM_v1.1_20260425.step  | 增加了末端3个关节电机的线束卡口`Cable Restraint`，防松防脱落。修复了第一个关节型号`由4310改为4340P`。底部增加了CNC件`02_Base_Reinforcement_Part.step`加强底部强度。增加了线束卡扣。 |
+|  10.30.2026 | v1.1 |  reBot_B601_DM_v1.1_20260625.step  | 线束全部更换为开模定制的更高质量线束；小臂与腕部的两个 3D 打印支架内部做了微调，使线束能够穿过孔位。 |
 
 
 当前BOM为reBot Arm B601 DM机械臂清单，所使用的是Damiao43系列电机，另一款reBot Arm B601 RS机械臂所使用的是RobStride电机，[清单请看这里](../reBot_B601_RS/README.md)
@@ -27,7 +28,7 @@
 *   `3D_Printed_Parts/`: 所有3D打印文件的Step。
 *   `Metal_Parts/`: 所有金属加工文件的Step。
 *   `Purchased_Parts/`: 所有购买件的Step。
-*   `reBot_B601_DM_v1.1_20260415step`: 机械臂整体装配文件。
+*   `reBot_B601_DM_v1.1_20260625.step`：机械臂整体装配文件（当前版本）；`reBot_B601_DM_v1.1_20260425.step` 保留为上一版。
 
 # 📊 物料清单（BOM）
 
