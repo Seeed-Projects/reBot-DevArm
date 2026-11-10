@@ -8,7 +8,7 @@ Camera mount CAD files for B601 robots and data collection setups, plus a USDZ e
 
 | Collection | Assets | Format |
 | --- | --- | --- |
-| [B601 camera mounts](#b601-camera-mounts) | 4 camera mount designs | STEP (`.step`) |
+| [B601 camera mounts](#b601-camera-mounts) | 3 camera mount designs | STEP (`.step`) |
 | [Data collection camera mounts](#data-collection-camera-mounts) | V1: 4 mount designs and 4 adapter parts; V2: 1 assembly | STEP (`.stp`) |
 | [Data collection environment](#data-collection-environment) | 1 box model | USDZ (`.usdz`) |
 
@@ -16,7 +16,7 @@ The catalog below covers every CAD/model file in this repository. Camera and rob
 
 ## B601 camera mounts
 
-These four wrist camera mounts are shared by **B601-RS and B601-DM**. Their STEP files have been moved here from `hardware/reBot_B601_DM/3D_Printed_Parts/` with identical contents.
+These three wrist camera mounts are shared by **B601-RS and B601-DM**. Their STEP files have been moved here from `hardware/reBot_B601_DM/3D_Printed_Parts/` with identical contents.
 
 These files originate from the B601-DM 3D printed parts collection in [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts).
 
@@ -43,16 +43,6 @@ Camera mount identified as D405 / 305 in the source filename. The upstream D405 
 [Download D435_Gemini2_Mount.step](b601-camera-mounts/D435_Gemini2_Mount.step)
 
 Camera mount identified as D435 / Gemini 2 in the source filename. The upstream image is labeled D435i and shows an elongated camera support plate and curved mounting base. It is a CAD reference rendering, not proof of fit for every named camera or a finished-part photograph.
-
-### D455f mount
-
-![CAD preview: D455f_Mount](images/D455f_Mount.png)
-
-*D455f_Mount: preview rendered from the supplied STEP file.*
-
-[Download D455f_Mount.step](b601-camera-mounts/D455f_Mount.step)
-
-Camera mount identified as D455f in the source filename. The model shows an elongated support with mounting holes and a reinforcing section underneath. Open the STEP model to inspect the mounting geometry. The preview above is rendered directly from the supplied STEP geometry.
 
 ### UVC32 mount
 

@@ -8,15 +8,15 @@
 
 | 分类 | 内容 | 格式 |
 | --- | --- | --- |
-| [B601 摄像头支架](#b601-摄像头支架) | 4 款摄像头支架 | STEP（`.step`） |
+| [B601 摄像头支架](#b601-摄像头支架) | 3 款摄像头支架 | STEP（`.step`） |
 | [数据采集摄像头支架](#数据采集摄像头支架) | V1：4 款支架主体及 4 个适配件；V2：1 个完整装配 | STEP（`.stp`） |
 | [数据采集环境](#数据采集环境) | 1 个箱体模型 | USDZ（`.usdz`） |
 
-以下介绍覆盖仓库内全部 14 个模型文件。摄像头及机械臂名称沿用上游文件中的命名；上游未提供完整尺寸说明、紧固件清单、打印参数或适配验证结果。制作前请打开 CAD 文件，结合实际设备检查安装尺寸和间隙。
+以下介绍覆盖仓库内全部 13 个模型文件。摄像头及机械臂名称沿用上游文件中的命名；上游未提供完整尺寸说明、紧固件清单、打印参数或适配验证结果。制作前请打开 CAD 文件，结合实际设备检查安装尺寸和间隙。
 
 ## B601 摄像头支架
 
-这 4 款腕部相机支架由 **B601-RS 和 B601-DM 通用**。STEP 文件从 `hardware/reBot_B601_DM/3D_Printed_Parts/` 迁移至此，文件内容完全一致。
+这 3 款腕部相机支架由 **B601-RS 和 B601-DM 通用**。STEP 文件从 `hardware/reBot_B601_DM/3D_Printed_Parts/` 迁移至此，文件内容完全一致。
 
 这些文件来自 [reBot-DevArm 的 B601-DM 3D 打印零件目录](https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts)。
 
@@ -43,16 +43,6 @@
 [下载 D435_Gemini2_Mount.step](b601-camera-mounts/D435_Gemini2_Mount.step)
 
 文件名标识为 D435 / Gemini 2 支架。模型具有长条形摄像头承载板和弧形安装底座。上游参考图名为 D435i，仅作为外形参考；各型号的实际安装适配情况仍需检查。
-
-### D455f 支架
-
-![D455f 支架模型预览](images/D455f_Mount.png)
-
-*根据本仓库的 STEP 文件生成的模型预览。*
-
-[下载 D455f_Mount.step](b601-camera-mounts/D455f_Mount.step)
-
-文件名标识为 D455f 支架。模型为带安装孔的长条形支撑结构，下方有加强部分。可打开 STEP 文件检查安装孔位置和连接结构。
 
 ### UVC32 支架
 
@@ -178,7 +168,7 @@ V2 为铝型材主体＋3D 打印摄像头支架的数据采集支架；V1 使�
 
 ## 图片来源与模型预览
 
-全部 14 个模型文件均有直接根据原始 STEP 或 USDZ 几何生成的预览图。这些图片是模型预览，并非实物照片。V1 适配件单独展示，图片不代表已完成装配或适配验证。
+全部 13 个模型文件均有直接根据原始 STEP 或 USDZ 几何生成的预览图。这些图片是模型预览，并非实物照片。V1 适配件单独展示，图片不代表已完成装配或适配验证。
 
 另外两张 B601 参考图来自上游：[D405.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D405.jpg) 和 [D435i.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D435i.jpg)，两者也均为 CAD 渲染图。
 
