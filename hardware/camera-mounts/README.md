@@ -4,21 +4,28 @@ English | [简体中文](README_zh.md)
 
 Camera mount CAD files for B601 robots and data collection setups, plus a USDZ environment asset.
 
+> **For better data collection results, use the latest versions:** choose the current B601 wrist camera mounts below and the [V2 data collection camera mount](#v2-aluminum-extrusion-camera-mount). The historical B601 wrist mounts are archived as [V1](b601-camera-mounts/V1/README.md) for reference.
+
 ## Choose an asset
 
 | Collection | Assets | Format |
 | --- | --- | --- |
-| [B601 camera mounts](#b601-camera-mounts) | 3 camera mount designs | STEP (`.step`) |
+| [B601 camera mounts](#b601-camera-mounts) | Current version: 3 designs; historical V1: 3 designs | STEP (`.step`) |
 | [Data collection camera mounts](#data-collection-camera-mounts) | V1: 4 mount designs and 4 adapter parts; V2: 1 assembly | STEP (`.stp`) |
 | [Data collection environment](#data-collection-environment) | 1 box model | USDZ (`.usdz`) |
 
-The catalog below covers every CAD/model file in this repository. Camera and robot names follow the upstream filenames; dimensions, fasteners, print settings, and verified compatibility are not supplied here. Check the CAD geometry against your hardware before fabrication.
+The catalog below covers all 16 CAD/model files in this directory. Camera and robot names follow the upstream filenames; dimensions, fasteners, print settings, and verified compatibility are not supplied here. Check the CAD geometry against your hardware before fabrication.
 
 ## B601 camera mounts
 
 These three wrist camera mounts are shared by **B601-RS and B601-DM**. Their STEP files have been moved here from `hardware/reBot_B601_DM/3D_Printed_Parts/` with identical contents.
 
 These files originate from the B601-DM 3D printed parts collection in [reBot-DevArm](https://github.com/Seeed-Projects/reBot-DevArm/tree/main/hardware/reBot_B601_DM/3D_Printed_Parts).
+
+| Version | Files | Use |
+| --- | --- | --- |
+| Current version (recommended) | [D405 / 305](b601-camera-mounts/D405_305_Mount.step), [D435 / Gemini 2](b601-camera-mounts/D435_Gemini2_Mount.step), [UVC32](b601-camera-mounts/UVC32_mount.step) | Preferred for new data collection setups |
+| [V1 (historical)](b601-camera-mounts/V1/README.md) | Three STEP models and four historical reference images | Reference for existing projects |
 
 ### D405 / 305 mount
 
@@ -54,9 +61,13 @@ Camera mount identified as D435 / Gemini 2 in the source filename. The upstream 
 
 Camera mount identified as UVC32 in the source filename. The model shows a camera plate with a rectangular opening, connected to a curved mounting base. Open the STEP model to inspect the mounting geometry. The preview above is rendered directly from the supplied STEP geometry.
 
+### V1: Historical wrist camera mounts
+
+The B601 wrist mounts from before the September 18, 2026 update are archived in [b601-camera-mounts/V1/](b601-camera-mounts/V1/README.md), with the historical D405, D435i, Gemini 2, and UVC reference images. D435 / Gemini 2 share one STEP model. See the [V1 catalog](b601-camera-mounts/V1/README.md) for images, downloads, and the exact source revision.
+
 ## Data collection camera mounts
 
-Two construction versions are available:
+For better data collection results, prefer the latest **V2** assembly. Two construction versions are available:
 
 | Version | Construction | Files |
 | --- | --- | --- |
@@ -171,7 +182,7 @@ A box model from [rebot-arm-dli-isaacsim](https://github.com/yuyoujiang/rebot-ar
 
 ## Image sources and model previews
 
-Every model file has a preview rendered directly from its source STEP or USDZ geometry. These are model previews, not physical-product photographs. V1 adapter parts are shown separately; the images do not imply verified assembly or fit.
+The current B601 mounts, data collection mounts, and environment asset have previews rendered directly from their source STEP or USDZ geometry. Historical B601 V1 mounts are illustrated with the original reference images retained in their V1 catalog. These are model previews, not physical-product photographs. V1 adapter parts are shown separately; the images do not imply verified assembly or fit.
 
 Two additional B601 reference images come from upstream: [D405.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D405.jpg) and [D435i.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D435i.jpg). Both are CAD renderings.
 

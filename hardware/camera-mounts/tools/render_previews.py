@@ -11,6 +11,12 @@ from pxr import Usd, UsdGeom, Gf
 
 ROOT = Path(__file__).resolve().parents[1]
 
+def preview_target(source):
+    folder = ROOT/'images'
+    if source.parent.name == 'V1' and source.parent.parent.name == 'b601-camera-mounts':
+        folder = folder/'b601-v1'
+    return folder/f'{source.stem}.png'
+
 def render(polys, target, title):
     points = np.concatenate(polys)
     lo, hi = points.min(axis=0), points.max(axis=0)
@@ -51,7 +57,8 @@ for source in sources:
         # The supplied assembly is modeled along Y. Show it upright in the preview.
         vertices = vertices[:, [0, 2, 1]] * np.array([1, -1, 1])
     polys = [vertices[list(t)] for t in triangles]
-    target = ROOT/'images'/f'{source.stem}.png'
+    target = preview_target(source)
+    target.parent.mkdir(parents=True, exist_ok=True)
     render(polys, target, source.stem.replace('_',' ').replace('-',' '))
     print(source.name, len(triangles), flush=True)
 

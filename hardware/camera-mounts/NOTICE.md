@@ -17,3 +17,7 @@ See `licenses/` for the license texts that were available upstream.
 This collection was imported from [Yang-Ci/Camera-Mounts](https://github.com/Yang-Ci/Camera-Mounts) at commit `409b6f17d1a1ea581dae21da50407ca1a368de5c`. The four B601 STEP files were moved from this repository’s DM parts directory after SHA-256 comparison confirmed identical contents. Third-party assets retain their respective licensing status; this directory does not assign the repository-wide CERN OHL-W-2.0 license to assets whose upstream did not declare a license.
 
 The V1 directory layout and V2 assembly, preview, and catalog were synchronized from the same collection at commit `a859dc8a3074b87066ac88e4ddf22b0414c095b0`.
+
+## Historical B601 wrist camera mounts (V1)
+
+`b601-camera-mounts/V1/` contains the three wrist-mount STEP files from [the original B601-DM parts directory](https://github.com/Seeed-Projects/reBot-DevArm/tree/239af75936547ce5bdc44430d100a4eb78845413/hardware/reBot_B601_DM/3D_Printed_Parts/) at commit `239af75936547ce5bdc44430d100a4eb78845413`, before the September 18, 2026 update. The archive is labeled V1 here. `images/b601-v1/` retains the four historical reference images `D405.jpg`, `D435i.jpg`, `Gemini2_mount.png`, and `UVC_camera_mount.png` from the same revision. Original filenames and Git blob contents are preserved. D435 and Gemini 2 share one STEP model. These assets retain CERN OHL-W-2.0 licensing. This B601 wrist-mount V1 archive is distinct from the numbered data collection mounts in `data-collection-camera-mounts/V1/`.
