@@ -17,7 +17,7 @@
 
 **100% Open Source · Embodied AI · Full Hardware + Software Stack**
 
-🌐 [Landing Page](https://279070161-sketch.github.io/reBot/) · 📚 [Tutorial Center](https://wiki.seeedstudio.com/robotics_page/) · ▶ [Online Demo](https://seeed-projects.github.io/reBot_RS_Sim)
+🌐 [Landing Page](https://279070161-sketch.github.io/reBot/) · 📚 [Tutorial Center](https://wiki.seeedstudio.com/robotics_page/) · ▶ [Online Demo](https://seeed-projects.github.io/reBot_RS_Sim) · 🤖 [New: Bimanual reBot Arm T701](https://github.com/Seeed-Projects/reBot-Arm-T701)
 
 [![Discord](https://img.shields.io/discord/1409155673572249672?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/AbGuqJhDpQ)
 [![Documentation](https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue)](https://wiki.seeedstudio.com/robotics_page/)
@@ -31,6 +31,7 @@
 ## 📑 Contents
 
 - [📖 Introduction](#introduction)
+- [🤖 Meet the Bimanual reBot Arm T701](#-meet-the-bimanual-rebot-arm-t701)
 - [🛒 Get Your reBot Arm](#get-your-rebot-arm)
 - [🚀 Try the Online Simulation](#try-the-online-simulation)
 - [🗺️ Roadmap and Status](#roadmap-and-status)
@@ -52,6 +53,20 @@
 - 🛠️ **Hardware blueprints** — Source files for sheet-metal and 3D-printed parts.
 - 🔩 **BOM list** — Detailed down to the spec and purchase link of every single screw.
 - 💻 **Software & algorithms** — Python SDK, ROS1/2, Isaac Sim, LeRobot, and more.
+
+## 🤖 Meet the Bimanual reBot Arm T701
+
+<p align="center">
+  <a href="https://github.com/Seeed-Projects/reBot-Arm-T701"><img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-Arm-T701/main/media/T701_banner_beta.png" alt="reBot Arm T701 — open-source bimanual robotic platform" width="640"></a>
+</p>
+
+After the B601, the community asked the obvious next question: *"Can it have two arms?"* The **[reBot Arm T701](https://github.com/Seeed-Projects/reBot-Arm-T701)** is our answer — an open-source bimanual platform for Physical AI, robot learning, and real-world data collection, carrying the B601's open-source legacy forward.
+
+- 🦾 **Two 7-DOF arms + grippers on one torso** — One hand holds, the other operates.
+- 📷 **Vision & compute ready** — Mounts for RealSense D405 wrist cameras, a D435 head camera, and a Jetson Orin.
+- 🔓 **The same open-source promise** — CAD, BOM, SDK, and tutorials, released step by step.
+
+> 🧪 The T701 is in **beta preview** and releasing in the open. ⭐ **[Star and watch the T701 repository](https://github.com/Seeed-Projects/reBot-Arm-T701)** to catch every release.
 
 ## 🛒 Get Your reBot Arm
 

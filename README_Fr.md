@@ -17,7 +17,7 @@
 
 **100% open source · IA incarnée · Stack complet matériel + logiciel**
 
-🌐 [Page d'accueil](https://279070161-sketch.github.io/reBot/) · 📚 [Centre de tutoriels](https://wiki.seeedstudio.com/robotics_page/) · ▶ [Démo en ligne](https://seeed-projects.github.io/reBot_RS_Sim)
+🌐 [Page d'accueil](https://279070161-sketch.github.io/reBot/) · 📚 [Centre de tutoriels](https://wiki.seeedstudio.com/robotics_page/) · ▶ [Démo en ligne](https://seeed-projects.github.io/reBot_RS_Sim) · 🤖 [Nouveau : reBot Arm T701 bimanuel](https://github.com/Seeed-Projects/reBot-Arm-T701)
 
 [![Discord](https://img.shields.io/discord/1409155673572249672?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/AbGuqJhDpQ)
 [![Documentation](https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue)](https://wiki.seeedstudio.com/robotics_page/)
@@ -31,6 +31,7 @@
 ## 📑 Sommaire
 
 - [📖 Introduction](#introduction)
+- [🤖 Découvrez le reBot Arm T701 bimanuel](#-découvrez-le-rebot-arm-t701-bimanuel)
 - [🛒 Obtenez votre reBot Arm](#obtenez-votre-rebot-arm)
 - [🚀 Essayez la simulation en ligne](#essayez-la-simulation-en-ligne)
 - [🗺️ Feuille de route](#feuille-de-route)
@@ -52,6 +53,20 @@
 - 🛠️ **Plans matériels** —— Fichiers sources des pièces en tôle et des pièces imprimées en 3D.
 - 🔩 **Liste BOM** —— Détaillée jusqu'à la spécification et au lien d'achat de chaque vis.
 - 💻 **Logiciels et algorithmes** —— SDK Python, ROS1/2, Isaac Sim, LeRobot, etc.
+
+## 🤖 Découvrez le reBot Arm T701 bimanuel
+
+<p align="center">
+  <a href="https://github.com/Seeed-Projects/reBot-Arm-T701"><img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-Arm-T701/main/media/T701_banner_beta.png" alt="reBot Arm T701 —— plateforme robotique bimanuelle open source" width="640"></a>
+</p>
+
+Après le B601, la communauté a posé la question qui s'imposait : « Peut-il avoir deux bras ? » Le **[reBot Arm T701](https://github.com/Seeed-Projects/reBot-Arm-T701)** est notre réponse —— une plateforme bimanuelle open source pour l'IA physique, l'apprentissage robotique et la collecte de données en conditions réelles, dans la continuité de l'héritage open source du B601.
+
+- 🦾 **Deux bras à 7 DDL + pinces sur un seul torse** —— Une main tient, l'autre opère.
+- 📷 **Prêt pour la vision et le calcul** —— Supports pour caméras de poignet RealSense D405, caméra de tête D435 et Jetson Orin.
+- 🔓 **La même promesse open source** —— CAO, BOM, SDK et tutoriels, publiés étape par étape.
+
+> 🧪 Le T701 est en **préversion bêta** et publié progressivement. ⭐ **[Ajoutez une étoile au dépôt T701 et suivez-le](https://github.com/Seeed-Projects/reBot-Arm-T701)** pour ne manquer aucune publication.
 
 ## 🛒 Obtenez votre reBot Arm
 

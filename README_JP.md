@@ -17,7 +17,7 @@
 
 **100% オープンソース · Embodied AI · ハードウェア + ソフトウェアのフルスタック**
 
-🌐 [ランディングページ](https://279070161-sketch.github.io/reBot/) · 📚 [チュートリアルセンター](https://wiki.seeedstudio.com/robotics_page/) · ▶ [オンラインデモ](https://seeed-projects.github.io/reBot_RS_Sim)
+🌐 [ランディングページ](https://279070161-sketch.github.io/reBot/) · 📚 [チュートリアルセンター](https://wiki.seeedstudio.com/robotics_page/) · ▶ [オンラインデモ](https://seeed-projects.github.io/reBot_RS_Sim) · 🤖 [新登場：双腕 reBot Arm T701](https://github.com/Seeed-Projects/reBot-Arm-T701)
 
 [![Discord](https://img.shields.io/discord/1409155673572249672?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/AbGuqJhDpQ)
 [![ドキュメント](https://img.shields.io/badge/Documentation-%F0%9F%93%95-blue)](https://wiki.seeedstudio.com/robotics_page/)
@@ -31,6 +31,7 @@
 ## 📑 目次
 
 - [📖 はじめに](#はじめに)
+- [🤖 双腕の新メンバー reBot Arm T701](#-双腕の新メンバー-rebot-arm-t701)
 - [🛒 入手方法](#入手方法)
 - [🚀 オンライン体験](#オンライン体験)
 - [🗺️ ロードマップ](#ロードマップ)
@@ -52,6 +53,20 @@
 - 🛠️ **ハードウェア設計図** —— 板金部品および 3D プリント部品のソースファイル
 - 🔩 **BOM リスト** —— すべてのネジの仕様や購入リンクに至るまで詳細に記載
 - 💻 **ソフトウェア & アルゴリズム** —— Python SDK、ROS1/2、Isaac Sim、LeRobot など
+
+## 🤖 双腕の新メンバー reBot Arm T701
+
+<p align="center">
+  <a href="https://github.com/Seeed-Projects/reBot-Arm-T701"><img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-Arm-T701/main/media/T701_banner_beta.png" alt="reBot Arm T701 —— オープンソース双腕ロボットプラットフォーム" width="640"></a>
+</p>
+
+B601 の公開後、コミュニティから最も多く寄せられた質問は「腕を2本にできますか？」でした。**[reBot Arm T701](https://github.com/Seeed-Projects/reBot-Arm-T701)** がその答えです —— Physical AI、ロボット学習、実世界データ収集のためのオープンソース双腕プラットフォームで、B601 の「真のオープンソース」の理念を受け継いでいます。
+
+- 🦾 **1つの胴体に 7 自由度アーム 2 本 + グリッパー** —— 片手で支え、もう片方の手で操作
+- 📷 **ビジョン & コンピューティング対応** —— RealSense D405 手首カメラ、D435 ヘッドカメラ、Jetson Orin 用のマウントを用意
+- 🔓 **変わらないオープンソースの約束** —— CAD、BOM、SDK、チュートリアルを順次公開
+
+> 🧪 T701 は現在 **ベータプレビュー** 段階で、順次オープンソース化を進めています。⭐ **[T701 リポジトリを Star & Watch](https://github.com/Seeed-Projects/reBot-Arm-T701)** して、最新リリースをお見逃しなく。
 
 ## 🛒 入手方法
 
