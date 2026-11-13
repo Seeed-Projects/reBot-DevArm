@@ -10,9 +10,9 @@
 
 [![Hardware License: CERN-OHL-W-2.0](https://img.shields.io/badge/License-CERN--OHL--W--2.0--Hardware-green.svg)](./LICENSE)
 [![Software License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0--Software-pink.svg)](./LICENSE)
-[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#roadmap-and-status)
-[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#roadmap-and-status)
-[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#roadmap-and-status)
+[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#%EF%B8%8F-roadmap-and-status)
+[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#%EF%B8%8F-roadmap-and-status)
+[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#%EF%B8%8F-roadmap-and-status)
 [![Commercial](https://img.shields.io/badge/Commercial-Contact%20Us-red.svg)](mailto:yaohui.zhu@seeed.cc)
 
 **100% Open Source · Embodied AI · Full Hardware + Software Stack**
@@ -30,18 +30,18 @@
 
 ## 📑 Contents
 
-- [📖 Introduction](#introduction)
+- [📖 Introduction](#-introduction)
 - [🤖 Meet the Bimanual reBot Arm T701](#-meet-the-bimanual-rebot-arm-t701)
-- [🛒 Get Your reBot Arm](#get-your-rebot-arm)
-- [🚀 Try the Online Simulation](#try-the-online-simulation)
-- [🗺️ Roadmap and Status](#roadmap-and-status)
-- [⚙️ Hardware Specifications](#hardware-specifications)
-- [🌟 Community Showcase](#community-showcase)
-- [🧹 Optional Hardware](#optional-hardware)
-- [🎓 Full-Stack Robotics Ecosystem](#full-stack-robotics-ecosystem)
-- [🙌 Acknowledgments and Contributors](#acknowledgments-and-contributors)
-- [📄 License](#license)
-- [☎ Contact Us](#contact-us)
+- [🛒 Get Your reBot Arm](#-get-your-rebot-arm)
+- [🚀 Try the Online Simulation](#-try-the-online-simulation)
+- [🗺️ Roadmap and Status](#%EF%B8%8F-roadmap-and-status)
+- [⚙️ Hardware Specifications](#%EF%B8%8F-hardware-specifications)
+- [🌟 Community Showcase](#-community-showcase)
+- [🧹 Optional Hardware](#-optional-hardware)
+- [🎓 Full-Stack Robotics Ecosystem](#-full-stack-robotics-ecosystem)
+- [🙌 Acknowledgments and Contributors](#-acknowledgments-and-contributors)
+- [📄 License](#-license)
+- [☎ Contact Us](#-contact-us)
 
 ---
 

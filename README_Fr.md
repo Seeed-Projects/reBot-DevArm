@@ -10,9 +10,9 @@
 
 [![Licence matérielle : CERN-OHL-W-2.0](https://img.shields.io/badge/License-CERN--OHL--W--2.0--Hardware-green.svg)](./LICENSE)
 [![Licence logicielle : Apache-2.0](https://img.shields.io/badge/License-Apache--2.0--Software-pink.svg)](./LICENSE)
-[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#feuille-de-route)
-[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#feuille-de-route)
-[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#feuille-de-route)
+[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#%EF%B8%8F-feuille-de-route)
+[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#%EF%B8%8F-feuille-de-route)
+[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#%EF%B8%8F-feuille-de-route)
 [![Commercial](https://img.shields.io/badge/Commercial-Contact%20Us-red.svg)](mailto:yaohui.zhu@seeed.cc)
 
 **100% open source · IA incarnée · Stack complet matériel + logiciel**
@@ -30,18 +30,18 @@
 
 ## 📑 Sommaire
 
-- [📖 Introduction](#introduction)
+- [📖 Introduction](#-introduction)
 - [🤖 Découvrez le reBot Arm T701 bimanuel](#-découvrez-le-rebot-arm-t701-bimanuel)
-- [🛒 Obtenez votre reBot Arm](#obtenez-votre-rebot-arm)
-- [🚀 Essayez la simulation en ligne](#essayez-la-simulation-en-ligne)
-- [🗺️ Feuille de route](#feuille-de-route)
-- [⚙️ Spécifications matérielles](#spécifications-matérielles)
-- [🌟 Projets de la communauté](#projets-de-la-communauté)
-- [🧹 Accessoires optionnels](#accessoires-optionnels)
-- [🎓 Écosystème robotique full-stack](#écosystème-robotique-full-stack)
-- [🙌 Remerciements et contributeurs](#remerciements-et-contributeurs)
-- [📄 Licence](#licence)
-- [☎ Contactez-nous](#contactez-nous)
+- [🛒 Obtenez votre reBot Arm](#-obtenez-votre-rebot-arm)
+- [🚀 Essayez la simulation en ligne](#-essayez-la-simulation-en-ligne)
+- [🗺️ Feuille de route](#%EF%B8%8F-feuille-de-route)
+- [⚙️ Spécifications matérielles](#%EF%B8%8F-spécifications-matérielles)
+- [🌟 Projets de la communauté](#-projets-de-la-communauté)
+- [🧹 Accessoires optionnels](#-accessoires-optionnels)
+- [🎓 Écosystème robotique full-stack](#-écosystème-robotique-full-stack)
+- [🙌 Remerciements et contributeurs](#-remerciements-et-contributeurs)
+- [📄 Licence](#-licence)
+- [☎ Contactez-nous](#-contactez-nous)
 
 ---
 

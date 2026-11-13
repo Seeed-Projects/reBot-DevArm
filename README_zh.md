@@ -10,9 +10,9 @@
 
 [![硬件许可：CERN-OHL-W-2.0](https://img.shields.io/badge/License-CERN--OHL--W--2.0--Hardware-green.svg)](./LICENSE)
 [![软件许可：Apache-2.0](https://img.shields.io/badge/License-Apache--2.0--Software-pink.svg)](./LICENSE)
-[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#开源路线图)
-[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#开源路线图)
-[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#开源路线图)
+[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#%EF%B8%8F-开源路线图)
+[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#%EF%B8%8F-开源路线图)
+[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#%EF%B8%8F-开源路线图)
 [![商用合作](https://img.shields.io/badge/Commercial-Contact%20Us-red.svg)](mailto:yaohui.zhu@seeed.cc)
 
 **100% 全开源 · 具身智能 · 软硬一体 · [商用宽松条件请看这里](#权利与限制说明)**
@@ -30,18 +30,18 @@
 
 ## 📑 目录
 
-- [📖 项目简介](#项目简介)
+- [📖 项目简介](#-项目简介)
 - [🤖 双臂新成员 reBot Arm T701](#-双臂新成员-rebot-arm-t701)
-- [🛒 获取方式](#获取方式)
-- [🚀 在线体验](#在线体验)
-- [🗺️ 开源路线图](#开源路线图)
-- [⚙️ 硬件参数](#硬件参数)
-- [🌟 社区项目](#社区项目)
-- [🧹 可选硬件](#可选硬件)
-- [🎓 全栈机器人生态](#全栈机器人生态)
-- [🙌 致谢与贡献者](#致谢与贡献者)
-- [📄 许可证](#许可证)
-- [☎ 联系我们](#联系我们)
+- [🛒 获取方式](#-获取方式)
+- [🚀 在线体验](#-在线体验)
+- [🗺️ 开源路线图](#%EF%B8%8F-开源路线图)
+- [⚙️ 硬件参数](#%EF%B8%8F-硬件参数)
+- [🌟 社区项目](#-社区项目)
+- [🧹 可选硬件](#-可选硬件)
+- [🎓 全栈机器人生态](#-全栈机器人生态)
+- [🙌 致谢与贡献者](#-致谢与贡献者)
+- [📄 许可证](#-许可证)
+- [☎ 联系我们](#-联系我们)
 
 ---
 

@@ -10,9 +10,9 @@
 
 [![ハードウェアライセンス: CERN-OHL-W-2.0](https://img.shields.io/badge/License-CERN--OHL--W--2.0--Hardware-green.svg)](./LICENSE)
 [![ソフトウェアライセンス: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0--Software-pink.svg)](./LICENSE)
-[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#ロードマップ)
-[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#ロードマップ)
-[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#ロードマップ)
+[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#%EF%B8%8F-ロードマップ)
+[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#%EF%B8%8F-ロードマップ)
+[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#%EF%B8%8F-ロードマップ)
 [![商用](https://img.shields.io/badge/Commercial-Contact%20Us-red.svg)](mailto:yaohui.zhu@seeed.cc)
 
 **100% オープンソース · Embodied AI · ハードウェア + ソフトウェアのフルスタック**
@@ -30,18 +30,18 @@
 
 ## 📑 目次
 
-- [📖 はじめに](#はじめに)
+- [📖 はじめに](#-はじめに)
 - [🤖 双腕の新メンバー reBot Arm T701](#-双腕の新メンバー-rebot-arm-t701)
-- [🛒 入手方法](#入手方法)
-- [🚀 オンライン体験](#オンライン体験)
-- [🗺️ ロードマップ](#ロードマップ)
-- [⚙️ ハードウェア仕様](#ハードウェア仕様)
-- [🌟 コミュニティ作品](#コミュニティ作品)
-- [🧹 オプションパーツ](#オプションパーツ)
-- [🎓 フルスタックエコシステム](#フルスタックエコシステム)
-- [🙌 謝辞と貢献者](#謝辞と貢献者)
-- [📄 ライセンス](#ライセンス)
-- [☎ お問い合わせ](#お問い合わせ)
+- [🛒 入手方法](#-入手方法)
+- [🚀 オンライン体験](#-オンライン体験)
+- [🗺️ ロードマップ](#%EF%B8%8F-ロードマップ)
+- [⚙️ ハードウェア仕様](#%EF%B8%8F-ハードウェア仕様)
+- [🌟 コミュニティ作品](#-コミュニティ作品)
+- [🧹 オプションパーツ](#-オプションパーツ)
+- [🎓 フルスタックエコシステム](#-フルスタックエコシステム)
+- [🙌 謝辞と貢献者](#-謝辞と貢献者)
+- [📄 ライセンス](#-ライセンス)
+- [☎ お問い合わせ](#-お問い合わせ)
 
 ---
 

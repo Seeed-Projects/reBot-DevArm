@@ -10,9 +10,9 @@
 
 [![Licencia de hardware: CERN-OHL-W-2.0](https://img.shields.io/badge/License-CERN--OHL--W--2.0--Hardware-green.svg)](./LICENSE)
 [![Licencia de software: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0--Software-pink.svg)](./LICENSE)
-[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#hoja-de-ruta)
-[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#hoja-de-ruta)
-[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#hoja-de-ruta)
+[![ROS](https://img.shields.io/badge/ROS-Noetic%20%7C%20Humble-orange.svg)](#%EF%B8%8F-hoja-de-ruta)
+[![LeRobot](https://img.shields.io/badge/Framework-LeRobot-yellow.svg)](#%EF%B8%8F-hoja-de-ruta)
+[![Isaac Sim](https://img.shields.io/badge/Framework-Isaac%20Sim-yellow.svg)](#%EF%B8%8F-hoja-de-ruta)
 [![Comercial](https://img.shields.io/badge/Commercial-Contact%20Us-red.svg)](mailto:yaohui.zhu@seeed.cc)
 
 **100% código abierto · IA corpórea · Stack completo de hardware + software**
@@ -30,18 +30,18 @@
 
 ## 📑 Contenido
 
-- [📖 Introducción](#introducción)
+- [📖 Introducción](#-introducción)
 - [🤖 Conoce el reBot Arm T701 bimanual](#-conoce-el-rebot-arm-t701-bimanual)
-- [🛒 Consigue tu reBot Arm](#consigue-tu-rebot-arm)
-- [🚀 Prueba la simulación en línea](#prueba-la-simulación-en-línea)
-- [🗺️ Hoja de ruta](#hoja-de-ruta)
-- [⚙️ Especificaciones de hardware](#especificaciones-de-hardware)
-- [🌟 Proyectos de la comunidad](#proyectos-de-la-comunidad)
-- [🧹 Hardware opcional](#hardware-opcional)
-- [🎓 Ecosistema de robótica integral](#ecosistema-de-robótica-integral)
-- [🙌 Agradecimientos y contribuidores](#agradecimientos-y-contribuidores)
-- [📄 Licencia](#licencia)
-- [☎ Contacto](#contacto)
+- [🛒 Consigue tu reBot Arm](#-consigue-tu-rebot-arm)
+- [🚀 Prueba la simulación en línea](#-prueba-la-simulación-en-línea)
+- [🗺️ Hoja de ruta](#%EF%B8%8F-hoja-de-ruta)
+- [⚙️ Especificaciones de hardware](#%EF%B8%8F-especificaciones-de-hardware)
+- [🌟 Proyectos de la comunidad](#-proyectos-de-la-comunidad)
+- [🧹 Hardware opcional](#-hardware-opcional)
+- [🎓 Ecosistema de robótica integral](#-ecosistema-de-robótica-integral)
+- [🙌 Agradecimientos y contribuidores](#-agradecimientos-y-contribuidores)
+- [📄 Licencia](#-licencia)
+- [☎ Contacto](#-contacto)
 
 ---
 
