@@ -1,85 +1,257 @@
-"""Render source geometry. Requires cadquery, matplotlib, usd-core, numpy."""
+"""Render STEP and USDZ previews with CadQuery, usd-core, NumPy and Blender's bpy."""
 import argparse
+import math
 from pathlib import Path
-import numpy as np
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+
+import bpy
 import cadquery as cq
-from pxr import Usd, UsdGeom, Gf
+from mathutils import Vector
+import numpy as np
+from OCP.BRep import BRep_Tool
+from OCP.TopAbs import TopAbs_REVERSED
+from OCP.TopLoc import TopLoc_Location
+from pxr import Gf, Usd, UsdGeom, UsdShade
 
 ROOT = Path(__file__).resolve().parents[1]
+V2 = "data-collection-camera-mount-v2"
+BOX = ROOT / "data-collection-environment/box.usdz"
+TALL_MOUNTS = {"mount-1", "mount-2", "mount-3", "mount-4"}
+# Convert Y-up geometry to Z-up without flipping the winding.
+Y_UP_TO_Z_UP = np.array([[1, 0, 0], [0, 0, -1], [0, 1, 0]])
+
 
 def preview_target(source):
-    folder = ROOT/'images'
-    if source.parent.name == 'V1' and source.parent.parent.name == 'b601-camera-mounts':
-        folder = folder/'b601-v1'
-    return folder/f'{source.stem}.png'
+    folder = ROOT / "images"
+    if source.parent.name == "V1" and source.parent.parent.name == "b601-camera-mounts":
+        folder /= "b601-v1"
+    return folder / f"{source.stem}.png"
 
-def render(polys, target, title):
-    points = np.concatenate(polys)
-    lo, hi = points.min(axis=0), points.max(axis=0)
-    center = (lo + hi) / 2
-    radius = max(hi - lo) * .6
-    fig = plt.figure(figsize=(9, 7), facecolor='#f3f5f7')
-    ax = fig.add_subplot(111, projection='3d', computed_zorder=False)
-    ax.set_facecolor('#f3f5f7')
-    light = np.array([.4, -.6, .7])
-    normals = np.array([np.cross(p[1]-p[0], p[2]-p[0]) for p in polys])
-    normals /= np.maximum(np.linalg.norm(normals, axis=1)[:,None], 1e-12)
-    shade = .45 + .5 * np.abs(normals @ light)
-    colors = np.column_stack([shade*.18, shade*.65, shade*.78, np.ones(len(shade))])
-    ax.add_collection3d(Poly3DCollection(polys, facecolors=colors, linewidths=0, rasterized=True))
-    for setter, c in zip([ax.set_xlim, ax.set_ylim, ax.set_zlim], center):
-        setter(c-radius, c+radius)
-    ax.set_box_aspect((1,1,1), zoom=1.65)
-    ax.view_init(elev=25, azim=-55)
-    ax.set_proj_type('ortho')
-    ax.set_axis_off()
-    fig.suptitle(title, fontsize=18, y=.94)
-    fig.text(.5, .06, 'CAD / model preview · source geometry', ha='center', color='#53616b')
-    fig.savefig(target, dpi=140, bbox_inches='tight')
-    plt.close(fig)
 
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('sources', nargs='*', type=Path,
-                    help='Render selected STEP/STP files; omit to render all assets.')
-args = parser.parse_args()
-sources = args.sources or [source for folder in ['b601-camera-mounts', 'data-collection-camera-mounts']
-                          for source in sorted((ROOT/folder).rglob('*'))
-                          if source.suffix.lower() in {'.step', '.stp'}]
-for source in sources:
+def tessellate(part):
+    part.mesh(0.05, 0.1)
+    points, triangles = [], []
+    for face in part.Faces():
+        location = TopLoc_Location()
+        surface = BRep_Tool.Triangulation_s(face.wrapped, location)
+        if surface is None:
+            # Some STEP adapters contain degenerate faces with zero area.
+            if abs(face.Area()) < 1e-8:
+                continue
+            raise ValueError("Unable to tessellate a nondegenerate STEP face")
+
+        transform = location.Transformation()
+        offset = len(points) - 1  # OpenCascade nodes are 1-based.
+        for index in range(1, surface.NbNodes() + 1):
+            point = surface.Node(index).Transformed(transform)
+            points.append((point.X(), point.Y(), point.Z()))
+        reversed_face = face.wrapped.Orientation() == TopAbs_REVERSED
+        for triangle in surface.Triangles():
+            a, b, c = triangle.Get()
+            if reversed_face:
+                b, c = c, b
+            triangles.append((a + offset, b + offset, c + offset))
+    return np.array(points), triangles
+
+
+def step_meshes(source):
     shape = cq.importers.importStep(str(source)).val()
-    vertices, triangles = shape.tessellate(.15, .15)
-    vertices = np.array([v.toTuple() for v in vertices])
-    if source.stem == 'data-collection-camera-mount-v2':
-        # The supplied assembly is modeled along Y. Show it upright in the preview.
-        vertices = vertices[:, [0, 2, 1]] * np.array([1, -1, 1])
-    polys = [vertices[list(t)] for t in triangles]
-    target = preview_target(source)
+    if source.stem != V2:
+        parts = [(shape, "Polymer")]
+    else:
+        parts = []
+        for solid in shape.Solids():
+            bounds = solid.BoundingBox()
+            # The source assembly uses four 20 × 20 mm extrusion segments.
+            profile = math.isclose(bounds.xlen, 20, abs_tol=0.01) and math.isclose(
+                bounds.zlen, 20, abs_tol=0.01
+            )
+            parts.append((solid, "Aluminum" if profile and bounds.ylen > 100 else "Polymer"))
+
+    for part, finish in parts:
+        points, triangles = tessellate(part)
+        if source.stem == V2:
+            points = points @ Y_UP_TO_Z_UP.T
+        yield points, triangles, finish
+
+
+def usd_meshes(source):
+    stage = Usd.Stage.Open(str(source))
+    cache = UsdGeom.XformCache()
+    y_up = UsdGeom.GetStageUpAxis(stage) == "Y"
+    for prim in stage.Traverse():
+        if not prim.IsA(UsdGeom.Mesh):
+            continue
+        mesh = UsdGeom.Mesh(prim)
+        transform = cache.GetLocalToWorldTransform(prim)
+        points = np.array([
+            tuple(transform.Transform(Gf.Vec3d(*point))) for point in mesh.GetPointsAttr().Get()
+        ])
+        if y_up:
+            points = points @ Y_UP_TO_Z_UP.T
+        indices = mesh.GetFaceVertexIndicesAttr().Get()
+        faces = []
+        offset = 0
+        left_handed = mesh.GetOrientationAttr().Get() == UsdGeom.Tokens.leftHanded
+        for count in mesh.GetFaceVertexCountsAttr().Get():
+            face = list(indices[offset:offset + count])
+            if left_handed:
+                face.reverse()
+            faces.append(face)
+            offset += count
+        bound, _ = UsdShade.MaterialBindingAPI(prim).ComputeBoundMaterial()
+        name = bound.GetPrim().GetName() if bound else ""
+        finish = {
+            "Diffuse": "Box",
+            "green": "Green lettering",
+            "PreviewSurface": "Dark lettering",
+        }.get(name, "Box markers")
+        yield points, faces, finish
+
+
+def material(name, color, roughness, metallic=0, edge_radius=0):
+    result = bpy.data.materials.new(name)
+    result.use_nodes = True
+    shader = result.node_tree.nodes.get("Principled BSDF")
+    shader.inputs["Base Color"].default_value = (*color, 1)
+    shader.inputs["Roughness"].default_value = roughness
+    shader.inputs["Metallic"].default_value = metallic
+    if edge_radius:
+        bevel = result.node_tree.nodes.new("ShaderNodeBevel")
+        bevel.inputs["Radius"].default_value = edge_radius
+        result.node_tree.links.new(bevel.outputs["Normal"], shader.inputs["Normal"])
+    return result
+
+
+def add_model(points, faces, finish):
+    mesh = bpy.data.meshes.new(finish.name)
+    mesh.from_pydata(points.tolist(), [], faces)
+    # Each STEP surface has its own vertices. Keeping those seams preserves
+    # sharp edges and avoids welding thin or near-coincident surfaces together.
+    for face in mesh.polygons:
+        face.use_smooth = True
+    mesh.set_sharp_from_angle(angle=math.radians(32))
+    mesh.materials.append(finish)
+    model = bpy.data.objects.new(finish.name, mesh)
+    bpy.context.collection.objects.link(model)
+
+
+def studio_light(name, position, energy, size, color):
+    light = bpy.data.lights.new(name, "AREA")
+    light.energy = energy
+    light.shape = "DISK"
+    light.size = size
+    light.color = color
+    lamp = bpy.data.objects.new(name, light)
+    bpy.context.collection.objects.link(lamp)
+    lamp.location = position
+    lamp.rotation_euler = (Vector((0, 0, 0.35)) - lamp.location).to_track_quat("-Z", "Y").to_euler()
+
+
+def frame_camera(vertices, direction, width, height):
+    rotation = Vector(direction).to_track_quat("Z", "Y")
+    right = rotation @ Vector((1, 0, 0))
+    up = rotation @ Vector((0, 1, 0))
+    projection = vertices @ np.array([right, up]).T
+    low, high = projection.min(axis=0), projection.max(axis=0)
+    middle = (low + high) / 2
+    span_x, span_y = high - low
+
+    camera = bpy.data.cameras.new("Orthographic")
+    camera.type = "ORTHO"
+    camera.ortho_scale = max(span_x * 1.26 / width, span_y * 1.24 / height) * max(width, height)
+    camera_object = bpy.data.objects.new("Orthographic", camera)
+    bpy.context.collection.objects.link(camera_object)
+    camera_object.rotation_euler = rotation.to_euler()
+    camera_object.location = (
+        right * middle[0] + up * (middle[1] - span_y * 0.025) + Vector(direction).normalized() * 4
+    )
+    bpy.context.scene.camera = camera_object
+
+
+def render(source, target, draft=False):
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    is_box = source.suffix.lower() == ".usdz"
+    meshes = list(usd_meshes(source) if is_box else step_meshes(source))
+    vertices = np.concatenate([points for points, _, _ in meshes])
+    low, high = vertices.min(axis=0), vertices.max(axis=0)
+    center = (low + high) / 2
+    center[2] = low[2]
+    scale = float(max(high - low))
+    finishes = {
+        "Polymer": material("Polymer", (0.022, 0.064, 0.095), 0.40),
+        "Aluminum": material("Aluminum", (0.29, 0.33, 0.38), 0.39, metallic=0.74),
+        "Box": material("Box", (0.37, 0.44, 0.48), 0.46, edge_radius=0.0015),
+        "Box markers": material("Box markers", (0.14, 0.21, 0.24), 0.65),
+        "Green lettering": material("Green lettering", (0.08, 0.38, 0.12), 0.50),
+        "Dark lettering": material("Dark lettering", (0.024, 0.030, 0.038), 0.50),
+    }
+    for points, faces, finish in meshes:
+        add_model((points - center) / scale, faces, finishes[finish])
+
+    bpy.ops.mesh.primitive_plane_add(size=200, location=(0, 0, -0.002))
+    bpy.context.object.data.materials.append(material("Backdrop", (0.86, 0.89, 0.94), 0.85))
+
+    scene = bpy.context.scene
+    scene.world = bpy.data.worlds.new("Studio ambient")
+    scene.world.use_nodes = True
+    background = scene.world.node_tree.nodes.get("Background")
+    background.inputs["Color"].default_value = (0.72, 0.81, 1.0, 1)
+    background.inputs["Strength"].default_value = 0.33
+    side = -1 if is_box else 1
+    studio_light("Key", (-2.4 * side, -3 * side, 4), 490, 4.0, (1.0, 0.93, 0.84))
+    studio_light("Fill", (3.0 * side, -1.0 * side, 2.1), 145, 3.0, (0.78, 0.88, 1.0))
+    studio_light("Rim", (1.4 * side, 2.9 * side, 3.2), 360, 2.4, (1.0, 1.0, 1.0))
+
+    width, height = 1040, 680
+    direction = (1.2, -1.0, 1.18)
+    if source.stem == V2:
+        width, height = 580, 940
+        direction = (1.4, -1.0, 0.48)
+    elif source.stem in TALL_MOUNTS:
+        width, height = 650, 740
+        direction = (0.82, -1.2, 0.66)
+    elif is_box:
+        direction = (-0.84, 1.7, 0.64)
+
+    frame_camera((vertices - center) / scale, direction, width, height)
+    scene.render.engine = "CYCLES"
+    scene.cycles.device = "CPU"
+    scene.cycles.samples = 20 if draft else 72
+    scene.cycles.use_denoising = True
+    scene.cycles.max_bounces = 6
+    scene.view_settings.view_transform = "AgX"
+    scene.render.resolution_x = width
+    scene.render.resolution_y = height
+    scene.render.resolution_percentage = 55 if draft else 100
+    scene.render.image_settings.file_format = "PNG"
+    scene.render.image_settings.color_mode = "RGB"
+    scene.render.image_settings.compression = 80
     target.parent.mkdir(parents=True, exist_ok=True)
-    render(polys, target, source.stem.replace('_',' ').replace('-',' '))
-    print(source.name, len(triangles), flush=True)
+    scene.render.filepath = str(target)
+    bpy.ops.render.render(write_still=True)
+    print(f"{source.name} → {target.name}", flush=True)
 
-if args.sources:
-    raise SystemExit(0)
 
-stage = Usd.Stage.Open(str(ROOT/'data-collection-environment/box.usdz'))
-polys=[]
-cache=UsdGeom.XformCache()
-for prim in stage.Traverse():
-    if not prim.IsA(UsdGeom.Mesh): continue
-    mesh=UsdGeom.Mesh(prim)
-    xf=cache.GetLocalToWorldTransform(prim)
-    points=np.array([tuple(xf.Transform(Gf.Vec3d(*p))) for p in mesh.GetPointsAttr().Get()])
-    ids=mesh.GetFaceVertexIndicesAttr().Get()
-    offset=0
-    for count in mesh.GetFaceVertexCountsAttr().Get():
-        face=list(ids[offset:offset+count]); offset+=count
-        for i in range(1,count-1): polys.append(points[[face[0],face[i],face[i+1]]])
-if UsdGeom.GetStageUpAxis(stage)=='Y':
-    polys=[p[:,[0,2,1]]*np.array([1,-1,1]) for p in polys]
-assert polys, 'No mesh geometry in box.usdz'
-render(polys, ROOT/'images/box.png', 'Box environment model')
-print('box.usdz',len(polys),flush=True)
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "sources", nargs="*", type=Path, help="Render selected STEP/STP or USDZ assets."
+    )
+    parser.add_argument("--draft", type=Path, metavar="DIR", help="Write quick previews to DIR.")
+    args = parser.parse_args()
+    sources = args.sources or [
+        source
+        for folder in ("b601-camera-mounts", "data-collection-camera-mounts")
+        for source in sorted((ROOT / folder).glob("**/*"))
+        if source.suffix.lower() in {".step", ".stp"}
+        and preview_target(source).parent == ROOT / "images"
+    ] + [BOX]
+    for source in sources:
+        target = preview_target(source)
+        if args.draft:
+            target = args.draft.resolve() / target.relative_to(ROOT / "images")
+        render(source, target, draft=bool(args.draft))
+
+
+if __name__ == "__main__":
+    main()
