@@ -33,11 +33,9 @@
 
 *根据本仓库的 STEP 文件生成的模型预览。*
 
-[上游 D405 支架参考渲染图](images/b601-d405.jpg)
-
 [下载 D405_305_Mount.step](b601-camera-mounts/D405_305_Mount.step)
 
-文件名标识为 D405 / 305 支架。模型由摄像头承载板和弧形安装底座组成，承载板上有安装孔。reBot-DevArm 首页将名称中的“305”标识为 Gemini 305。上图均为 CAD 渲染图。
+文件名标识为 D405 / 305 支架。模型由摄像头承载板和弧形安装底座组成，承载板上有安装孔。reBot-DevArm 首页将名称中的“305”标识为 Gemini 305。
 
 ### D435 / Gemini 2 支架
 
@@ -45,11 +43,9 @@
 
 *根据本仓库的 STEP 文件生成的模型预览。*
 
-[上游 D435i 支架参考渲染图](images/b601-d435i.jpg)
-
 [下载 D435_Gemini2_Mount.step](b601-camera-mounts/D435_Gemini2_Mount.step)
 
-文件名标识为 D435 / Gemini 2 支架。模型具有长条形摄像头承载板和弧形安装底座。上游参考图名为 D435i，仅作为外形参考；各型号的实际安装适配情况仍需检查。
+文件名标识为 D435 / Gemini 2 支架。模型具有长条形摄像头承载板和弧形安装底座。安装前请核对模型与实际硬件的适配情况。
 
 ### UVC32 支架
 
@@ -180,8 +176,6 @@ V2 为铝型材主体＋3D 打印摄像头支架的数据采集支架；V1 使�
 ## 图片来源与模型预览
 
 当前版本的 B601 支架、数据采集支架和环境模型均使用 Blender Cycles 根据原始 STEP 或 USDZ 几何进行棚拍式渲染。图中的配色和表面质感仅用于展示。B601 历史 V1 支架使用 V1 目录中保留的历史参考图展示。这些图片是模型预览，并非实物照片。V1 适配件单独展示，图片不代表已完成装配或适配验证。
-
-另外两张 B601 参考图来自上游：[D405.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D405.jpg) 和 [D435i.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D435i.jpg)，两者也均为 CAD 渲染图。
 
 如需重新生成预览图，在 Python 3.11 环境中安装 `bpy==4.5.11`、`cadquery`、`numpy` 和 `usd-core`，然后在仓库根目录执行 `cd hardware/camera-mounts && python tools/render_previews.py`。仅生成 V2 预览可在 `hardware/camera-mounts/` 目录执行 `python tools/render_previews.py data-collection-camera-mounts/data-collection-camera-mount-v2.stp`。
 

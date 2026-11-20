@@ -33,11 +33,9 @@ These files originate from the B601-DM 3D printed parts collection in [reBot-Dev
 
 *D405_305_Mount: preview rendered from the supplied STEP file.*
 
-[Upstream CAD rendering of the D405 mount](images/b601-d405.jpg)
-
 [Download D405_305_Mount.step](b601-camera-mounts/D405_305_Mount.step)
 
-Camera mount identified as D405 / 305 in the source filename. The upstream D405 rendering shows a camera support plate connected to a curved mounting base. The image is a CAD rendering, not a finished-part photograph; the main reBot-DevArm README identifies “305” as Gemini 305.
+Camera mount identified as D405 / 305 in the source filename. The model shows a camera support plate with mounting holes connected to a curved mounting base. The main reBot-DevArm README identifies “305” as Gemini 305.
 
 ### D435 / Gemini 2 mount
 
@@ -45,11 +43,9 @@ Camera mount identified as D405 / 305 in the source filename. The upstream D405 
 
 *D435_Gemini2_Mount: preview rendered from the supplied STEP file.*
 
-[Upstream D435i CAD rendering](images/b601-d435i.jpg)
-
 [Download D435_Gemini2_Mount.step](b601-camera-mounts/D435_Gemini2_Mount.step)
 
-Camera mount identified as D435 / Gemini 2 in the source filename. The upstream image is labeled D435i and shows an elongated camera support plate and curved mounting base. It is a CAD reference rendering, not proof of fit for every named camera or a finished-part photograph.
+Camera mount identified as D435 / Gemini 2 in the source filename. The model shows an elongated camera support plate and a curved mounting base. Check the mounting geometry against your hardware.
 
 ### UVC32 mount
 
@@ -183,8 +179,6 @@ A box model from [rebot-arm-dli-isaacsim](https://github.com/yuyoujiang/rebot-ar
 ## Image sources and model previews
 
 The current B601 mounts, data collection mounts, and environment asset have studio previews rendered in Blender Cycles from their source STEP or USDZ geometry. The colors and finishes are illustrative. Historical B601 V1 mounts are illustrated with the original reference images retained in their V1 catalog. These are model previews, not physical-product photographs. V1 adapter parts are shown separately; the images do not imply verified assembly or fit.
-
-Two additional B601 reference images come from upstream: [D405.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D405.jpg) and [D435i.jpg](https://github.com/Seeed-Projects/reBot-DevArm/blob/main/hardware/reBot_B601_DM/3D_Printed_Parts/images/D435i.jpg). Both are CAD renderings.
 
 To regenerate the previews, install `bpy==4.5.11`, `cadquery`, `numpy`, and `usd-core` in a Python 3.11 environment, then run `cd hardware/camera-mounts && python tools/render_previews.py` from the repository root. To render only V2, run `python tools/render_previews.py data-collection-camera-mounts/data-collection-camera-mount-v2.stp` from `hardware/camera-mounts/`.
 
