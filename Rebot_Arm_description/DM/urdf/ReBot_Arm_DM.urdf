@@ -367,7 +367,14 @@
     <child link="end_link" />
     <axis xyz="0 0 0" />
   </joint>
+  <!-- Provisional finger inertials use 42.3 g per finger based on the legacy DM URDF.
+       Centers of mass and tensors assume uniform density in the current collision meshes. -->
   <link name="finger_left_link">
+    <inertial>
+      <origin xyz="-0.0602334 0.0131619 -0.0015621" rpy="0 0 0" />
+      <mass value="0.0423" />
+      <inertia ixx="1.16066e-05" ixy="3.42191e-06" ixz="-1.7233e-06" iyy="2.04496e-05" iyz="9.83378e-08" izz="2.19143e-05" />
+    </inertial>
     <visual name="finger_left_body">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
@@ -411,6 +418,11 @@
     <limit lower="0" upper="0.05" effort="8" velocity="0.08" />
   </joint>
   <link name="finger_right_link">
+    <inertial>
+      <origin xyz="-0.0602437 -0.0132498 0.0016211" rpy="0 0 0" />
+      <mass value="0.0423" />
+      <inertia ixx="1.16204e-05" ixy="-3.40846e-06" ixz="1.72058e-06" iyy="2.03479e-05" iyz="1.28601e-07" izz="2.18093e-05" />
+    </inertial>
     <visual name="finger_right_body">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
