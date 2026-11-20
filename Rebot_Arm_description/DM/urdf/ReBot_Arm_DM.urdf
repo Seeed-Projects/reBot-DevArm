@@ -331,9 +331,9 @@
     <!-- The legacy 0.500 kg included both fingers. This residual preserves the
          assembly mass, center of mass, and inertia at zero finger travel. -->
     <inertial>
-      <origin xyz="-0.07652030202 -2.493692329e-06 2.46976216e-06" rpy="0 0 0" />
-      <mass value="0.4154" />
-      <inertia ixx="0.0003353447474" ixy="-1.651378644e-07" ixz="5.329592575e-07" iyy="9.865572459e-05" iyz="1.474823189e-06" izz="0.0003764200905" />
+      <origin xyz="-0.07492123603 6.860139348e-06 -7.681169284e-06" rpy="0 0 0" />
+      <mass value="0.3882" />
+      <inertia ixx="0.0003063529736" ixy="-1.563473381e-07" ixz="5.140357628e-07" iyy="0.0001137940927" iyz="-1.025394223e-06" izz="0.0003737621931" />
     </inertial>
     <visual name="gripper_base_seeed_yellow">
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -369,13 +369,15 @@
     <child link="end_link" />
     <axis xyz="0 0 0" />
   </joint>
-  <!-- Provisional finger inertials use 42.3 g per finger based on the legacy DM URDF.
-       Centers of mass and tensors assume uniform density in the current collision meshes. -->
+  <!-- Each finger uses a measured 12.0 g printed body and 43.9 g hardware group.
+       Centers of mass and tensors are estimated from their visual meshes with uniform
+       density within each weighed group. The hardware group covers the moving
+       carriage, travel stop and crossed rack. -->
   <link name="finger_left_link">
     <inertial>
-      <origin xyz="-0.0602334 0.0131619 -0.0015621" rpy="0 0 0" />
-      <mass value="0.0423" />
-      <inertia ixx="1.16066e-05" ixy="3.42191e-06" ixz="-1.7233e-06" iyy="2.04496e-05" iyz="9.83378e-08" izz="2.19143e-05" />
+      <origin xyz="-0.06977348246 0.008873565107 0.003629107093" rpy="0 0 0" />
+      <mass value="0.0559" />
+      <inertia ixx="2.840092016e-05" ixy="-3.744740801e-06" ixz="3.109543825e-06" iyy="2.038803338e-05" iyz="4.00238964e-06" izz="3.431763831e-05" />
     </inertial>
     <visual name="finger_left_body">
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -421,9 +423,9 @@
   </joint>
   <link name="finger_right_link">
     <inertial>
-      <origin xyz="-0.0602437 -0.0132498 0.0016211" rpy="0 0 0" />
-      <mass value="0.0423" />
-      <inertia ixx="1.16204e-05" ixy="-3.40846e-06" ixz="1.72058e-06" iyy="2.03479e-05" iyz="1.28601e-07" izz="2.18093e-05" />
+      <origin xyz="-0.06973082816 -0.009006251259 -0.003512765964" rpy="0 0 0" />
+      <mass value="0.0559" />
+      <inertia ixx="2.842436227e-05" ixy="3.736926924e-06" ixz="-3.102547418e-06" iyy="2.037253503e-05" iyz="4.071671987e-06" izz="3.419509349e-05" />
     </inertial>
     <visual name="finger_right_body">
       <origin xyz="0 0 0" rpy="0 0 0" />
