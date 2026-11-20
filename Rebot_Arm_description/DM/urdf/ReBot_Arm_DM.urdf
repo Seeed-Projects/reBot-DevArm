@@ -328,10 +328,12 @@
     <limit lower="-3.14" upper="3.14" effort="7" velocity="200" />
   </joint>
   <link name="end_link">
+    <!-- The legacy 0.500 kg included both fingers. This residual preserves the
+         assembly mass, center of mass, and inertia at zero finger travel. -->
     <inertial>
-      <origin xyz="-0.0737654295815033 -9.5080995865868E-06 7.04327840286845E-06" rpy="0 0 0" />
-      <mass value="0.5000000" />
-      <inertia ixx="0.00037354" ixy="-0.00000011" ixz="0.00000050" iyy="0.00015830" iyz="0.00000348" izz="0.00045353" />
+      <origin xyz="-0.07652030202 -2.493692329e-06 2.46976216e-06" rpy="0 0 0" />
+      <mass value="0.4154" />
+      <inertia ixx="0.0003353447474" ixy="-1.651378644e-07" ixz="5.329592575e-07" iyy="9.865572459e-05" iyz="1.474823189e-06" izz="0.0003764200905" />
     </inertial>
     <visual name="gripper_base_seeed_yellow">
       <origin xyz="0 0 0" rpy="0 0 0" />
