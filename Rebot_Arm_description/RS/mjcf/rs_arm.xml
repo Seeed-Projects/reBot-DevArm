@@ -128,17 +128,17 @@
 
   <worldbody>
     <body name="base_link" pos="0 0 0">
-      <inertial pos="0.0000029 -0.0001223 0.0243376" mass="1.1774" fullinertia="0.0013304 0.00213119 0.00275877 0.00000001 0 0"/>
+      <inertial pos="2.87641888266442E-06 -0.000122302488725115 0.0243376121934547" mass="1.2013" fullinertia="0.0013304 0.00213119 0.00275877 0.00000001 0 0"/>
       <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_base_black_mat" type="mesh" mesh="base_link" />
       <geom pos="0 0 0" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" type="mesh" mesh="base_link" />
       <body name="link1" pos="-0.0003428 -0.0009868 0.075">
         <joint name="joint1" type="hinge" axis="0 0 -1" limited="true" range="-2.8 2.8" damping="0.5" frictionloss="0"/>
-        <inertial pos="0.0081765 0.0012258 0.033142" mass="0.4655" fullinertia="0.00025207 0.00015464 0.00023416 0 -0.00002832 0"/>
+        <inertial pos="0.00817652280320541 0.00122584211922395 0.0331419658967293" mass="0.4658" fullinertia="0.00025207 0.00015464 0.00023416 0 -0.00002832 0"/>
         <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_anodized_silver_mat" type="mesh" mesh="link1" />
         <geom pos="0 0 0" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" type="mesh" mesh="link1" />
         <body name="link2" pos="0.020343 0.027237 0.07" quat="0.7071055 -0.7071081 0 0">
           <joint name="joint2" type="hinge" axis="0 0 1" limited="true" range="-0.2 3.14" damping="0.5" frictionloss="0"/>
-          <inertial pos="-0.1178648 -0.0034223 -0.0271552" mass="1.772" fullinertia="0.00073374 0.01255987 0.01281387 -0.00000043 0.00000851 0.00000128"/>
+          <inertial pos="-0.0646343092625248 0.0202916447981769 -0.0271551938501484" mass="1.9641" fullinertia="0.00073374 0.01255987 0.01281387 -0.00000043 0.00000851 0.00000128"/>
           <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_motor_black_mat" type="mesh" mesh="motor_2_3" />
           <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_anodized_silver_mat" type="mesh" mesh="cnc2" />
           <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_pla_black_mat" type="mesh" mesh="pla2_black" />
@@ -146,7 +146,7 @@
           <geom pos="0 0 0" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" type="mesh" mesh="link2" />
           <body name="link3" pos="-0.236 0 0">
             <joint name="joint3" type="hinge" axis="0 0 -1" limited="true" range="-0.2 3.14" damping="0.5" frictionloss="0"/>
-            <inertial pos="0.1034272 -0.0664138 -0.0271069" mass="1.062" fullinertia="0.00046807 0.00632695 0.00648221 -0.00003456 -0.0000426 0.00000006"/>
+            <inertial pos="0.0865212554477486 -0.0398286864925187 -0.0271068687716704" mass="1.0273" fullinertia="0.00046807 0.00632695 0.00648221 -0.00003456 -0.0000426 0.00000006"/>
             <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_anodized_silver_mat" type="mesh" mesh="cnc3" />
             <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_motor_black_mat" type="mesh" mesh="motor_4" />
             <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_pla_black_mat" type="mesh" mesh="pla3_black" />
@@ -156,24 +156,24 @@
             <geom pos="0 0 0" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" type="mesh" mesh="link3" />
             <body name="link4" pos="0.228 -0.072746 0.0045">
               <joint name="joint4" type="hinge" axis="0 0 -1" limited="true" range="-1.57 1.57" damping="0.5" frictionloss="0"/>
-              <inertial pos="0.0475545 -0.0441113 -0.0314112" mass="0.66" fullinertia="0.00045986 0.00075258 0.00066742 0.00024219 0 0"/>
+              <inertial pos="0.0379557618417933 -0.031245154939458 -0.0314111924918381" mass="0.6781" fullinertia="0.00045986 0.00075258 0.00066742 0.00024219 0 0"/>
               <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_motor_black_mat" type="mesh" mesh="motor_5" />
               <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_anodized_silver_mat" type="mesh" mesh="cnc4" />
               <geom pos="0 0 0" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" type="mesh" mesh="link4" />
               <body name="link5" pos="0.087 -0.048 -0.03075" quat="0.7071055 -0.7071081 0 0">
                 <joint name="joint5" type="hinge" axis="0 0 -1" limited="true" range="-1.57 1.57" damping="0.5" frictionloss="0"/>
-                <inertial pos="-0.0114401 0.0000048 0.0480487" mass="0.1501205" fullinertia="0.0000734238 0.0000551539 0.000052992 0.0000000136 -0.0000008581 -0.0000000133"/>
+                <inertial pos="-0.00618756488694402 -0.0116402460850124 0.0380487481818926" mass="0.5341" fullinertia="7.34238025911107E-05 5.5153884237714E-05 5.29920095811017E-05 1.35700947009798E-08 -8.58146433770359E-07 -1.32742144977931E-08"/>
                 <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_motor_black_mat" type="mesh" mesh="motor_6" />
                 <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_anodized_silver_mat" type="mesh" mesh="cnc5" />
                 <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_seeed_green_mat" type="mesh" mesh="pla5_green" />
                 <geom pos="0 0 0" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" type="mesh" mesh="link5" />
                 <body name="link6" pos="0.0365 0 0.048" quat="0.7071055 0 0.7071081 0">
                   <joint name="joint6" type="hinge" axis="0 0 -1" limited="true" range="-3.14 3.14" damping="2.0" frictionloss="0.1"/>
-                  <inertial pos="0.000018 0 0.0043481" mass="0.03" fullinertia="0.0000044227 0.0000043719 0.000008543 0 0.0000000002 0"/>
+                  <inertial pos="1.80196022567525E-05 2.48334592051007E-08 0.00434805764057547" mass="0.1" fullinertia="4.42273835852359E-06 4.37185522080034E-06 8.54299378942051E-06 3.16758463739482E-12 1.51852818442002E-10 -2.21864017603015E-12"/>
                   <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_motor_black_mat" type="mesh" mesh="link6" />
                   <geom pos="0 0 0" rgba="0 0 0 0" group="3" contype="1" conaffinity="1" type="mesh" mesh="link6" />
                   <body name="gripper_end" pos="0 0 0.16621" quat="-0.0000026 0.7071055 0.0000026 0.7071081">
-                    <inertial pos="-0.1127517 0.0001284 -0.0000057" mass="0.65" fullinertia="0.00037354 0.0001583 0.00045353 -0.00000011 0.0000005 0.00000348"/>
+                    <inertial pos="-0.107557036628663 0.00548442992350182 0.00734754100475039" mass="0.4678" fullinertia="0.00037354 0.0001583 0.00045353 -0.00000011 0.0000005 0.00000348"/>
                     <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_seeed_green_mat" type="mesh" mesh="pla7_green" />
                     <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_anodized_silver_mat" type="mesh" mesh="cnc7" />
                     <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_motor_black_mat" type="mesh" mesh="motor_7" />
@@ -230,7 +230,7 @@
                     </body>
                     <body name="gripper_left" pos="-0.041939 -0.0000734 0" quat="0.4999982 0.5 -0.5 0.5000018">
                       <joint name="joint_left" type="slide" axis="0 0 1" limited="true" range="0 0.05" damping="5.0" frictionloss="0.5"/>
-                      <inertial pos="-0.0021801 0.018709 0.0093219" mass="0.0752" diaginertia="0.0000109878 0.0000095015 0.0000093078"/>
+                      <inertial pos="-0.004352194953 0.02887219666 0.007481036235" mass="0.0559" fullinertia="3.625113031e-05 3.151591629e-05 2.038162557e-05 3.480513097e-06 -4.464819266e-06 4.986072156e-06"/>
                       <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_pla_black_mat" type="mesh" mesh="pla_left" />
                       <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_anodized_silver_mat" type="mesh" mesh="cnc_left" />
                       <!-- DM 与 RS 使用同一夹爪；保留 DM 的前/中/后凸分片，避免整件 STL
@@ -258,8 +258,8 @@
                             friction="1.5 0.04 0.01" solref="0.002 1" solimp="0.98 0.995 0.0005" />
                     </body>
                     <body name="gripper_right" pos="-0.041939 0.0000734 0" quat="0.4999982 -0.5 -0.5 -0.5000018">
-                      <joint name="joint_right" type="slide" axis="0 0 1" limited="true" range="0 0.0715" damping="5.0" frictionloss="0.5"/>
-                      <inertial pos="0.0021801 -0.018709 0.0093219" mass="0.0752" diaginertia="0.0000109878 0.0000095015 0.0000093078"/>
+                      <joint name="joint_right" type="slide" axis="0 0 1" limited="true" range="0 0.05" damping="5.0" frictionloss="0.5"/>
+                      <inertial pos="0.004352194953 -0.02887219666 0.007481036235" mass="0.0559" fullinertia="3.625113031e-05 3.151591629e-05 2.038162557e-05 3.480513097e-06 4.464819266e-06 -4.986072156e-06"/>
                       <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_pla_black_mat" type="mesh" mesh="pla_right" />
                       <geom pos="0 0 0" group="1" contype="0" conaffinity="0" material="rs_anodized_silver_mat" type="mesh" mesh="cnc_right" />
                       <geom name="gripper_right_front_collision" type="mesh" mesh="gripper_right_front_collision"

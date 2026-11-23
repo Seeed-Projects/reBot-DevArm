@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -12,6 +13,37 @@ def contained(base, relative):
     if not path.is_relative_to(base.resolve()) or not path.is_file():
         raise ValueError(f'Missing or external asset: {relative} (under {base})')
     return path
+
+
+def verify_rs_inertials(arm):
+    urdf = ET.parse(arm / 'urdf/ReBot_Arm_RS.urdf')
+    mjcf = ET.parse(arm / 'mjcf/rs_arm.xml')
+    for link in urdf.findall('link'):
+        name = link.attrib['name']
+        expected = link.find('inertial')
+        actual = mjcf.find(f'.//body[@name="{name}"]/inertial')
+        if actual is None:
+            raise ValueError(f'Missing RS MJCF inertial: {name}')
+        tensor = expected.find('inertia').attrib
+        expected_values = [
+            float(expected.find('mass').attrib['value']),
+            *map(float, expected.find('origin').attrib['xyz'].split()),
+            *(float(tensor[key]) for key in ('ixx', 'iyy', 'izz', 'ixy', 'ixz', 'iyz')),
+        ]
+        values = [float(actual.attrib['mass']), *map(float, actual.attrib['pos'].split())]
+        if 'fullinertia' in actual.attrib:
+            values.extend(map(float, actual.attrib['fullinertia'].split()))
+        else:
+            values.extend([*map(float, actual.attrib['diaginertia'].split()), 0.0, 0.0, 0.0])
+        if len(values) != len(expected_values) or not all(
+            math.isclose(a, b, rel_tol=0.0, abs_tol=1e-8)
+            for a, b in zip(expected_values, values)
+        ):
+            raise ValueError(f'RS URDF and MJCF inertials differ: {name}')
+    for name in ('joint7', 'joint_left', 'joint_right'):
+        joint = mjcf.find(f'.//joint[@name="{name}"]')
+        if joint is None or list(map(float, joint.attrib['range'].split())) != [0.0, 0.05]:
+            raise ValueError(f'Invalid RS MJCF finger range: {name}')
 
 
 def verify(description, simulate=False):
@@ -50,6 +82,7 @@ def verify(description, simulate=False):
                 if mesh.get('file'):
                     contained(base, (model.parent / meshdir / mesh.attrib['file']).resolve().relative_to(base.resolve()))
             models.append(model)
+    verify_rs_inertials(description / 'RS')
     if simulate:
         import mujoco
         import numpy as np

@@ -1203,12 +1203,12 @@
     },
     {
       "path": "RS/mjcf/rs_arm.xml",
-      "sha256": "8995155fd45364cc968338fdcb92935517a7edae6bfc8b9e82ec67df93c40741",
+      "sha256": "fc192edc6ccebb2841c4f5e48c44578c7420195c8bb36f766bad8652be9fed1c",
       "source_repository": "Yang-Ci/ReBot_Arm_DigitalTwin_RS",
       "source_commit": "aa807cf2affe85b13b86221159871aae7742c01b",
       "source_path": "rebotarm_ros2_RS/src/rebotarm_mujoco_rs/models/rs_arm.xml",
       "source_sha256": "3c624e4c0747131f4fe1990b868fdcb825b9ed17a472fa94f611d20245152ce6",
-      "transformation": "mesh reference paths only"
+      "transformation": "mesh reference paths, measured RS URDF inertials, and 50 mm per-finger limits"
     },
     {
       "path": "RS/mjcf/rs_grasp_scene.xml",
