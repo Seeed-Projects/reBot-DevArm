@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Last modified: 2026-11-23 10:05:03 (UTC+08:00, Beijing time)
+  Modified by: YangCi
+-->
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
@@ -31,7 +35,7 @@
         xyz="2.87641888266442E-06 -0.000122302488725115 0.0243376121934547"
         rpy="0 0 0" />
       <mass
-        value="1.1774" />
+        value="1.2013" />
       <inertia
         ixx="0.00133040"
         ixy="0.00000001"
@@ -67,7 +71,7 @@
         xyz="0.00817652280320541 0.00122584211922395 0.0331419658967293"
         rpy="0 0 0" />
       <mass
-        value="0.4655" />
+        value="0.4658" />
       <inertia
         ixx="0.00025207"
         ixy="0.00000000"
@@ -118,10 +122,10 @@
     name="link2">
     <inertial>
       <origin
-        xyz="-0.117864812717456 -0.00342226413942967 -0.0271551938501484"
+        xyz="-0.0646343092625248 0.0202916447981769 -0.0271551938501484"
         rpy="0 0 0" />
       <mass
-        value="1.552" />
+        value="1.9641" />
       <inertia
         ixx="0.00073374"
         ixy="-0.00000043"
@@ -212,10 +216,10 @@
     name="link3">
     <inertial>
       <origin
-        xyz="0.103427154487799 -0.0664137912104635 -0.0271068687716704"
+        xyz="0.0865212554477486 -0.0398286864925187 -0.0271068687716704"
         rpy="0 0 0" />
       <mass
-        value="1.252" />
+        value="1.0273" />
       <inertia
         ixx="0.00046807"
         ixy="-0.00003456"
@@ -326,10 +330,10 @@
     name="link4">
     <inertial>
       <origin
-        xyz="0.0475544540775559 -0.0441113470158517 -0.0314111924918381"
+        xyz="0.0379557618417933 -0.031245154939458 -0.0314111924918381"
         rpy="0 0 0" />
       <mass
-        value="0.46" />
+        value="0.6781" />
       <inertia
         ixx="0.00045986"
         ixy="0.00024219"
@@ -400,10 +404,10 @@
     name="link5">
     <inertial>
       <origin
-        xyz="0.0114400622356175 4.7907739316217E-06 0.0380487481818926"
+        xyz="-0.00618756488694402 -0.0116402460850124 0.0380487481818926"
         rpy="0 0 0" />
       <mass
-        value="0.20120457182895" />
+        value="0.5341" />
       <inertia
         ixx="7.34238025911107E-05"
         ixy="1.35700947009798E-08"
@@ -536,12 +540,15 @@
   </joint>
   <link
     name="gripper_end">
+    <!-- Gravity calibration splits the measured 0.6796 kg link6 aggregate at zero
+         finger travel. The existing link6 and finger properties define the residual
+         mass and center of mass of gripper_end. -->
     <inertial>
       <origin
-        xyz="-0.112751692515958 0.000128443070436966 -5.72602449749882E-06"
+        xyz="-0.107557036628663 0.00548442992350182 0.00734754100475039"
         rpy="0 0 0" />
       <mass
-        value="0.65" />
+        value="0.4678" />
       <inertia
         ixx="0.00037354"
         ixy="-0.00000011"
@@ -615,19 +622,21 @@
   </joint>
   <link
     name="gripper_left">
+    <!-- Each finger uses a measured 12.0 g printed body and 43.9 g metal assembly.
+         Centers of mass and tensors assume uniform density within each visual mesh. -->
     <inertial>
       <origin
-        xyz="-0.00218008703135955 0.0187090355934181 0.00932188568692145"
+        xyz="-0.004352194953 0.02887219666 0.007481036235"
         rpy="0 0 0" />
       <mass
-        value="0.0752" />
+        value="0.0559" />
       <inertia
-        ixx="1.09877964176176E-05"
-        ixy="0"
-        ixz="0"
-        iyy="9.50146036720166E-06"
-        iyz="0"
-        izz="9.30779991911125E-06" />
+        ixx="3.625113031e-05"
+        ixy="3.480513097e-06"
+        ixz="-4.464819266e-06"
+        iyy="3.151591629e-05"
+        iyz="4.986072156e-06"
+        izz="2.038162557e-05" />
     </inertial>
     <!-- <visual>
       <origin
@@ -695,17 +704,17 @@
     name="gripper_right">
     <inertial>
       <origin
-        xyz="0.00218008703135955 -0.018709035593418 0.00932188568692151"
+        xyz="0.004352194953 -0.02887219666 0.007481036235"
         rpy="0 0 0" />
       <mass
-        value="0.0752" />
+        value="0.0559" />
       <inertia
-        ixx="1.09877964176176E-05"
-        ixy="0"
-        ixz="0"
-        iyy="9.50146036720166E-06"
-        iyz="0"
-        izz="9.30779991911125E-06" />
+        ixx="3.625113031e-05"
+        ixy="3.480513097e-06"
+        ixz="4.464819266e-06"
+        iyy="3.151591629e-05"
+        iyz="-4.986072156e-06"
+        izz="2.038162557e-05" />
     </inertial>
     <!-- <visual>
       <origin
