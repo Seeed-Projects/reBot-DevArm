@@ -11,10 +11,10 @@
 | 分类 | 内容 | 格式 |
 | --- | --- | --- |
 | [B601 摄像头支架](#b601-摄像头支架) | 当前版本：3 款；历史 V1：3 款 | STEP（`.step`） |
-| [数据采集摄像头支架](#数据采集摄像头支架) | V1：4 款支架主体及 4 个适配件；V2：1 个完整装配 | STEP（`.stp`） |
+| [数据采集摄像头支架](#数据采集摄像头支架) | V1：4 款支架主体及 4 个适配件；V2：1 个完整装配及 2 款桌面俯拍顶部支架 | STEP（`.step`、`.stp`）、STL |
 | [数据采集环境](#数据采集环境) | 1 个箱体模型 | USDZ（`.usdz`） |
 
-以下介绍覆盖仓库内全部 16 个模型文件。摄像头及机械臂名称沿用上游文件中的命名；上游未提供完整尺寸说明、紧固件清单、打印参数或适配验证结果。制作前请打开 CAD 文件，结合实际设备检查安装尺寸和间隙。
+以下介绍涵盖本目录的支架、适配件和环境模型。部分支架附有安装尺寸和紧固件规格。制作前请打开 CAD 文件，结合实际设备检查安装尺寸和间隙。
 
 ## B601 摄像头支架
 
@@ -68,7 +68,7 @@
 | 版本 | 结构 | 文件 |
 | --- | --- | --- |
 | [V1](data-collection-camera-mounts/V1/) | 3D 打印支架主体及摄像头适配件 | 下方的 4 款编号支架和 4 个适配件 |
-| [V2](#v2铝型材摄像头支架) | 铝型材主体＋3D 打印摄像头支架 | 1 个完整 STEP 装配 |
+| [V2](#v2铝型材摄像头支架) | 铝型材主体＋3D 打印摄像头支架 | 1 个完整 STEP 装配及 2 款桌面俯拍顶部支架 |
 
 V1 来自上游 [Camera-Mount 仓库](https://github.com/xiehuangbao888/Camera-Mount)，提供 4 款编号支架和 4 个对应的适配件，配件对应关系按原始文件名保留。上游没有提供装配说明或实物照片，完整装配效果及摄像头适配情况尚未验证。V2 由 [Yang-Ci/Camera-Mounts](https://github.com/Yang-Ci/Camera-Mounts) 提供，主体改用铝型材。
 
@@ -140,6 +140,24 @@ SO-ARM 适配件为偏置板状零件，对应上游的“支架1插件soarm”�
 
 V2 为铝型材主体＋3D 打印摄像头支架的数据采集支架；V1 使用 3D 打印主体。新文件包含主体和摄像头安装部件的完整装配，是装配 CAD 文件，并非可直接打印的一组 STL。制作前请在 CAD 软件中识别需要打印的部件，并检查摄像头安装接口。
 
+下方两款桌面俯拍顶部支架均沿用 V2 底座和 2020 铝型材接口。预览图展示三段立柱装配，虚线表示相机光轴。
+
+#### D435 / Gemini 2 · Gemini 336 版
+
+![Gemini 336 安装在 V2 桌面支架上的装配图和顶部近景](images/v2-gemini336-preview.png)
+
+支架通过 Orbbec Gemini 336 背面的两个 M3 螺纹孔固定，孔距为 45 mm。使用两颗 M3 × 6 mm 圆柱头内六角螺钉，设计旋入深度为 2.5 mm。采用图中的三段立柱装配时，画面边缘可能拍到原底座和立柱下段。
+
+[顶部支架 CAD（STEP）](data-collection-camera-mounts/v2-gemini336-top-mount.step) · [3D 打印文件（STL）](data-collection-camera-mounts/v2-gemini336-top-mount.stl)
+
+#### D405 / 305 · RealSense D405 版
+
+![RealSense D405 安装在 V2 桌面支架上的装配图和顶部近景](images/v2-d405-preview.png)
+
+支架通过 RealSense D405 背面的两个 M3 螺纹孔固定，孔距为 20 mm。
+
+[顶部支架 CAD（STEP）](data-collection-camera-mounts/v2-d405-top-mount.step) · [3D 打印文件（STL）](data-collection-camera-mounts/v2-d405-top-mount.stl)
+
 ### 中英文文件名对照
 
 仅修改文件名，CAD 文件内容保持不变；V1 支架编号和配件对应关系均保留，V2 装配由维护者本地提供。
@@ -170,14 +188,14 @@ V2 为铝型材主体＋3D 打印摄像头支架的数据采集支架；V1 使�
 
 1. 通过上述链接下载所需支架及对应适配件。
 2. 在 CAD 软件中打开 STEP/STP 文件，检查尺寸、安装孔和装配间隙。
-3. 根据实际加工方式准备制作文件。仓库未提供 STL 文件、打印参数或紧固件清单。
+3. V2 桌面俯拍顶部支架提供 STL 文件，可导入切片软件。其他模型请按实际加工方式准备制作文件。
 4. 使用支持 USDZ 的查看器或工具打开环境模型。
 
 ## 图片来源与模型预览
 
-当前版本的 B601 支架、数据采集支架和环境模型均使用 Blender Cycles 根据原始 STEP 或 USDZ 几何进行棚拍式渲染。图中的配色和表面质感仅用于展示。B601 历史 V1 支架使用 V1 目录中保留的历史参考图展示。这些图片是模型预览，并非实物照片。V1 适配件单独展示，图片不代表已完成装配或适配验证。
+当前版本的 B601 支架、V1 支架及适配件、原始 V2 装配和环境模型的棚拍式预览由 Blender Cycles 根据 CAD 或 USDZ 几何生成。D405 和 Gemini 336 桌面俯拍预览根据各自的 CAD 装配生成。图中的配色和表面质感仅用于展示。B601 历史 V1 支架使用 V1 目录中保留的历史参考图展示。这些图片是模型预览，并非实物照片。V1 适配件单独展示，图片不代表已完成装配或适配验证。
 
-如需重新生成预览图，在 Python 3.11 环境中安装 `bpy==4.5.11`、`cadquery`、`numpy` 和 `usd-core`，然后在仓库根目录执行 `cd hardware/camera-mounts && python tools/render_previews.py`。仅生成 V2 预览可在 `hardware/camera-mounts/` 目录执行 `python tools/render_previews.py data-collection-camera-mounts/data-collection-camera-mount-v2.stp`。
+如需重新生成棚拍式预览图，在 Python 3.11 环境中安装 `bpy==4.5.11`、`cadquery`、`numpy` 和 `usd-core`，然后在仓库根目录执行 `cd hardware/camera-mounts && python tools/render_previews.py`。仅生成 V2 预览可在 `hardware/camera-mounts/` 目录执行 `python tools/render_previews.py data-collection-camera-mounts/data-collection-camera-mount-v2.stp`。
 
 ## 资源来源与许可
 

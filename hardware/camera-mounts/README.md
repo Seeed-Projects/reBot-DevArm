@@ -11,10 +11,10 @@ Camera mount CAD files for B601 robots and data collection setups, plus a USDZ e
 | Collection | Assets | Format |
 | --- | --- | --- |
 | [B601 camera mounts](#b601-camera-mounts) | Current version: 3 designs; historical V1: 3 designs | STEP (`.step`) |
-| [Data collection camera mounts](#data-collection-camera-mounts) | V1: 4 mount designs and 4 adapter parts; V2: 1 assembly | STEP (`.stp`) |
+| [Data collection camera mounts](#data-collection-camera-mounts) | V1: 4 mount designs and 4 adapter parts; V2: 1 assembly and 2 tabletop top brackets | STEP (`.step`, `.stp`), STL |
 | [Data collection environment](#data-collection-environment) | 1 box model | USDZ (`.usdz`) |
 
-The catalog below covers all 16 CAD/model files in this directory. Camera and robot names follow the upstream filenames; dimensions, fasteners, print settings, and verified compatibility are not supplied here. Check the CAD geometry against your hardware before fabrication.
+The catalog below covers the camera mounts, adapters, and environment model in this directory. Mounting dimensions and fasteners are listed where available. Check the CAD geometry against your hardware before fabrication.
 
 ## B601 camera mounts
 
@@ -68,7 +68,7 @@ For better data collection results, prefer the latest **V2** assembly. Two const
 | Version | Construction | Files |
 | --- | --- | --- |
 | [V1](data-collection-camera-mounts/V1/) | 3D-printed support body and camera adapters | Four numbered mounts and four adapter parts listed below |
-| [V2](#v2-aluminum-extrusion-camera-mount) | Aluminum extrusion support body with a 3D-printed camera bracket | One complete STEP assembly |
+| [V2](#v2-aluminum-extrusion-camera-mount) | Aluminum extrusion support body with a 3D-printed camera bracket | One complete STEP assembly and two tabletop top brackets |
 
 V1 comes from the upstream [Camera-Mount repository](https://github.com/xiehuangbao888/Camera-Mount). Its four numbered mounts and four associated adapters retain the associations in the original filenames. Upstream does not include assembly instructions or photographs; completed assemblies and camera compatibility have not been verified. V2 is supplied by [Yang-Ci/Camera-Mounts](https://github.com/Yang-Ci/Camera-Mounts) and uses aluminum extrusions for the support body.
 
@@ -143,6 +143,24 @@ Camera mount design 4 has a tapered support body with a broad, recessed top inte
 
 V2 is a data collection camera mount with an aluminum extrusion support body and a 3D-printed camera bracket. V1 uses a 3D-printed support body. The supplied V2 assembly includes the support and camera mounting components together; it is an assembly CAD file, not a set of ready-to-print STL files. Inspect the assembly in CAD to identify the printed components and check the camera interface before fabrication.
 
+Both tabletop setups reuse the V2 base and clamp the top bracket to a 2020 aluminum extrusion. The previews show a three-section setup, with a dashed line marking the optical axis.
+
+#### D435 / Gemini 2 · Gemini 336 version
+
+![V2 tabletop stand with the Gemini 336 and a close-up of the top bracket](images/v2-gemini336-preview.png)
+
+The bracket attaches to the two rear M3 threaded holes on the Orbbec Gemini 336, spaced 45 mm apart. Two M3 × 6 mm socket-head cap screws give a nominal insertion depth of 2.5 mm. In the three-section setup, the base and lower extrusion may appear at the edge of the camera's field of view.
+
+[Top bracket CAD (STEP)](data-collection-camera-mounts/v2-gemini336-top-mount.step) · [3D-print file (STL)](data-collection-camera-mounts/v2-gemini336-top-mount.stl)
+
+#### D405 / 305 · RealSense D405 version
+
+![V2 tabletop stand with the RealSense D405 and a close-up of the top bracket](images/v2-d405-preview.png)
+
+The bracket attaches to the two rear M3 threaded holes on the RealSense D405, spaced 20 mm apart.
+
+[Top bracket CAD (STEP)](data-collection-camera-mounts/v2-d405-top-mount.step) · [3D-print file (STL)](data-collection-camera-mounts/v2-d405-top-mount.stl)
+
 ### Original-to-English filename mapping
 
 Only filenames have changed; the CAD file contents are preserved. V1 mount numbers and adapter associations remain traceable to upstream; the V2 assembly was supplied locally by the maintainer.
@@ -173,14 +191,14 @@ A box model from [rebot-arm-dli-isaacsim](https://github.com/yuyoujiang/rebot-ar
 
 1. Download the mount and any associated adapter using the links above.
 2. Open STEP/STP files in a CAD tool and inspect dimensions, clearances, and mounting holes.
-3. Prepare fabrication files for your chosen process. STL files, print settings, and a hardware bill of materials are not included.
+3. Use the supplied STL files for the V2 tabletop top brackets. For other models, prepare fabrication files for your chosen process.
 4. For the environment asset, use a viewer or tool that supports USDZ.
 
 ## Image sources and model previews
 
-The current B601 mounts, data collection mounts, and environment asset have studio previews rendered in Blender Cycles from their source STEP or USDZ geometry. The colors and finishes are illustrative. Historical B601 V1 mounts are illustrated with the original reference images retained in their V1 catalog. These are model previews, not physical-product photographs. V1 adapter parts are shown separately; the images do not imply verified assembly or fit.
+The current B601 mounts, the V1 mounts and adapters, the original V2 assembly, and the environment asset have studio previews rendered in Blender Cycles from their source geometry. The D405 and Gemini 336 tabletop illustrations show their respective CAD assemblies. The colors and finishes are illustrative. Historical B601 V1 mounts are illustrated with the original reference images retained in their V1 catalog. These are model previews, not physical-product photographs. V1 adapter parts are shown separately; the images do not imply verified assembly or fit.
 
-To regenerate the previews, install `bpy==4.5.11`, `cadquery`, `numpy`, and `usd-core` in a Python 3.11 environment, then run `cd hardware/camera-mounts && python tools/render_previews.py` from the repository root. To render only V2, run `python tools/render_previews.py data-collection-camera-mounts/data-collection-camera-mount-v2.stp` from `hardware/camera-mounts/`.
+To regenerate the studio previews, install `bpy==4.5.11`, `cadquery`, `numpy`, and `usd-core` in a Python 3.11 environment, then run `cd hardware/camera-mounts && python tools/render_previews.py` from the repository root. To render only V2, run `python tools/render_previews.py data-collection-camera-mounts/data-collection-camera-mount-v2.stp` from `hardware/camera-mounts/`.
 
 ## Sources and licensing
 
