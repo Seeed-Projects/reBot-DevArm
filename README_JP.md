@@ -152,6 +152,8 @@ B601 の公開後、コミュニティから最も多く寄せられた質問は
 
 ### reBot Arm B601-RS
 
+現行の RS URDF は実測した質量と重心を使用しています。モデル全体の質量は 6.5503 kg で、グリッパーの各指は 55.9 g、ストロークはそれぞれ 0～50 mm です。 [URDF ファイル](Rebot_Arm_description/RS/urdf/ReBot_Arm_RS.urdf)
+
 | 対応エコシステム | 状態 | 説明 | 関連ドキュメント |
 | :--- | :---: | :--- | :--- |
 | モーター基本使用 | ✅ 完了 | 基本的なモーション制御と API ラッパー化 | [Robstride](https://wiki.seeedstudio.com/cn/robstride_control/) |

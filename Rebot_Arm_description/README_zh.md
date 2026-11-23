@@ -70,6 +70,8 @@ Rebot_Arm_description/
 
 ## RS 与 DM 方案对比
 
+当前 RS URDF 使用实测质量和质心。模型总质量为 6.5503 kg，每侧夹爪手指为 55.9 g，滑动行程各为 0–50 mm。 [URDF 源文件](RS/urdf/ReBot_Arm_RS.urdf)
+
 | 项目 | B601-RS | B601-DM |
 | --- | --- | --- |
 | 主 URDF | `RS/urdf/ReBot_Arm_RS.urdf` | `DM/urdf/ReBot_Arm_DM.urdf` |

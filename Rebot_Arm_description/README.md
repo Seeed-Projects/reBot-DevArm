@@ -70,6 +70,8 @@ Files are categorized by how they are actually used in each model, not by whethe
 
 ## RS and DM comparison
 
+The current RS URDF uses measured masses and centers of mass. The model totals 6.5503 kg. Each gripper finger weighs 55.9 g and has 0–50 mm of travel. [URDF source](RS/urdf/ReBot_Arm_RS.urdf)
+
 | Item | B601-RS | B601-DM |
 | --- | --- | --- |
 | Main URDF | `RS/urdf/ReBot_Arm_RS.urdf` | `DM/urdf/ReBot_Arm_DM.urdf` |

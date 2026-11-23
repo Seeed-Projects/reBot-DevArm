@@ -152,6 +152,8 @@ We continuously maintain and adapt to mainstream robot development ecosystems. B
 
 ### reBot Arm B601-RS
 
+The current RS URDF uses measured masses and centers of mass. The model totals 6.5503 kg. Each gripper finger weighs 55.9 g and has 0–50 mm of travel. [URDF source](Rebot_Arm_description/RS/urdf/ReBot_Arm_RS.urdf)
+
 | Ecosystem | Status | Description | Documentation |
 | :--- | :---: | :--- | :--- |
 | Basic Motor Usage | ✅ Done | Motion control and API encapsulation | [Robstride](https://wiki.seeedstudio.com/cn/robstride_control/) |

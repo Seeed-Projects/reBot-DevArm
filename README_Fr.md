@@ -152,6 +152,8 @@ Nous maintenons et adaptons en continu les principaux écosystèmes de développ
 
 ### reBot Arm B601-RS
 
+L’URDF RS actuel utilise les masses et centres de masse mesurés. La masse totale du modèle est de 6,5503 kg. Chaque doigt du préhenseur pèse 55,9 g et sa course est de 0 à 50 mm. [Fichier URDF](Rebot_Arm_description/RS/urdf/ReBot_Arm_RS.urdf)
+
 | Écosystème | État | Description | Documentation |
 | :--- | :---: | :--- | :--- |
 | Utilisation de base des moteurs | ✅ Terminé | Contrôle de mouvement et encapsulation d'API | [Robstride](https://wiki.seeedstudio.com/cn/robstride_control/) |

@@ -146,6 +146,8 @@ RS 版本提供五种套件方案：
 
 ### reBot Arm B601-RS
 
+当前 RS URDF 使用实测质量和质心。模型总质量为 6.5503 kg，每侧夹爪手指为 55.9 g，滑动行程各为 0–50 mm。 [URDF 源文件](Rebot_Arm_description/RS/urdf/ReBot_Arm_RS.urdf)
+
 | 适配生态 | 状态 | 说明 | 相关文档 |
 | :--- | :---: | :--- | :--- |
 | 电机基本使用 | ✅ 完成 | 基础运动控制与 API 封装 | [灵足时代](https://wiki.seeedstudio.com/cn/robstride_control/) |

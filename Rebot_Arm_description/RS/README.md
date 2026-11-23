@@ -20,7 +20,8 @@ RS/
     └── mujoco_collision/   # Detailed MuJoCo finger-collision meshes
 ```
 
-- `urdf/ReBot_Arm_RS.urdf` is the current main RS model and defines both the arm and gripper.
+- The current RS URDF uses measured masses and centers of mass. The model totals 6.5503 kg. Each gripper finger weighs 55.9 g and has 0–50 mm of travel. [URDF source](urdf/ReBot_Arm_RS.urdf)
+- Each 55.9 g finger consists of 43.9 g of metal hardware and a 12.0 g 3D-printed finger. Pinocchio has six revolute joints and two prismatic finger joints, with `nq = nv = 8`.
 - `meshes/visual/` contains 54 STL files used only for rendering and colors, including wrist-camera visuals.
 - `meshes/shared/` contains 10 STL files used for both rendering and collision. RS currently has no independent meshes used only for URDF collision.
 - `meshes/mujoco_collision/` contains 10 MuJoCo collision meshes for the front, middle, and rear finger segments, carriages, and travel stops.

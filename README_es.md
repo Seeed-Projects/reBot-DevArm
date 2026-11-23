@@ -152,6 +152,8 @@ Mantenemos y adaptamos continuamente los principales ecosistemas de desarrollo r
 
 ### reBot Arm B601-RS
 
+El URDF RS actual utiliza las masas y los centros de masa medidos. La masa total del modelo es de 6,5503 kg. Cada dedo de la pinza pesa 55,9 g y tiene un recorrido de 0 a 50 mm. [Archivo URDF](Rebot_Arm_description/RS/urdf/ReBot_Arm_RS.urdf)
+
 | Ecosistema | Estado | Descripción | Documentación |
 | :--- | :---: | :--- | :--- |
 | Uso básico de motores | ✅ Completado | Control de movimiento y encapsulación de API | [Robstride](https://wiki.seeedstudio.com/cn/robstride_control/) |
