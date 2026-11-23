@@ -615,21 +615,19 @@
   </joint>
   <link
     name="gripper_left">
-    <!-- Each finger uses a measured 12.0 g printed body and 43.9 g metal assembly.
-         Centers of mass and tensors assume uniform density within each visual mesh. -->
     <inertial>
       <origin
-        xyz="-0.004352194953 0.02887219666 0.007481036235"
+        xyz="-0.00218008703135955 0.0187090355934181 0.00932188568692145"
         rpy="0 0 0" />
       <mass
-        value="0.0559" />
+        value="0.0752" />
       <inertia
-        ixx="3.625113031e-05"
-        ixy="3.480513097e-06"
-        ixz="-4.464819266e-06"
-        iyy="3.151591629e-05"
-        iyz="4.986072156e-06"
-        izz="2.038162557e-05" />
+        ixx="1.09877964176176E-05"
+        ixy="0"
+        ixz="0"
+        iyy="9.50146036720166E-06"
+        iyz="0"
+        izz="9.30779991911125E-06" />
     </inertial>
     <!-- <visual>
       <origin
@@ -697,17 +695,17 @@
     name="gripper_right">
     <inertial>
       <origin
-        xyz="0.004352194953 -0.02887219666 0.007481036235"
+        xyz="0.00218008703135955 -0.018709035593418 0.00932188568692151"
         rpy="0 0 0" />
       <mass
-        value="0.0559" />
+        value="0.0752" />
       <inertia
-        ixx="3.625113031e-05"
-        ixy="3.480513097e-06"
-        ixz="4.464819266e-06"
-        iyy="3.151591629e-05"
-        iyz="-4.986072156e-06"
-        izz="2.038162557e-05" />
+        ixx="1.09877964176176E-05"
+        ixy="0"
+        ixz="0"
+        iyy="9.50146036720166E-06"
+        iyz="0"
+        izz="9.30779991911125E-06" />
     </inertial>
     <!-- <visual>
       <origin
