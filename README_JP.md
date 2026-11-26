@@ -233,7 +233,7 @@ B601 の公開後、コミュニティから最も多く寄せられた質問は
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | 近日公開 |
 | [フィンガー取付台（ABS/PLA）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [フィンガー本体（TPU 95+）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | 近日公開 |
-| [<img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/gripper-wbot.jpg" height="100" alt="gripper-wbot のフィンガーとオレンジ色の摩擦パッド">](https://github.com/wangzhangup/gripper-wbot/blob/e2538949522f795327ef74a9bccb6d4a668a2059/render/gripper-detail.png) | **[gripper-wbot](https://github.com/wangzhangup/gripper-wbot)** · 作者：[@wangzhangup](https://github.com/wangzhangup) |
+| [<img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/gripper-wbot-studio.jpg" height="100" alt="組み立てた gripper-wbot の全体像">](https://github.com/wangzhangup/gripper-wbot/blob/e2538949522f795327ef74a9bccb6d4a668a2059/render/gripper-studio.png) [<img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/gripper-wbot.jpg" height="100" alt="gripper-wbot のフィンガーとオレンジ色の摩擦パッド">](https://github.com/wangzhangup/gripper-wbot/blob/e2538949522f795327ef74a9bccb6d4a668a2059/render/gripper-detail.png) | **[gripper-wbot](https://github.com/wangzhangup/gripper-wbot)** · 作者：[@wangzhangup](https://github.com/wangzhangup) |
 
 ### おすすめオプションパーツ
 

@@ -233,7 +233,7 @@ Les aperçus montrent les assemblages UVC32, D435i, D405 et Gemini 2 sur le B601
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | Bientôt disponible |
 | [Support de doigt (ABS/PLA)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [Doigt (TPU 95+)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | Bientôt disponible |
-| [<img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/gripper-wbot.jpg" height="100" alt="Doigts de gripper-wbot avec patins de friction orange">](https://github.com/wangzhangup/gripper-wbot/blob/e2538949522f795327ef74a9bccb6d4a668a2059/render/gripper-detail.png) | **[gripper-wbot](https://github.com/wangzhangup/gripper-wbot)** · par [@wangzhangup](https://github.com/wangzhangup) |
+| [<img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/gripper-wbot-studio.jpg" height="100" alt="Vue d’ensemble de la pince gripper-wbot assemblée">](https://github.com/wangzhangup/gripper-wbot/blob/e2538949522f795327ef74a9bccb6d4a668a2059/render/gripper-studio.png) [<img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/gripper-wbot.jpg" height="100" alt="Doigts de gripper-wbot avec patins de friction orange">](https://github.com/wangzhangup/gripper-wbot/blob/e2538949522f795327ef74a9bccb6d4a668a2059/render/gripper-detail.png) | **[gripper-wbot](https://github.com/wangzhangup/gripper-wbot)** · par [@wangzhangup](https://github.com/wangzhangup) |
 
 ### Matériel optionnel recommandé
 
