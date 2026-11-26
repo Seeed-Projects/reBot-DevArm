@@ -233,6 +233,7 @@ Las vistas muestran los conjuntos UVC32, D435i, D405 y Gemini 2 en el B601-RS; l
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | Próximamente |
 | [Soporte del dedo (ABS/PLA)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [Dedo (TPU 95+)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | Próximamente |
+| [<img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/gripper-wbot.jpg" height="100" alt="Dedos de gripper-wbot con almohadillas de fricción naranjas">](https://github.com/wangzhangup/gripper-wbot/blob/e2538949522f795327ef74a9bccb6d4a668a2059/render/gripper-detail.png) | **[gripper-wbot](https://github.com/wangzhangup/gripper-wbot)** · por [@wangzhangup](https://github.com/wangzhangup) |
 
 ### Hardware opcional recomendado
 
