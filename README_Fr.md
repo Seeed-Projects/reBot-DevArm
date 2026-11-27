@@ -174,6 +174,7 @@ L’URDF RS actuel utilise les masses et centres de masse mesurés. La masse tot
 | Écosystème | Auteur | Description | Dépôt |
 | :--- | :---: | :--- | :--- |
 | Téléopération par iPhone, HEBI Mobile I/O et Meta Quest | [@ammarjmahmood](https://github.com/ammarjmahmood) | Déplacez un téléphone ou une manette Quest et la pince suit, avec le mappage de pose relative de TidyBot++ (CoRL 2024) : application iPhone native SwiftUI et ARKit, HEBI Mobile I/O, WebXR en passthrough sur Quest, pilote MIT à 200 Hz avec compensation de gravité, cinématique inverse sur l'URDF RS officiel et verrouillages de sécurité. Testé sur un B601-RS avec un iPhone 16 Pro Max. | [rebot-phone-teleop](https://github.com/ammarjmahmood/rebot-phone-teleop) |
+| IHM portable, Zephyr RTOS / CAN / ROS 2 | [@xiayip](https://github.com/xiayip) | Un terminal portable pour le reBot Arm RS avec télémétrie articulaire en temps réel, contrôle de position par encodeur, modes d'amortissement/impédance, enregistrement et relecture de trajectoires guidées à la main, stockage Flash persistant et demandes de changement de contrôleur ROS 2. | [reBot_Arm_HMI](https://github.com/xiayip/reBot_Arm_HMI) · [Démo vidéo](https://www.bilibili.com/video/BV1MNnw6gEEe/) |
 
 ## ⚙️ Spécifications matérielles
 
@@ -233,6 +234,7 @@ Les aperçus montrent les assemblages UVC32, D435i, D405 et Gemini 2 sur le B601
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | Bientôt disponible |
 | [Support de doigt (ABS/PLA)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [Doigt (TPU 95+)](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | Bientôt disponible |
+| <img src="https://raw.githubusercontent.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper/main/bilder/spot.gif" height="100" alt="Touch-Sensing Fin-Ray Gripper"> | **[Touch-Sensing Fin-Ray Gripper](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper)** · [Dépôt GitHub](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper) |
 
 ### Matériel optionnel recommandé
 

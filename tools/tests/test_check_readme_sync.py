@@ -125,6 +125,29 @@ class SyncCheckTest(unittest.TestCase):
         problems = sync.check(self.root)
         self.assertTrue(any("roadmap tables" in p for p in problems))
 
+    def test_missing_github_link_is_caught(self):
+        """A community project added to English but missing from a translation."""
+        url = "https://github.com/example/community-project"
+        self.write(sync.SOURCE, SOURCE + f"\n- [Project]({url})\n")
+        for name in sync.TRANSLATIONS:
+            suffix = f"\n- [Projet]({url})\n" if name != "README_zh.md" else ""
+            self.write(name, GOOD_TRANSLATION + suffix)
+        problems = sync.check(self.root)
+        self.assertEqual(len(problems), 1)
+        self.assertIn("README_zh.md", problems[0])
+        self.assertIn("missing GitHub link", problems[0])
+        self.assertIn(url, problems[0])
+
+    def test_extra_github_link_is_caught(self):
+        """A stale GitHub link left in a translation after removal from English."""
+        url = "https://github.com/example/removed-project"
+        self.write("README_JP.md", GOOD_TRANSLATION + f"\n- [Old]({url})\n")
+        problems = sync.check(self.root)
+        self.assertEqual(len(problems), 1)
+        self.assertIn("README_JP.md", problems[0])
+        self.assertIn("extra GitHub link", problems[0])
+        self.assertIn(url, problems[0])
+
 
 class RepositoryTest(unittest.TestCase):
     """The real files in this repository must agree."""

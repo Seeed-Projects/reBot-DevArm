@@ -144,6 +144,12 @@ RS 版本提供五种套件方案：
 | 逐步更新最新算法 | ⏳ 计划中 | 逐步更新主流算法 | 持续进行 |
 | 推出系列免费课程 | ⏳ 计划中 | 逐步上线完全免费的系列课程 | 持续进行 |
 
+#### 社区贡献
+
+| 对应生态 | 作者 | 说明 | 仓库 |
+| :--- | :---: | :--- | :--- |
+| ROS2 (Humble)、第三方集成、URDF / rebotarm_bringup | [@danieldoradotalaveron-rb](https://github.com/danieldoradotalaveron-rb) | 1. **被动诊断监控器**（`rebotarm_monitor_ros2`）—— 面向 `rqt_robot_monitor` 的 `/diagnostics` 叠加层，支持串口/CAN 聚合；<br>2. **安全停靠与关机** —— 连接时记录休眠姿态，关机或调用 `/rebotarm/park` 时缓慢回位；<br>3. **重力补偿（平滑停止）** —— 通过 MIT 渐出消除位置/速度切换时的异响与抖动；<br>4. **带 IK/FK 与安全机制的手柄遥操作** —— 基于 IK 的末端控制与 RViz 实时可视化（仅仿真测试）；<br>5. **D405 眼在手上 TF** —— `end_link` 下的 Xacro，仅用于 RViz 可视化与 TF。 | [rebotarm_monitor_ros2](https://github.com/danieldoradotalaveron-rb/rebotarm_monitor_ros2) · [reBotArmController_ROS2](https://github.com/danieldoradotalaveron-rb/reBotArmController_ROS2) |
+
 ### reBot Arm B601-RS
 
 当前 RS URDF 使用实测质量和质心。模型总质量为 6.5503 kg，每侧夹爪手指为 55.9 g，滑动行程各为 0–50 mm。 [URDF 源文件](Rebot_Arm_description/RS/urdf/ReBot_Arm_RS.urdf)
@@ -228,6 +234,7 @@ reBot-DevArm 专为桌面级具身智能应用设计，兼顾负载能力与灵�
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | 敬请期待 |
 | [手指安装座（ABS/PLA）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [柔性手指本体（TPU 95+）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | 敬请期待 |
+| <img src="https://raw.githubusercontent.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper/main/bilder/spot.gif" height="100" alt="Touch-Sensing Fin-Ray Gripper"> | **[触觉传感 Fin-Ray 夹爪（Touch-Sensing Fin-Ray Gripper）](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper)** · [GitHub 仓库](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper) |
 
 ### 推荐可选硬件
 

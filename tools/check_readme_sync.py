@@ -9,7 +9,8 @@ not differ between translations and deliberately ignores the things that must:
   * how many roadmap tables there are,
   * how many rows each of those tables has,
   * the status glyph (OK / in progress / planned) on each row,
-  * the numbers in the hardware specification table.
+  * the numbers in the hardware specification table,
+  * the set of language-neutral GitHub links (repositories, profiles, assets).
 
 Prose is never compared, so translators stay free to phrase things their own
 way. Run it from the repository root:
@@ -34,6 +35,12 @@ STATUS_RE = re.compile(f"[{STATUS_GLYPHS}]")
 # A measurement in the specification table: "767 mm", "1.5kg", "DC 24V", "< 0.2 mm".
 # Decimal separators differ by locale (1.5 kg vs 1,5 kg), so they are normalised.
 NUMBER_RE = re.compile(r"\d+(?:[.,]\d+)?")
+
+# GitHub repository, profile, and raw asset links are language-neutral and
+# should stay aligned across all translations (unlike regional store links).
+GITHUB_URL_RE = re.compile(
+    r"https?://(?:raw\.)?github(?:usercontent)?\.com/[^\s)\"'>]+"
+)
 
 
 def read_lines(path):
@@ -100,10 +107,20 @@ def spec_numbers(lines):
     return out
 
 
+def github_links(lines):
+    """Language-neutral GitHub URLs referenced in the document."""
+    urls = set()
+    for line in lines:
+        for url in GITHUB_URL_RE.findall(line):
+            urls.add(url.rstrip(".,;:"))
+    return urls
+
+
 def check(root):
     source_lines = read_lines(os.path.join(root, SOURCE))
     source_tables = split_tables(source_lines)
     source_specs = spec_numbers(source_lines)
+    source_github = github_links(source_lines)
     problems = []
 
     for name in TRANSLATIONS:
@@ -146,6 +163,12 @@ def check(root):
                     f"{name}: specification {key} is {specs[key]}, "
                     f"{SOURCE} says {expected}"
                 )
+
+        dst_github = github_links(lines)
+        for url in sorted(source_github - dst_github):
+            problems.append(f"{name}: missing GitHub link from {SOURCE}: {url}")
+        for url in sorted(dst_github - source_github):
+            problems.append(f"{name}: extra GitHub link not in {SOURCE}: {url}")
 
     return problems
 

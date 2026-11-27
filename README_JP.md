@@ -165,7 +165,7 @@ B601 の公開後、コミュニティから最も多く寄せられた質問は
 | Pinocchio 統合 | ✅ 完了 | 順運動学/逆運動学と重力補償を実現 | [Pinocchio ガイド](https://wiki.seeedstudio.com/rebot_arm_b601_rs_pinocchio_meshcat/) · [リポジトリ](https://github.com/Seeed-Projects/reBotArm_control_py) |
 | 深度カメラ統合 | ✅ 完了 | YOLO と深度カメラによるビジュアル把持デモ | [把持デモ](https://wiki.seeedstudio.com/rebot_arm_b601_rs_grasping_demo/) |
 | エンボディド・エージェント・アーキテクチャ | ✅ 完了 | 自然言語コマンド（例：「pick up the red block」）を受信し、把持計画を自動生成・実行 | [設計](https://wiki.seeedstudio.com/ja/wrc_demo_tutorial/) · [ソースコード](https://github.com/TheMoonAstronaut/wrc.git) |
-| Isaac Sim シミュレーション | ✅ 完了 | USD モデルのインポートとシミュレーション遠隔操作 | [Github リポジトリ](https://github.com/Seeed-Projects/reBot-Isaacsim) |
+| Isaac Sim シミュレーション | ✅ 完了 | USD モデルのインポートとシミュレーション遠隔操作 | [DLI コース](https://www.seeedstudio.com/sim-to-real-with-seeed-rebot-and-nvidia-isaac) · [リポジトリ](https://github.com/Seeed-Projects/reBot-Isaacsim) |
 | 最新アルゴリズムの段階的更新 | ⏳ 計画中 | 主流アルゴリズムを段階的に更新予定 | 継続中 |
 | 完全無料コースシリーズの提供 | ⏳ 計画中 | 完全無料のコースシリーズを順次提供予定 | 継続中 |
 
@@ -174,6 +174,7 @@ B601 の公開後、コミュニティから最も多く寄せられた質問は
 | 対応エコシステム | 作者 | 説明 | リポジトリ |
 | :--- | :---: | :--- | :--- |
 | iPhone、HEBI Mobile I/O、Meta Quest によるテレオペレーション | [@ammarjmahmood](https://github.com/ammarjmahmood) | スマートフォンや Quest コントローラーを動かすとグリッパーが追従します。TidyBot++（CoRL 2024）の相対姿勢マッピングを採用：ネイティブ SwiftUI と ARKit の iPhone アプリ、HEBI Mobile I/O、Quest の WebXR パススルー、200 Hz MIT ドライバー、重力フィードフォワード、公式 RS URDF による逆運動学と安全インターロック。B601-RS と iPhone 16 Pro Max で検証済み。 | [rebot-phone-teleop](https://github.com/ammarjmahmood/rebot-phone-teleop) |
+| ハンドヘルド HMI、Zephyr RTOS / CAN / ROS 2 | [@xiayip](https://github.com/xiayip) | reBot Arm RS 向けのハンドヘルド端末。関節のリアルタイムテレメトリ、エンコーダによる位置制御、ダンピング／インピーダンスモード、手導きによる軌道記録・再生、Flash 永続保存、ROS 2 コントローラ切替要求に対応。 | [reBot_Arm_HMI](https://github.com/xiayip/reBot_Arm_HMI) · [動画デモ](https://www.bilibili.com/video/BV1MNnw6gEEe/) |
 
 ## ⚙️ ハードウェア仕様
 
@@ -233,6 +234,7 @@ B601 の公開後、コミュニティから最も多く寄せられた質問は
 | :--- | :--- |
 | <img src="./hardware/reBot_B601_DM/3D_Printed_Parts/images/Soft_Finger.png" height="100"> | 近日公開 |
 | [フィンガー取付台（ABS/PLA）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Mount.step) · [フィンガー本体（TPU 95+）](hardware/reBot_B601_DM/3D_Printed_Parts/Soft_Gripper/Soft_Gripper_Finger.step) | 近日公開 |
+| <img src="https://raw.githubusercontent.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper/main/bilder/spot.gif" height="100" alt="Touch-Sensing Fin-Ray Gripper"> | **[Touch-Sensing Fin-Ray Gripper](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper)** · [GitHub リポジトリ](https://github.com/StefanRohringer/Touch-Sensing-Fin-Ray-Gripper) |
 
 ### おすすめオプションパーツ
 
